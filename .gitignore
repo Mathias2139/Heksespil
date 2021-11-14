@@ -1,0 +1,10 @@
+Library
+obj
+Logs
+UserSettings
+Heksespil.sln
+.vsconfig
+.collabignore
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+Temp
