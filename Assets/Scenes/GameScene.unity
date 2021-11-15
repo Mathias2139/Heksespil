@@ -2053,7 +2053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 60
   inputEvent: {fileID: 11400000, guid: 34045e83daaf30540b4c43bd163fa6c2, type: 2}
-  minigames: []
+  minigames:
+  - {fileID: 7180782629096888039, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
 --- !u!114 &1615371153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2548,6 +2549,10 @@ PrefabInstance:
     - target: {fileID: 7180782629096888039, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
       propertyPath: m_Name
       value: KrydsOgBolle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180782629096888039, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}

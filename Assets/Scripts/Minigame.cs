@@ -12,7 +12,7 @@ public class Minigame : MonoBehaviour
     public UnityEvent startGame;
     public BoolEvent gameFinished;
     public StringEvent countdown;
-
+    private Coroutine broadcast;
     private void Awake()
     {
         StartCoroutine(StartSequence(countdownTime));
@@ -31,7 +31,7 @@ public class Minigame : MonoBehaviour
             {
                 countdown.Raise("Begin");
                 countdownLenght--;
-                yield return new WaitForSeconds(0.7f);
+                yield return new WaitForSeconds(0.5f);
                 
             }
             if(countdownLenght < 0)
@@ -41,7 +41,7 @@ public class Minigame : MonoBehaviour
                 StopAllCoroutines();
             }
             countdownLenght--;
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
         }
     }
     public void StartGame()
@@ -50,6 +50,34 @@ public class Minigame : MonoBehaviour
     }
     public void EndGame(bool won)
     {
-        gameFinished.Raise(won);
+        broadcast = StartCoroutine(BroadcastEndGame(won,0));
+        if (won)
+        {
+            countdown.Raise("You Won");
+        }
+        else
+        {
+            countdown.Raise("You Lost");
+        }
+        
+    }
+
+    public IEnumerator BroadcastEndGame(bool won, int loop)
+    {
+        while (true)
+        {
+            if(loop == 0)
+            {
+                loop++;
+                yield return new WaitForSeconds(1);
+            }
+            gameFinished.Raise(won);
+            if(broadcast != null)
+            {
+                StopCoroutine(broadcast);
+            }
+            StopAllCoroutines();
+            yield return new WaitForEndOfFrame();
+        }
     }
 }

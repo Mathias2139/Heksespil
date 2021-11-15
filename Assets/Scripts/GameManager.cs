@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         input = new PlayerControls();
         held = new bool[9];
         time = startTime;
-        //SpawnNextMinigame();
+        SpawnNextMinigame();
     }
     public void MinigameCompleted(bool won)
     {

@@ -888,19 +888,28 @@ MonoBehaviour:
   board:
   - squareRenderer: {fileID: 1841222502}
     isEmpty: 1
+    symbol: 2
   - squareRenderer: {fileID: 1763810904}
     isEmpty: 1
+    symbol: 2
   - squareRenderer: {fileID: 1527196662}
     isEmpty: 1
+    symbol: 2
   - squareRenderer: {fileID: 62518867}
     isEmpty: 1
+    symbol: 2
   - squareRenderer: {fileID: 202576037}
     isEmpty: 1
+    symbol: 2
   - squareRenderer: {fileID: 1121988939}
     isEmpty: 1
+    symbol: 2
   - squareRenderer: {fileID: 140306125}
     isEmpty: 1
+    symbol: 2
   - squareRenderer: {fileID: 1370911083}
     isEmpty: 1
+    symbol: 2
   - squareRenderer: {fileID: 1707735013}
     isEmpty: 1
+    symbol: 2
