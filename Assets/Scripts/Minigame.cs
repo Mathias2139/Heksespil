@@ -13,9 +13,14 @@ public class Minigame : MonoBehaviour
     public BoolEvent gameFinished;
     public StringEvent countdown;
     private Coroutine broadcast;
+    public Canvas[] canvi;
     private void Awake()
     {
         StartCoroutine(StartSequence(countdownTime));
+        foreach (Canvas canvas in canvi)
+        {
+            canvas.worldCamera = Camera.main;
+        }
     }
 
     private IEnumerator StartSequence(int countdownLenght)

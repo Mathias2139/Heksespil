@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private int globalScore = 0;
     public IntEvent inputEvent;
     public GameObject[] minigames;
+    public bool runGame;
 
     private PlayerControls input;
     private bool[] held;
@@ -24,7 +25,11 @@ public class GameManager : MonoBehaviour
         input = new PlayerControls();
         held = new bool[9];
         time = startTime;
-        SpawnNextMinigame();
+        if (runGame)
+        {
+            SpawnNextMinigame();
+        }
+        
     }
     public void MinigameCompleted(bool won)
     {
@@ -34,10 +39,15 @@ public class GameManager : MonoBehaviour
             globalScore++;
         }
         //Cover Screen while switching game
-        //Remove Previous Minigame
-        RemoveMinigame();
-        //Spawn Next Minigame
-        SpawnNextMinigame();
+        
+        if (runGame)
+        {
+            //Remove Previous Minigame
+            RemoveMinigame();
+            //Spawn Next Minigame
+            SpawnNextMinigame();
+        }
+       
         //uncover screen
     }
    

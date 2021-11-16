@@ -14,6 +14,18 @@ public class TacTacToe : MonoBehaviour
     private List<int> xMoves;
     private List<int> oMoves;
 
+    public int[,] winCombos = new int[8, 3]
+        {
+            {0,1,2 },
+            {3,4,5 },
+            {6,7,8 },
+            {0,3,6 },
+            {1,4,7 },
+            {2,5,8 },
+            {0,4,8 },
+            {6,4,2 }
+        };
+
 
     [System.Serializable]
     public class Square
@@ -33,6 +45,7 @@ public class TacTacToe : MonoBehaviour
         manager = GetComponent<Minigame>();
         xMoves = new List<int>();
         oMoves = new List<int>();
+       
     }
     public void StartGame()
     {
@@ -98,12 +111,103 @@ public class TacTacToe : MonoBehaviour
                     board[xMoves[0]].symbol = 2;
                     xMoves.RemoveAt(0);
                 }
+                if (xMoves.Count == 3)
+                {
+                    
+                    if (CheckForWinner(1))
+                    {
+                        Debug.Log("X Wins");
+                        GameWon();
+                        return;
+                    }
+                }
 
                 //AI Move
                 List<int> emptySpots = new List<int>();
                 FindEmptySpot(emptySpots);
                 if (emptySpots.Count != 0)
                 {
+                    int bestScore = -100;
+                    int bestMove = 0;
+                    for (int i = 0; i < emptySpots.Count; i++)
+                    {
+
+                        int[] simboard = new int[9];
+                        int j = 0;
+                        foreach (Square symbol in board)
+                        {
+                            simboard[j] = symbol.symbol;
+                            j++;
+                        }
+
+                        int score = -100;
+                        if(EvaluatePosition(0 ,simboard, emptySpots[i]) == true)
+                        {
+                            Debug.Log("O wins at " + i);
+                            score = 10;
+                        }
+                        else if(EvaluatePosition(1 , simboard, emptySpots[i]) == true)
+                        {
+                            Debug.Log("X wins at " + i);
+                            if (score < -10)
+                            {
+                                score = -10;
+                            }
+                            
+                        }
+                        if(EvaluatePosition(0, simboard, emptySpots[i]) == false)
+                        {
+                            if(score < -50)
+                            {
+                                score = -50;
+                            }
+                        }
+                        else if (EvaluatePosition(1, simboard, emptySpots[i]) == false)
+                        {
+                            if (score < -50)
+                            {
+                                score = -50;
+                            }
+                        }
+
+                            if (score > bestScore)
+                        {
+                            bestScore = score;
+                            bestMove = emptySpots[i];
+                            Debug.Log(bestMove);
+                        }
+                        
+                    }
+                    if(bestScore == -100)
+                    {
+                        System.Random random = new System.Random();
+                        bestMove = emptySpots[random.Next(emptySpots.Count)];
+                        
+                    }
+                    board[bestMove].squareRenderer.sprite = symbols[1];
+                    board[bestMove].isEmpty = false;
+                    board[bestMove].symbol = 0;
+                    oMoves.Add(bestMove);
+                    if (oMoves.Count > 3)
+                    {
+                        board[oMoves[0]].squareRenderer.sprite = null;
+                        board[oMoves[0]].isEmpty = true;
+                        board[oMoves[0]].symbol = 2;
+                        oMoves.RemoveAt(0);
+                    }
+                    if (oMoves.Count == 3)
+                    {
+                        
+                        if (CheckForWinner(0))
+                        {
+                            Debug.Log("O Wins");
+                            GameLost();
+                            return;
+                        }
+                    }
+
+
+                    /* Find Random
                     System.Random random = new System.Random();
                     int index = random.Next(emptySpots.Count);
 
@@ -118,6 +222,7 @@ public class TacTacToe : MonoBehaviour
                         board[oMoves[0]].symbol = 2;
                         oMoves.RemoveAt(0);
                     }
+                    */
                 }
             }
             else
@@ -126,12 +231,24 @@ public class TacTacToe : MonoBehaviour
             }
 
         }
-        if(xMoves.Count == 3)
-        {
-            CheckForWinner();
-        }
+        
         
 
+    }
+
+    private bool EvaluatePosition(int piece, int[] board, int emptySpot)
+    {
+        
+        board[emptySpot] = piece;
+
+        for (int i = 0; i < 8; i++)
+        {
+            if (board[winCombos[i, 0]] == piece && board[winCombos[i, 1]] == piece && board[winCombos[i, 2]] == piece)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void FindEmptySpot(List<int> spots)
@@ -147,22 +264,19 @@ public class TacTacToe : MonoBehaviour
         }
     }
 
-    private void CheckForWinner()
+    private bool CheckForWinner(int piece)
     {
-        //Check Columns
-        if(board[6].symbol == board[3].symbol && board[6].symbol == board[0].symbol)
+        for (int i = 0; i < 8; i++)
         {
-            if(board[6].symbol == 1)
+            if (board[winCombos[i,0]].symbol == piece && board[winCombos[i, 1]].symbol == piece && board[winCombos[i, 2]].symbol == piece)
             {
-                GameWon();
+                Debug.Log(winCombos[i, 0] + " " + winCombos[i, 1] + " " + winCombos[i, 2]);
+                return true;
             }
-            else if (board[6].symbol == 0)
-            {
-                GameLost();
-            }
-            return;
-            
         }
+        return false;
+        #region old win check
+        /*
         if (board[7].symbol == board[4].symbol && board[7].symbol == board[1].symbol)
         {
             if (board[7].symbol == 1)
@@ -258,7 +372,9 @@ public class TacTacToe : MonoBehaviour
             return;
 
         }
-       
+        */
+        #endregion
+
     }
 
     private float MiniMax(Square[] board, int depth, bool isMaximizing)

@@ -28,7 +28,8 @@ public class CreateMenu : MonoBehaviour
         minigame.minigameName = "Minigame navn her!";
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
         canvas.worldCamera = Camera.main;
-        canvas.planeDistance = 5;
+        canvas.planeDistance = 7;
+        canvas.sortingOrder = 1;
 
         //Parent UI to minigame
         ui.transform.SetParent(go.transform);
