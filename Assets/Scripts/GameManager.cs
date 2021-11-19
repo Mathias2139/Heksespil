@@ -13,12 +13,17 @@ public class GameManager : MonoBehaviour
     public IntEvent inputEvent;
     public GameObject[] minigames;
     public bool runGame;
+    public bool banPreviousGame;
     public FloatEvent globalTimer;
+    public BoolEvent gameFinished;
+    public FloatEvent globalTimeReward;
+    public FloatEvent localTime;
     private PlayerControls input;
     private bool[] held;
 
     private GameObject currentMinigame;
-    
+    private int previousMinigame;
+    private int randomNumber;
 
     private void Start()
     {
@@ -60,11 +65,38 @@ public class GameManager : MonoBehaviour
     private void SpawnNextMinigame()
     {
         //Spawn Prefab
+        int randomNumber = GenerateRandomNumber();
+        if (banPreviousGame)
+        {
+            if (randomNumber == previousMinigame)
+            {
+                if (randomNumber == minigames.Length)
+                {
+                    randomNumber = 0;
+                }
+                else
+                {
+                    randomNumber++;
+                }
 
-        currentMinigame = Instantiate(minigames[Random.Range(0, minigames.Length)]);
+            }
+        }
+        currentMinigame = Instantiate(minigames[randomNumber]);
+        previousMinigame = randomNumber;
+        Minigame minigame = currentMinigame.GetComponent<Minigame>();
+        minigame.globalTime = globalTimer;
+        minigame.localTime = localTime;
+        minigame.globalTimeReward = globalTimeReward;
+        minigame.completedMinigames = globalScore;
+
 
         //Initialize Controls, link game to manager
         //Start Game
+    }
+
+    private int GenerateRandomNumber()
+    {
+        return Random.Range(0, minigames.Length);
     }
 
     private void RemoveMinigame()

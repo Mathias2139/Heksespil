@@ -57,8 +57,41 @@ public class TelefonMinigame : MonoBehaviour
 
     public void Input(int input)
     {
+        
         if (allowInput)
         {
+            #region numpad to phone
+            switch (input)
+            {
+                case (1):
+                    input = 7;
+                    break;
+                case (2):
+                    input = 8;
+                    break;
+                case (3):
+                    input = 9;
+                    break;
+                case (4):
+                    input = 4;
+                    break;
+                case (5):
+                    input = 5;
+                    break;
+                case (6):
+                    input = 6;
+                    break;
+                case (7):
+                    input = 1;
+                    break;
+                case (8):
+                    input = 2;
+                    break;
+                case (9):
+                    input = 3;
+                    break;
+            }
+            #endregion
             moveTowards = input-1;
             if (input-1 == phonenumber[progress])
             {
