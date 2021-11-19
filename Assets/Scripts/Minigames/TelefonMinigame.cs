@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class TelefonMinigame : MonoBehaviour
 {
-    public bool allowInput = false;
+    private bool allowInput = false;
     public Transform pointer;
     public Sprite[] numberSprites;
     public SpriteRenderer[] spriteRenderers;
     private System.Random random;
-    private int progess = 0;
+    private int progress = 0;
     private int[] phonenumber;
     private Minigame minigame;
     private int moveTowards = 0;
@@ -60,16 +60,16 @@ public class TelefonMinigame : MonoBehaviour
         if (allowInput)
         {
             moveTowards = input-1;
-            if (input-1 == phonenumber[progess])
+            if (input-1 == phonenumber[progress])
             {
-                spriteRenderers[progess].color = Color.green;
-                progess++;
+                spriteRenderers[progress].color = Color.green;
+                progress++;
             }
             else
             {
-                spriteRenderers[progess].color = Color.red;
+                spriteRenderers[progress].color = Color.red;
             }
-            if(progess == 8)
+            if(progress == 8)
             {
                 GameWon();
                 allowInput = false;
