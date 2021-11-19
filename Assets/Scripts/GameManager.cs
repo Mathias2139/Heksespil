@@ -8,12 +8,12 @@ public class GameManager : MonoBehaviour
 {
     [Range(0,180)]
     public float startTime = 60;
-    private float time = 100;
+    private float globalTime = 100;
     private int globalScore = 0;
     public IntEvent inputEvent;
     public GameObject[] minigames;
     public bool runGame;
-
+    public FloatEvent globalTimer;
     private PlayerControls input;
     private bool[] held;
 
@@ -24,12 +24,18 @@ public class GameManager : MonoBehaviour
     {
         input = new PlayerControls();
         held = new bool[9];
-        time = startTime;
+        globalTime = startTime;
         if (runGame)
         {
             SpawnNextMinigame();
         }
         
+    }
+    private void Update()
+    {
+        globalTime -= Time.deltaTime;
+        globalTimer.Raise(globalTime);
+
     }
     public void MinigameCompleted(bool won)
     {
@@ -66,9 +72,15 @@ public class GameManager : MonoBehaviour
         Destroy(currentMinigame);
     }
 
+    public void AddTime(float time)
+    {
+        Debug.Log("Recieved " + time);
+        globalTime += (time + 0.01f);
+        
+    }
     private void LateUpdate()
     {
-        time -= Time.deltaTime;
+      
     }
 
     #region InputSystem

@@ -79,6 +79,6 @@ public class TelefonMinigame : MonoBehaviour
 
     private void GameWon()
     {
-        minigame.EndGame(true);
+        minigame.EndGame(1);
     }
 }

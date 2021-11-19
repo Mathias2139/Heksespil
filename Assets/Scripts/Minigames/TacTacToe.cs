@@ -10,7 +10,7 @@ public class TacTacToe : MonoBehaviour
     private Minigame manager;
     public Sprite[] symbols;
     public Square[] board;
-
+    public bool startRandom;
     private List<int> xMoves;
     private List<int> oMoves;
 
@@ -104,6 +104,7 @@ public class TacTacToe : MonoBehaviour
                 board[targetSquare - 1].isEmpty = false;
                 board[targetSquare - 1].symbol = 1;
                 xMoves.Add(targetSquare - 1);
+                /*
                 if (xMoves.Count > 3)
                 {
                     board[xMoves[0]].squareRenderer.sprite = null;
@@ -111,13 +112,14 @@ public class TacTacToe : MonoBehaviour
                     board[xMoves[0]].symbol = 2;
                     xMoves.RemoveAt(0);
                 }
-                if (xMoves.Count == 3)
+                */
+                if (xMoves.Count >= 3)
                 {
                     
                     if (CheckForWinner(1))
                     {
                         Debug.Log("X Wins");
-                        GameWon();
+                        GameFinish(1);
                         return;
                     }
                 }
@@ -127,102 +129,118 @@ public class TacTacToe : MonoBehaviour
                 FindEmptySpot(emptySpots);
                 if (emptySpots.Count != 0)
                 {
-                    int bestScore = -100;
-                    int bestMove = 0;
-                    for (int i = 0; i < emptySpots.Count; i++)
+                    if (!startRandom)
                     {
+                        int bestScore = -100;
+                        int bestMove = 0;
+                        for (int i = 0; i < emptySpots.Count; i++)
+                        {
 
-                        int[] simboard = new int[9];
-                        int j = 0;
-                        foreach (Square symbol in board)
-                        {
-                            simboard[j] = symbol.symbol;
-                            j++;
-                        }
+                            int[] simboard = new int[9];
+                            int j = 0;
+                            foreach (Square symbol in board)
+                            {
+                                simboard[j] = symbol.symbol;
+                                j++;
+                            }
 
-                        int score = -100;
-                        if(EvaluatePosition(0 ,simboard, emptySpots[i]) == true)
-                        {
-                            Debug.Log("O wins at " + i);
-                            score = 10;
-                        }
-                        else if(EvaluatePosition(1 , simboard, emptySpots[i]) == true)
-                        {
-                            Debug.Log("X wins at " + i);
-                            if (score < -10)
+                            int score = -100;
+                            if (EvaluatePosition(0, simboard, emptySpots[i]) == true)
                             {
-                                score = -10;
+                                Debug.Log("O wins at " + i);
+                                score = 10;
                             }
-                            
-                        }
-                        if(EvaluatePosition(0, simboard, emptySpots[i]) == false)
-                        {
-                            if(score < -50)
+                            else if (EvaluatePosition(1, simboard, emptySpots[i]) == true)
                             {
-                                score = -50;
+                                Debug.Log("X wins at " + i);
+                                if (score < -10)
+                                {
+                                    score = -10;
+                                }
+
                             }
-                        }
-                        else if (EvaluatePosition(1, simboard, emptySpots[i]) == false)
-                        {
-                            if (score < -50)
+                            if (EvaluatePosition(0, simboard, emptySpots[i]) == false)
                             {
-                                score = -50;
+                                if (score < -50)
+                                {
+                                    score = -50;
+                                }
                             }
-                        }
+                            else if (EvaluatePosition(1, simboard, emptySpots[i]) == false)
+                            {
+                                if (score < -50)
+                                {
+                                    score = -50;
+                                }
+                            }
 
                             if (score > bestScore)
-                        {
-                            bestScore = score;
-                            bestMove = emptySpots[i];
-                            Debug.Log(bestMove);
+                            {
+                                bestScore = score;
+                                bestMove = emptySpots[i];
+                                Debug.Log(bestMove);
+                            }
+
                         }
-                        
+                        if (bestScore == -100)
+                        {
+                            System.Random random = new System.Random();
+                            bestMove = emptySpots[random.Next(emptySpots.Count)];
+
+                        }
+                        board[bestMove].squareRenderer.sprite = symbols[1];
+                        board[bestMove].isEmpty = false;
+                        board[bestMove].symbol = 0;
+                        oMoves.Add(bestMove);
+                        /*
+                        if (oMoves.Count > 3)
+                        {
+                            board[oMoves[0]].squareRenderer.sprite = null;
+                            board[oMoves[0]].isEmpty = true;
+                            board[oMoves[0]].symbol = 2;
+                            oMoves.RemoveAt(0);
+                        }
+                        */
                     }
-                    if(bestScore == -100)
+                    else
                     {
                         System.Random random = new System.Random();
-                        bestMove = emptySpots[random.Next(emptySpots.Count)];
-                        
+                        int index = random.Next(emptySpots.Count);
+
+                        board[emptySpots[index]].squareRenderer.sprite = symbols[1];
+                        board[emptySpots[index]].isEmpty = false;
+                        board[emptySpots[index]].symbol = 0;
+                        oMoves.Add(emptySpots[index]);
+                        /*
+                        if (oMoves.Count > 3)
+                        {
+                            board[oMoves[0]].squareRenderer.sprite = null;
+                            board[oMoves[0]].isEmpty = true;
+                            board[oMoves[0]].symbol = 2;
+                            oMoves.RemoveAt(0);
+                        }
+                        */
                     }
-                    board[bestMove].squareRenderer.sprite = symbols[1];
-                    board[bestMove].isEmpty = false;
-                    board[bestMove].symbol = 0;
-                    oMoves.Add(bestMove);
-                    if (oMoves.Count > 3)
-                    {
-                        board[oMoves[0]].squareRenderer.sprite = null;
-                        board[oMoves[0]].isEmpty = true;
-                        board[oMoves[0]].symbol = 2;
-                        oMoves.RemoveAt(0);
-                    }
-                    if (oMoves.Count == 3)
+                    
+                    if (oMoves.Count >= 3)
                     {
                         
                         if (CheckForWinner(0))
                         {
                             Debug.Log("O Wins");
-                            GameLost();
+                            GameFinish(2);
                             return;
                         }
                     }
+                    startRandom = !startRandom;
 
-
-                    /* Find Random
-                    System.Random random = new System.Random();
-                    int index = random.Next(emptySpots.Count);
-
-                    board[emptySpots[index]].squareRenderer.sprite = symbols[1];
-                    board[emptySpots[index]].isEmpty = false;
-                    board[emptySpots[index]].symbol = 0;
-                    oMoves.Add(emptySpots[index]);
-                    if (oMoves.Count > 3)
-                    {
-                        board[oMoves[0]].squareRenderer.sprite = null;
-                        board[oMoves[0]].isEmpty = true;
-                        board[oMoves[0]].symbol = 2;
-                        oMoves.RemoveAt(0);
-                    }
-                    */
+                    //Find Random
+                    
+                    
+                }
+                else
+                {
+                    GameFinish(4);
                 }
             }
             else
@@ -386,17 +404,14 @@ public class TacTacToe : MonoBehaviour
     {
 
     }
-    private void GameLost()
+    private void GameFinish(int won)
     {
-        manager.EndGame(false);
+        manager.EndGame(won);
 
-       
-       
-        
         allowInput = false;
     }
     private void GameWon()
     {
-        manager.EndGame(true);
+        manager.EndGame(1);
     }
 }

@@ -15,7 +15,7 @@ public class Minigame : MonoBehaviour
     public int countdownTime = 3;
     public UnityEvent startGame;
     public BoolEvent gameFinished;
-    public FloatEvent GlobalTimeReward;
+    public IntEvent GlobalTimeReward;
     public FloatEvent GlobalTime;
     public FloatEvent localTime;
     public StringEvent countdown;
@@ -90,18 +90,17 @@ public class Minigame : MonoBehaviour
             case 1:
                 countdown.Raise("You Won");
                 GlobalTimeReward.Raise(timeReward);
-                Debug.Log("Added " + timeReward + " to global time");
                 break;
             case 2:
                 countdown.Raise("You Lost");
-                GlobalTimeReward.Raise(-localTimer);
+                GlobalTime.Raise(-localTimer);
                 break;
             case 3:
                 countdown.Raise("Time Up");
                 break;
             case 4:
                 countdown.Raise("Tie");
-                GlobalTimeReward.Raise(-localTimer);
+                GlobalTime.Raise(-localTimer);
                 break;
         }
       
