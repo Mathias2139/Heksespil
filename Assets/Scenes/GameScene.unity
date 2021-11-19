@@ -481,12 +481,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameName: Skuffespil
-  beginText: Find
+  beginText: Stuff
   timeToComplete: 7
   timeReward: 5
   countdownTime: 3
-  overrideCountdown: 0
-  overrideWords: []
+  overrideCountdown: 1
+  overrideWords:
+  - Find
+  - Your
   startGame:
     m_PersistentCalls:
       m_Calls:
@@ -536,6 +538,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b612231c77f0224448d58947d7e4ad79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: 38867d6ee706b264ab15cd2f26d77be8, type: 2}
+  - {fileID: 11400000, guid: 9a32132938888c84eb523f27980cc565, type: 2}
+  - {fileID: 11400000, guid: 7b6d07542f7a55b4d96e0c9bbdbec1e5, type: 2}
 --- !u!1 &265409581
 GameObject:
   m_ObjectHideFlags: 0
