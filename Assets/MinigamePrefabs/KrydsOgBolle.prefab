@@ -824,11 +824,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameName: Kryds og Bolle
-  beginText: 
+  beginText: Toe
   tutorialText: 
   timeToComplete: 10
   timeReward: 5
   countdownTime: 3
+  overrideCountdown: 1
+  overrideWords:
+  - Tic
+  - Tac
   startGame:
     m_PersistentCalls:
       m_Calls:
@@ -845,8 +849,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   gameFinished: {fileID: 11400000, guid: 586b159bccee13948b4c0115c3694da7, type: 2}
-  GlobalTimeReward: {fileID: 11400000, guid: 3c2d01670eb023a4e9a27327dda66b19, type: 2}
-  GlobalTime: {fileID: 11400000, guid: 591ef2667dac74a4b859332ed046c2b9, type: 2}
+  globalTimeReward: {fileID: 0}
+  globalTime: {fileID: 0}
   localTime: {fileID: 11400000, guid: 2d125fec822cbe94eb08fdb0e2f7570b, type: 2}
   countdown: {fileID: 11400000, guid: 6759f2581fcc7624f984a197b0a236e5, type: 2}
   canvi: []
