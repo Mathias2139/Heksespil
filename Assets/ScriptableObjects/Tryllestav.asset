@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46764be64a5bf8948be78cb5952b8299, type: 3}
   m_Name: Tryllestav
   m_EditorClassIdentifier: 
-  look: {fileID: 0}
+  look: {fileID: -2945471927325512642, guid: 26577f59d2d3304489f05dbe87cad920, type: 3}
   discription: Wand

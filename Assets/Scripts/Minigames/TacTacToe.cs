@@ -230,8 +230,9 @@ public class TacTacToe : MonoBehaviour
                         {
                             Debug.Log("O Wins");
                             GameFinish(2);
-                            return;
                             allowInput = false;
+                            return;
+                            
                         }
                     }
                     startRandom = !startRandom;

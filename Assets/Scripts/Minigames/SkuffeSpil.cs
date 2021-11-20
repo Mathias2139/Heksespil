@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkuffeSpil : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class SkuffeSpil : MonoBehaviour
     public Transform[] drawers;
     private Vector3[] drawerStartPositions;
     public Vector3 drawerOpenAmount;
+    public Image foundItemObject;
     private void Start()
     {
          
@@ -25,11 +27,16 @@ public class SkuffeSpil : MonoBehaviour
         minigame.beginText = randomItem.discription;
         drawerOpen = new bool[12];
         drawerStartPositions = new Vector3[drawers.Length];
+        foundItemObject.transform.localScale = Vector3.zero;
+        foundItemObject.sprite = randomItem.look;
+        
         for (int i = 0; i < drawers.Length; i++)
         {
             drawerStartPositions[i] = drawers[i].position;
         }
-        
+
+        foundItemObject.transform.position = drawerStartPositions[randomPosition] - new Vector3(0, 0.3f, 0);
+
     }
     private void Update()
     {
@@ -60,6 +67,7 @@ public class SkuffeSpil : MonoBehaviour
             if (drawerOpen[itemPosition] && !drawerOpen[itemPosition + 3])
             {
                 Debug.Log("Found Item");
+                foundItemObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
                 minigame.EndGame(1);
                 allowInput = false;
             }
