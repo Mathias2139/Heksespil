@@ -21,7 +21,14 @@ public class TelefonMinigame : MonoBehaviour
     
     void Start()
     {
-        
+        random = new System.Random();
+        minigame = GetComponent<Minigame>();
+        phonenumber = GeneratePhoneNumber();
+        for (int i = 0; i < 8; i++)
+        {
+            spriteRenderers[i].sprite = numberSprites[phonenumber[i]];
+        }
+        GetComponent<Animation>().Play("Telefonspil_Papir");
     }
 
     private void Update()
@@ -35,14 +42,7 @@ public class TelefonMinigame : MonoBehaviour
     public void StartGame()
     {
         allowInput = true;
-        random = new System.Random();
-        minigame = GetComponent<Minigame>();
-        phonenumber = GeneratePhoneNumber();
-        for (int i = 0; i < 8; i++)
-        {
-            spriteRenderers[i].sprite = numberSprites[phonenumber[i]];
-        }
-        GetComponent<Animation>().Play("Telefonspil_Papir");
+        
     }
 
     private int[] GeneratePhoneNumber()
@@ -50,7 +50,7 @@ public class TelefonMinigame : MonoBehaviour
         int[] numbers = new int[8];
         for (int i = 0; i < 8; i++)
         {
-            numbers[i] = Mathf.RoundToInt(random.Next(1,9));
+            numbers[i] = Mathf.RoundToInt(random.Next(0,9));
         }
         return numbers;
     }
@@ -92,7 +92,7 @@ public class TelefonMinigame : MonoBehaviour
                     break;
             }
             #endregion
-            moveTowards = input-1;
+            moveTowards = input;
             if (input-1 == phonenumber[progress])
             {
                 spriteRenderers[progress].color = Color.green;

@@ -120,6 +120,7 @@ public class TacTacToe : MonoBehaviour
                     {
                         Debug.Log("X Wins");
                         GameFinish(1);
+                        allowInput = false;
                         return;
                     }
                 }
@@ -230,6 +231,7 @@ public class TacTacToe : MonoBehaviour
                             Debug.Log("O Wins");
                             GameFinish(2);
                             return;
+                            allowInput = false;
                         }
                     }
                     startRandom = !startRandom;
@@ -241,6 +243,7 @@ public class TacTacToe : MonoBehaviour
                 else
                 {
                     GameFinish(4);
+                    allowInput = false;
                 }
             }
             else
