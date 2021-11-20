@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
             {
                 if (randomNumber == minigames.Length)
                 {
-                    randomNumber = 0;
+                    randomNumber = 0;   
                 }
                 else
                 {
