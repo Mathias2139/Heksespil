@@ -50,7 +50,7 @@ public class TelefonMinigame : MonoBehaviour
         int[] numbers = new int[8];
         for (int i = 0; i < 8; i++)
         {
-            numbers[i] = Mathf.RoundToInt(random.Next(1,9));
+            numbers[i] = Mathf.RoundToInt(random.Next(0,9));
         }
         return numbers;
     }
@@ -92,7 +92,7 @@ public class TelefonMinigame : MonoBehaviour
                     break;
             }
             #endregion
-            moveTowards = input-1;
+            moveTowards = input;
             if (input-1 == phonenumber[progress])
             {
                 spriteRenderers[progress].color = Color.green;

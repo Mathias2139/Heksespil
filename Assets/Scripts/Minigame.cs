@@ -149,6 +149,7 @@ public class Minigame : MonoBehaviour
     }
     public void EndGame(int won)
     {
+        gameStarted = false;
         broadcast = StartCoroutine(BroadcastEndGame(won,0));
         switch (won)
         {
@@ -156,21 +157,21 @@ public class Minigame : MonoBehaviour
                 countdown.Raise("You Won");
                 globalTimeReward.Raise(timeReward);
                 Debug.Log("Added " + timeReward + " to global time");
-                gameStarted = false;
+                
                 break;
             case 2:
                 countdown.Raise("You Lost");
                 globalTimeReward.Raise(-localTimer);
-                gameStarted = false;
+                
                 break;
             case 3:
                 countdown.Raise("Time Up");
-                gameStarted = false;
+                
                 break;
             case 4:
                 countdown.Raise("Tie");
-                globalTimeReward.Raise(-localTimer);
-                gameStarted = false;
+                
+                
                 break;
         }
       
