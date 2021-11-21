@@ -118,7 +118,7 @@ public class TacTacToe : MonoBehaviour
                     
                     if (CheckForWinner(1))
                     {
-                        Debug.Log("X Wins");
+                        
                         GameFinish(1);
                         allowInput = false;
                         return;
@@ -148,12 +148,12 @@ public class TacTacToe : MonoBehaviour
                             int score = -100;
                             if (EvaluatePosition(0, simboard, emptySpots[i]) == true)
                             {
-                                Debug.Log("O wins at " + i);
+                                
                                 score = 10;
                             }
                             else if (EvaluatePosition(1, simboard, emptySpots[i]) == true)
                             {
-                                Debug.Log("X wins at " + i);
+                                
                                 if (score < -10)
                                 {
                                     score = -10;
@@ -292,7 +292,7 @@ public class TacTacToe : MonoBehaviour
         {
             if (board[winCombos[i,0]].symbol == piece && board[winCombos[i, 1]].symbol == piece && board[winCombos[i, 2]].symbol == piece)
             {
-                Debug.Log(winCombos[i, 0] + " " + winCombos[i, 1] + " " + winCombos[i, 2]);
+                
                 return true;
             }
         }

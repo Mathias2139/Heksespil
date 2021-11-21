@@ -19,6 +19,7 @@ public class Minigame : MonoBehaviour
     public int countdownTime = 3;
     public bool overrideCountdown;
     public string[] overrideWords;
+    private float timeBetweenWords = 0.5f;
     [Space(15)]
     private bool gameStarted;
     [Header("Event System")]
@@ -32,13 +33,14 @@ public class Minigame : MonoBehaviour
     public FloatEvent localTime;
     public StringEvent countdown;
     
+    
     [Space(15)]
     private float localTimer;
     [Header("Canvas Setup")]
     public Canvas[] canvi;
     
-    [HideInInspector]
-    public int completedMinigames;
+    
+    public GameStats currentGameState;
     
     private void Awake()
     {
@@ -47,40 +49,63 @@ public class Minigame : MonoBehaviour
             countdownTime = overrideWords.Length;
         }
 
+        #region overridewords scaler 
+
+        if (currentGameState.completedMinigames > 5)
+        {
+            timeBetweenWords = Mathf.Clamp(timeBetweenWords - 0.07f, 0, 100);
+        }
+        if (currentGameState.completedMinigames > 10)
+        {
+            timeBetweenWords = Mathf.Clamp(timeBetweenWords - 0.07f, 0, 100);
+        }
+        if (currentGameState.completedMinigames > 15)
+        {
+            timeBetweenWords = Mathf.Clamp(timeBetweenWords - 0.07f, 0, 100);
+        }
+        if (currentGameState.completedMinigames > 20)
+        {
+            timeBetweenWords = Mathf.Clamp(timeBetweenWords - 0.07f, 0, 100);
+        }
+        if (currentGameState.completedMinigames > 25)
+        {
+            timeBetweenWords = Mathf.Clamp(timeBetweenWords - 0.07f, 0, 100);
+        }
+        #endregion
 
         if (!overrideCountdown)
         {
-            if (completedMinigames > 5)
+            #region countdown scaler
+            if (currentGameState.completedMinigames > 5)
             {
-                countdownTime = Mathf.Clamp(countdownTime--, 0, 100);
+                countdownTime = Mathf.Clamp(countdownTime-1, 0, 100);
             }
-            if (completedMinigames > 10)
+            if (currentGameState.completedMinigames > 10)
             {
-                countdownTime = Mathf.Clamp(countdownTime--, 0, 100);
+                countdownTime = Mathf.Clamp(countdownTime-1, 0, 100);
             }
-            if (completedMinigames > 15)
+            if (currentGameState.completedMinigames > 15)
             {
-                countdownTime = Mathf.Clamp(countdownTime--, 0, 100);
+                countdownTime = Mathf.Clamp(countdownTime-1, 0, 100);
             }
-            if (completedMinigames > 20)
+            if (currentGameState.completedMinigames > 20)
             {
-                countdownTime = Mathf.Clamp(countdownTime--, 0, 100);
+                countdownTime = Mathf.Clamp(countdownTime-1, 0, 100);
             }
-            if (completedMinigames > 25)
+            if (currentGameState.completedMinigames > 25)
             {
-                countdownTime = Mathf.Clamp(countdownTime--, 0, 100);
+                countdownTime = Mathf.Clamp(countdownTime-1, 0, 100);
             }
 
             if (countdownTime != 0)
             {
                 countdown.Raise(countdownTime.ToString());
             }
-            
+            #endregion
         }
         else
         {
             countdown.Raise(overrideWords[overrideWords.Length - countdownTime]);
-            
         }
 
         StartCoroutine(StartSequence(countdownTime));
@@ -129,7 +154,7 @@ public class Minigame : MonoBehaviour
                 countdown.Raise(beginText);
                 
                 countdownLenght--;
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(timeBetweenWords);
                 
             }
             if(countdownLenght < 0)
@@ -140,7 +165,7 @@ public class Minigame : MonoBehaviour
                 StopAllCoroutines();
             }
             countdownLenght--;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(timeBetweenWords);
         }
     }
     public void StartGame()
@@ -156,7 +181,7 @@ public class Minigame : MonoBehaviour
             case 1:
                 countdown.Raise("You Won");
                 globalTimeReward.Raise(timeReward);
-                Debug.Log("Added " + timeReward + " to global time");
+                
                 
                 break;
             case 2:

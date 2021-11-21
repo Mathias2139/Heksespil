@@ -35,7 +35,7 @@ public class TelefonMinigame : MonoBehaviour
     {
         if(moveTowards != 0)
         {
-            pointer.position = Vector3.MoveTowards(pointer.position, numberPositions[moveTowards].position, 15 * Time.deltaTime);
+            pointer.position = Vector3.MoveTowards(pointer.position, numberPositions[moveTowards].position, 12 * (1+minigame.currentGameState.completedMinigames/15) * Time.deltaTime);
         }
     }
 

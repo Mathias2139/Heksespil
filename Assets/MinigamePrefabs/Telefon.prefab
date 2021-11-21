@@ -2803,7 +2803,7 @@ MonoBehaviour:
   canvi:
   - {fileID: 2831245129599072879}
   - {fileID: 761248914}
-  completedMinigames: 0
+  currentGameState: {fileID: 11400000, guid: 9be70091218cf314e8451da3430b663c, type: 2}
 --- !u!114 &2831245128275075474
 MonoBehaviour:
   m_ObjectHideFlags: 0

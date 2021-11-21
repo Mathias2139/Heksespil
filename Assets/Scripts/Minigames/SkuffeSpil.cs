@@ -34,6 +34,20 @@ public class SkuffeSpil : MonoBehaviour
         {
             drawerStartPositions[i] = drawers[i].position;
         }
+        for (int i = 0; i < 9; i++)
+        {
+            int ran = Random.Range(0, 2);
+            if(ran == 1)
+            {
+                drawerOpen[i] = true;
+            }
+            
+        }
+        drawerOpen[randomPosition] = false;
+        for (int i = 0; i < drawers.Length; i++)
+        {
+            drawers[i].position = drawerStartPositions[i] + drawerOpenAmount;
+        }
 
         foundItemObject.transform.position = drawerStartPositions[randomPosition] - new Vector3(0, 0.3f, 0);
 
@@ -44,11 +58,11 @@ public class SkuffeSpil : MonoBehaviour
         {
             if (drawerOpen[i])
             {
-                drawers[i].position = Vector3.MoveTowards(drawers[i].position, drawerStartPositions[i] + drawerOpenAmount, 15 * Time.deltaTime);
+                drawers[i].position = Vector3.MoveTowards(drawers[i].position, drawerStartPositions[i] + drawerOpenAmount, 10 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
             }
             else
             {
-                drawers[i].position = Vector3.MoveTowards(drawers[i].position, drawerStartPositions[i], 15 * Time.deltaTime);   
+                drawers[i].position = Vector3.MoveTowards(drawers[i].position, drawerStartPositions[i], 10*(1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);   
             }
             
         }
