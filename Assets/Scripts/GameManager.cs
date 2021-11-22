@@ -9,19 +9,25 @@ public class GameManager : MonoBehaviour
     [Range(0,180)]
     public float startTime = 60;
     private float globalTime = 100;
-    private int globalScore = 0;
+    public GameStats stats;
     public IntEvent inputEvent;
     public GameObject[] minigames;
     public bool runGame;
+    public bool banPreviousGame;
     public FloatEvent globalTimer;
+    public BoolEvent gameFinished;
+    public FloatEvent globalTimeReward;
+    public FloatEvent localTime;
     private PlayerControls input;
     private bool[] held;
 
     private GameObject currentMinigame;
-    
+    private int previousMinigame;
+    private int randomNumber;
 
     private void Start()
     {
+        stats.completedMinigames = 0;
         input = new PlayerControls();
         held = new bool[9];
         globalTime = startTime;
@@ -42,7 +48,7 @@ public class GameManager : MonoBehaviour
         //Add score and time
         if (won)
         {
-            globalScore++;
+            stats.completedMinigames++;
         }
         //Cover Screen while switching game
         
@@ -60,11 +66,38 @@ public class GameManager : MonoBehaviour
     private void SpawnNextMinigame()
     {
         //Spawn Prefab
+        int randomNumber = GenerateRandomNumber();
+        if (banPreviousGame)
+        {
+            if (randomNumber == previousMinigame)
+            {
+                if (randomNumber == minigames.Length)
+                {
+                    randomNumber = 0;   
+                }
+                else
+                {
+                    randomNumber++;
+                }
 
-        currentMinigame = Instantiate(minigames[Random.Range(0, minigames.Length)]);
+            }
+        }
+        currentMinigame = Instantiate(minigames[randomNumber]);
+        previousMinigame = randomNumber;
+        Minigame minigame = currentMinigame.GetComponent<Minigame>();
+        minigame.globalTime = globalTimer;
+        minigame.localTime = localTime;
+        minigame.globalTimeReward = globalTimeReward;
+        
+
 
         //Initialize Controls, link game to manager
         //Start Game
+    }
+
+    private int GenerateRandomNumber()
+    {
+        return Random.Range(0, minigames.Length);
     }
 
     private void RemoveMinigame()
@@ -74,7 +107,7 @@ public class GameManager : MonoBehaviour
 
     public void AddTime(float time)
     {
-        Debug.Log("Recieved " + time);
+        
         globalTime += (time + 0.01f);
         
     }

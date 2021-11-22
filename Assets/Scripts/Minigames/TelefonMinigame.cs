@@ -21,20 +21,6 @@ public class TelefonMinigame : MonoBehaviour
     
     void Start()
     {
-        
-    }
-
-    private void Update()
-    {
-        if(moveTowards != 0)
-        {
-            pointer.position = Vector3.MoveTowards(pointer.position, numberPositions[moveTowards].position, 15 * Time.deltaTime);
-        }
-    }
-
-    public void StartGame()
-    {
-        allowInput = true;
         random = new System.Random();
         minigame = GetComponent<Minigame>();
         phonenumber = GeneratePhoneNumber();
@@ -45,21 +31,68 @@ public class TelefonMinigame : MonoBehaviour
         GetComponent<Animation>().Play("Telefonspil_Papir");
     }
 
+    private void Update()
+    {
+        if(moveTowards != 0)
+        {
+            pointer.position = Vector3.MoveTowards(pointer.position, numberPositions[moveTowards].position, 12 * (1+minigame.currentGameState.completedMinigames/15) * Time.deltaTime);
+        }
+    }
+
+    public void StartGame()
+    {
+        allowInput = true;
+        
+    }
+
     private int[] GeneratePhoneNumber()
     {
         int[] numbers = new int[8];
         for (int i = 0; i < 8; i++)
         {
-            numbers[i] = Mathf.RoundToInt(random.Next(1,9));
+            numbers[i] = Mathf.RoundToInt(random.Next(0,9));
         }
         return numbers;
     }
 
     public void Input(int input)
     {
+        
         if (allowInput)
         {
-            moveTowards = input-1;
+            #region numpad to phone
+            switch (input)
+            {
+                case (1):
+                    input = 7;
+                    break;
+                case (2):
+                    input = 8;
+                    break;
+                case (3):
+                    input = 9;
+                    break;
+                case (4):
+                    input = 4;
+                    break;
+                case (5):
+                    input = 5;
+                    break;
+                case (6):
+                    input = 6;
+                    break;
+                case (7):
+                    input = 1;
+                    break;
+                case (8):
+                    input = 2;
+                    break;
+                case (9):
+                    input = 3;
+                    break;
+            }
+            #endregion
+            moveTowards = input;
             if (input-1 == phonenumber[progress])
             {
                 spriteRenderers[progress].color = Color.green;

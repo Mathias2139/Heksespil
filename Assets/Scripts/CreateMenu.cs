@@ -13,12 +13,12 @@ public class CreateMenu : MonoBehaviour
         // Create a custom game object
         GameObject ui = new GameObject("Custom UI Object");
         GameObject go = new GameObject("Custom Game Object");
-        
 
         // Add custom Components
         Minigame minigame = go.AddComponent<Minigame>();
         IntListener listener = go.AddComponent<IntListener>();
         Canvas canvas = ui.AddComponent<Canvas>();
+        
         CanvasScaler canvasScaler = ui.AddComponent<CanvasScaler>();
         
 
@@ -33,7 +33,6 @@ public class CreateMenu : MonoBehaviour
 
         //Parent UI to minigame
         ui.transform.SetParent(go.transform);
-       
         
 
         // Ensure it gets reparented if this was a context click (otherwise does nothing)

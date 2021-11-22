@@ -56,13 +56,18 @@ public class WhackAMole_Minigame : MonoBehaviour
 
     public void AddMole()
     {
-        int randomNumber = Random.Range(1, 9);
-        if (moleArray[randomNumber] = null)
+        int randomNumber = Random.Range(0, 8);
+        Debug.Log(moleArray[randomNumber]);
+        if (moleArray[randomNumber] == null)
             {
             GameObject RandomSpawn = SpawnPoints[randomNumber];
             GameObject mole = Instantiate(Mole, RandomSpawn.transform.position, Quaternion.identity);
             mole.GetComponent<Mole>().molePosition = randomNumber;
             moleArray[randomNumber] = mole;
+        }
+        else
+        {
+            AddMole();
         }
     }
 
