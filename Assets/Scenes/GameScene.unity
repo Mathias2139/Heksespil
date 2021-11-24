@@ -2980,6 +2980,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].time
+      value: 3.5259564
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].time
+      value: 4.740245
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].value
+      value: 2.4627728
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].value
+      value: 1.3050117
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].inSlope
+      value: -0.25052148
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].inSlope
+      value: -0.06808841
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].outSlope
+      value: -0.25052148
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].inWeight
+      value: 0.45670807
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].outSlope
+      value: -0.06808841
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].outWeight
+      value: 0.25730762
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5396804818119273330, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: m_Camera
       value: 

@@ -1639,14 +1639,11 @@ MonoBehaviour:
   textBox: {fileID: 2129441184}
   typingClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
   audioSourceGroup: {fileID: 1677125806}
-  playDialogue1Button: {fileID: 552474611}
-  playDialogue2Button: {fileID: 0}
-  playDialogue3Button: {fileID: 0}
-  skipButton: {fileID: 0}
-  dialogue1: <sp:15>This is a test of the <anim:wave>dialogue system.</anim><p:normal>
-    It can also <sp:7><color=red><anim:shake>SHAKE!</anim></color>
-  dialogue2: 
-  dialogue3: 
+  skipButton: {fileID: 552474611}
+  dialogue:
+  - Hello
+  - This is a test
+  - Goodbye
 --- !u!4 &2143420919
 Transform:
   m_ObjectHideFlags: 0

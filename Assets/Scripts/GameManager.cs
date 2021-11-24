@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         stats.completedMinigames = 0;
+        stats.minigamesPlayed = 0;
         input = new PlayerControls();
         held = new bool[9];
         globalTime = startTime;
@@ -50,8 +51,9 @@ public class GameManager : MonoBehaviour
         {
             stats.completedMinigames++;
         }
+        stats.minigamesPlayed++;
         //Cover Screen while switching game
-        
+
         if (runGame)
         {
             //Remove Previous Minigame

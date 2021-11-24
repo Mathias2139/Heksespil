@@ -11,6 +11,7 @@ public class Minigame : MonoBehaviour
     public string minigameName;
     public string beginText;
     public int timeToComplete;
+    public AnimationCurve timeByPoints;
     public int timeReward;
     [Space(15)]
     private Coroutine broadcast;
