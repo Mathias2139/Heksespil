@@ -2774,8 +2774,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameName: Telefon
-  beginText: Call
+  beginText: Dial
   timeToComplete: 10
+  timeByPoints:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   timeReward: 5
   countdownTime: 3
   overrideCountdown: 0

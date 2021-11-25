@@ -2275,7 +2275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba7753eebfa3924e8d88a32e08dd45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 60
+  startTime: 61
   stats: {fileID: 11400000, guid: 9be70091218cf314e8451da3430b663c, type: 2}
   inputEvent: {fileID: 11400000, guid: 34045e83daaf30540b4c43bd163fa6c2, type: 2}
   minigames:
@@ -2283,11 +2283,12 @@ MonoBehaviour:
   - {fileID: 2831245128275075475, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
   - {fileID: 5396804818044387249, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
   runGame: 1
-  banPreviousGame: 0
+  banPreviousGame: 1
   globalTimer: {fileID: 11400000, guid: 591ef2667dac74a4b859332ed046c2b9, type: 2}
   gameFinished: {fileID: 11400000, guid: 586b159bccee13948b4c0115c3694da7, type: 2}
   globalTimeReward: {fileID: 11400000, guid: 3c2d01670eb023a4e9a27327dda66b19, type: 2}
   localTime: {fileID: 11400000, guid: 2d125fec822cbe94eb08fdb0e2f7570b, type: 2}
+  endscene: EndingScene
 --- !u!114 &1615371153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,6 +2916,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2831245128275075477, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831245128275075477, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].time
+      value: 0.09573746
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831245128275075477, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831245128275075477, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].value
+      value: 0.721344
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831245128275075477, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831245128275075477, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831245128275075477, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2831245129599072879, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2990,7 +3019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: timeByPoints.m_Curve.Array.data[1].time
-      value: 4.740245
+      value: 5.5593824
       objectReference: {fileID: 0}
     - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: timeByPoints.m_Curve.Array.data[0].value
@@ -2998,7 +3027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: timeByPoints.m_Curve.Array.data[1].value
-      value: 1.3050117
+      value: 1.5298042
       objectReference: {fileID: 0}
     - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: timeByPoints.m_Curve.Array.data[0].inSlope

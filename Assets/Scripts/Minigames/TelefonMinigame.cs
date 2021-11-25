@@ -41,7 +41,15 @@ public class TelefonMinigame : MonoBehaviour
 
     public void StartGame()
     {
-        allowInput = true;
+        if(allowInput == true)
+        {
+            allowInput = false;
+        }
+        else
+        {
+            allowInput = true;
+        }
+        
         
     }
 

@@ -130,6 +130,7 @@ public class Minigame : MonoBehaviour
             if (localTimer <= 0)
             {
                 EndGame(3);
+                StartGame();
             }
         }
     }

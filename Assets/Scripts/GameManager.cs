@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using MA.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     public FloatEvent localTime;
     private PlayerControls input;
     private bool[] held;
+    public string endscene;
 
     private GameObject currentMinigame;
     private int previousMinigame;
@@ -42,6 +44,10 @@ public class GameManager : MonoBehaviour
     {
         globalTime -= Time.deltaTime;
         globalTimer.Raise(globalTime);
+        if(globalTime <= 0)
+        {
+            SceneManager.LoadScene(endscene);
+        }
 
     }
     public void MinigameCompleted(bool won)
@@ -73,7 +79,7 @@ public class GameManager : MonoBehaviour
         {
             if (randomNumber == previousMinigame)
             {
-                if (randomNumber == minigames.Length)
+                if (randomNumber == minigames.Length - 1)
                 {
                     randomNumber = 0;   
                 }
