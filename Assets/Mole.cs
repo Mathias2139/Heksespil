@@ -12,7 +12,7 @@ public class Mole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Play animation when spawning
+        // Spille animation af mole der kommer op
     }
 
     // Update is called once per frame
@@ -21,8 +21,8 @@ public class Mole : MonoBehaviour
         moleTimer += Time.deltaTime;
         if (moleTimer >= totalMoleTime)
             {
-            //Play animation before destroying game object
-            Destroy(this);
+            // Spille animation af mole der går ned
+            Destroy(this.gameObject);
         }
     }
 }

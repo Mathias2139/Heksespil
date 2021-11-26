@@ -10,25 +10,25 @@ public class WhackAMole_Minigame : MonoBehaviour
     private float spawnTimer;
     private float spawnTotalTime;
     private GameObject[] moleArray;
+    public int moleCounter;
     
     // Start is called before the first frame update
     void Start()
     {
-        spawnTotalTime = Random.Range(1.5f, 3.5f);
+        spawnTotalTime = 1.5f;
         moleArray = new GameObject[9];
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Spawne nye moles
+        // Spawne nye moles
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= spawnTotalTime)
         {
             AddMole();
-            spawnTotalTime = Random.Range(1.5f, 2.5f);
+            spawnTotalTime = Random.Range(0.5f, 1.5f);
             spawnTimer = 0;
-
         }
             
         
@@ -37,9 +37,6 @@ public class WhackAMole_Minigame : MonoBehaviour
     public void StartGame()
     {
         allowInput = true;
-        AddMole();
-
-
     }
 
 
@@ -47,40 +44,44 @@ public class WhackAMole_Minigame : MonoBehaviour
     {
         if (allowInput)
         {
-            // Hvis input (1-9) har en mole (hvis ikke den position i moleArray er null?)
-            // -> slet mole (fjern game object, fjern position på array);
-            // giv ekstra tid til global time
-            // Hvis ikke -> ikke ske noget? animation af at slå på tomt hul?
+            if (moleArray[input - 1] != null)
+            {
+                // Spille animation af kost 
+                // Animation.Play();
+                RemoveMole(input-1);
+            }
+            else
+            {
+                // Spille animation af kost
+            }
         }
     }
 
     public void AddMole()
     {
-        int randomNumber = Random.Range(0, 8);
+        int randomNumber = Random.Range(0, 9);
         Debug.Log(moleArray[randomNumber]);
-        if (moleArray[randomNumber] == null)
-            {
-            GameObject RandomSpawn = SpawnPoints[randomNumber];
-            GameObject mole = Instantiate(Mole, RandomSpawn.transform.position, Quaternion.identity);
-            mole.GetComponent<Mole>().molePosition = randomNumber;
-            moleArray[randomNumber] = mole;
-        }
-        else
+        if (moleCounter < 6)
         {
-            AddMole();
+            if (moleArray[randomNumber] == null)
+            {
+                GameObject RandomSpawn = SpawnPoints[randomNumber];
+                GameObject mole = Instantiate(Mole, RandomSpawn.transform.position, Quaternion.identity);
+                mole.GetComponent<Mole>().molePosition = randomNumber;
+                moleArray[randomNumber] = mole;
+                moleCounter = moleCounter+1;
+            }
+            else
+            {
+                AddMole();
+            }
         }
     }
 
     public void RemoveMole(int position)
     {
-        //Modtage en position
-        //Finde det game object der er på den position
-    }
-
-    public void HitMole(int position)
-    {
-        //Er der en mole på det felt der er slået på?
-        //Hvis der er: fjern mole - point?
-        //Hvis der ikke er: ??
+        // Spille animation af mole der bliver slået
+        Destroy(moleArray[position]);
+        moleCounter = moleCounter - 1;
     }
 }
