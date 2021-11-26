@@ -1643,9 +1643,10 @@ MonoBehaviour:
   dialogue:
   - We gotta clean the house!<p:short> <size=90%>now,</size><p:short> <size=130%>now,</size><p:short><anim:shake>
     <size=160%>now</size></anim> <size=100%> people!</size>
-  - "I want this place looking like <color=blue>Disney on ice\u2122</color><p:short>
+  - "I want this place looking like <color=lightblue>Disney on ice\u2122</color><p:tiny>
     in <p:normal> ONE <p:normal> MINUTE!"
-  - Get rid the couches. We can't let people know we SIT!
+  - Get <p:tiny> rid of the couches. <p:short> We can't let people know we <sp:100>
+    <anim:shake><size=150%>SIT! </size></anim>
 --- !u!4 &2143420919
 Transform:
   m_ObjectHideFlags: 0

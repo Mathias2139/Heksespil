@@ -16,6 +16,7 @@ public class SkuffeSpil : MonoBehaviour
     private Vector3[] drawerStartPositions;
     public Vector3 drawerOpenAmount;
     public Image foundItemObject;
+    public Transform drawer;
     private void Start()
     {
          
@@ -84,7 +85,10 @@ public class SkuffeSpil : MonoBehaviour
         if (allowInput)
         {
             drawerOpen[input-1] = !drawerOpen[input-1];
-
+            if(drawerOpen[input - 1] == false)
+            {
+                ShakeDrawer();
+            }
             if (drawerOpen[itemPosition] && !drawerOpen[itemPosition + 3])
             {
                 Debug.Log("Found Item");
@@ -94,5 +98,14 @@ public class SkuffeSpil : MonoBehaviour
             }
         }
         
+    }
+
+    private void ShakeDrawer()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            drawer.rotation *= Quaternion.Euler(new Vector3(0, 0, Random.Range(-5, 5)));
+        }
+        drawer.rotation = Quaternion.Euler(Vector3.zero);
     }
 }
