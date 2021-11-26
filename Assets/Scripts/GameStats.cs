@@ -6,4 +6,5 @@ using UnityEngine;
 public class GameStats : ScriptableObject
 {
     public int completedMinigames;
+    public int minigamesPlayed;
 }

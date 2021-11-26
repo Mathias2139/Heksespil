@@ -49,7 +49,14 @@ public class TacTacToe : MonoBehaviour
     }
     public void StartGame()
     {
-        allowInput = true;
+        if (allowInput == true)
+        {
+            allowInput = false;
+        }
+        else
+        {
+            allowInput = true;
+        }
     }
    
     public void Input(int targetSquare)

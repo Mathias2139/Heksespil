@@ -9,42 +9,48 @@ public class DialogueManager : MonoBehaviour
     public AudioClip typingClip;
     public AudioSourceGroup audioSourceGroup;
 
-    public Button playDialogue1Button;
-    public Button playDialogue2Button;
-    public Button playDialogue3Button;
+
     public Button skipButton;
+    private int currentDialogue;
 
     [TextArea]
-    public string dialogue1;
-    [TextArea]
-    public string dialogue2;
-    [TextArea]
-    public string dialogue3;
+    public string[] dialogue;
+    
+
+    private string cachedDialogue;
 
     private DialogueVertexAnimator dialogueVertexAnimator;
     void Awake() {
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox, audioSourceGroup);
-        playDialogue1Button.onClick.AddListener(delegate { PlayDialogue1(); });
-        playDialogue2Button.onClick.AddListener(delegate { PlayDialogue2(); });
-        playDialogue3Button.onClick.AddListener(delegate { PlayDialogue3(); });
+
         skipButton.onClick.AddListener(delegate { SkipDialogue(); });
+        cachedDialogue = dialogue[0];
+        currentDialogue = 0;
     }
 
-    private void PlayDialogue1() {
-        PlayDialogue(dialogue1);
-    }
 
-    private void PlayDialogue2() {
-        PlayDialogue(dialogue2);
-    }
-
-    private void PlayDialogue3() {
-        PlayDialogue(dialogue3);
-    }
     private void SkipDialogue()
     {
-        dialogueVertexAnimator.SkipToEndOfCurrentMessage();
+        PlayDialogue(cachedDialogue);
+        currentDialogue++;
+        if (currentDialogue > dialogue.Length-1)
+        {
+            Debug.Log("Dialogue over");
+        }
+        else
+        {
+            Debug.Log(currentDialogue);
+            cachedDialogue = dialogue[currentDialogue];
+        }
+        
     }
+
+    public void AutoPlay()
+    {
+        Debug.Log("playing Dialogue");
+        PlayDialogue(dialogue[0]);
+    }
+
 
 
     private Coroutine typeRoutine = null;

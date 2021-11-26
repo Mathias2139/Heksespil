@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using MA.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     public FloatEvent localTime;
     private PlayerControls input;
     private bool[] held;
+    public string endscene;
 
     private GameObject currentMinigame;
     private int previousMinigame;
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         stats.completedMinigames = 0;
+        stats.minigamesPlayed = 0;
         input = new PlayerControls();
         held = new bool[9];
         globalTime = startTime;
@@ -41,6 +44,10 @@ public class GameManager : MonoBehaviour
     {
         globalTime -= Time.deltaTime;
         globalTimer.Raise(globalTime);
+        if(globalTime <= 0)
+        {
+            SceneManager.LoadScene(endscene);
+        }
 
     }
     public void MinigameCompleted(bool won)
@@ -50,8 +57,9 @@ public class GameManager : MonoBehaviour
         {
             stats.completedMinigames++;
         }
+        stats.minigamesPlayed++;
         //Cover Screen while switching game
-        
+
         if (runGame)
         {
             //Remove Previous Minigame
@@ -71,7 +79,7 @@ public class GameManager : MonoBehaviour
         {
             if (randomNumber == previousMinigame)
             {
-                if (randomNumber == minigames.Length)
+                if (randomNumber == minigames.Length - 1)
                 {
                     randomNumber = 0;   
                 }

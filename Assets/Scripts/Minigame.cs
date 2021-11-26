@@ -11,6 +11,7 @@ public class Minigame : MonoBehaviour
     public string minigameName;
     public string beginText;
     public int timeToComplete;
+    public AnimationCurve timeByPoints;
     public int timeReward;
     [Space(15)]
     private Coroutine broadcast;
@@ -129,6 +130,7 @@ public class Minigame : MonoBehaviour
             if (localTimer <= 0)
             {
                 EndGame(3);
+                StartGame();
             }
         }
     }
