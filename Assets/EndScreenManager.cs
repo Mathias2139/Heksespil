@@ -21,7 +21,7 @@ public class EndScreenManager : MonoBehaviour
     {
         leaderboardobjects = new List<GameObject>();
         StartCoroutine(InvokeEvents());
-        scoreDisplay.dialogue[0] = stats.completedMinigames.ToString();
+        scoreDisplay.dialogue[0] = "<sp:3>" + stats.completedMinigames.ToString();
         DisplayLeaderboard();
        
     }
@@ -32,14 +32,16 @@ public class EndScreenManager : MonoBehaviour
         {
             Destroy(obj);
         }
-        for (int i = 0; i < Mathf.Min(leaderboard.leaderboard.Count, 10); i++)
+        for (int i = 0; i < Mathf.Min(leaderboard.leaderboard.Count, 7); i++)
         {
             GameObject entry = new GameObject("Entry " + leaderboard.leaderboard[i].name);
             Text entrytext = entry.AddComponent<Text>();
             entrytext.text = leaderboard.leaderboard[i].score.ToString() + " - " + leaderboard.leaderboard[i].name;
             entrytext.font = leaderboardFont;
             entrytext.alignment = TextAnchor.MiddleCenter;
-            entrytext.fontSize = 35;
+            entrytext.fontSize = 32;
+            entrytext.resizeTextForBestFit = true;
+            entrytext.color = Color.black;
             entry.transform.SetParent(leaderboardLayoutGroup.transform);
             leaderboardobjects.Add(entry);
         }

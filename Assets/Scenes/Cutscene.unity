@@ -1641,9 +1641,11 @@ MonoBehaviour:
   audioSourceGroup: {fileID: 1677125806}
   skipButton: {fileID: 552474611}
   dialogue:
-  - Hello
-  - This is a test
-  - Goodbye
+  - We gotta clean the house!<p:short> <size=90%>now,</size><p:short> <size=130%>now,</size><p:short><anim:shake>
+    <size=160%>now</size></anim> <size=100%> people!</size>
+  - "I want this place looking like <color=blue>Disney on ice\u2122</color><p:short>
+    in <p:normal> ONE <p:normal> MINUTE!"
+  - Get rid the couches. We can't let people know we SIT!
 --- !u!4 &2143420919
 Transform:
   m_ObjectHideFlags: 0

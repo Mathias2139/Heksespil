@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Leaderboard
   m_EditorClassIdentifier: 
   leaderboard:
+  - name: "Evin\u200B"
+    score: 999
   - name: ghafwk
     score: 17
   - name: "Mathias\u200B"
