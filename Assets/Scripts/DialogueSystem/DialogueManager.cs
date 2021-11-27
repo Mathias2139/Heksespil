@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     public AudioSourceGroup audioSourceGroup;
 
 
-    public Button skipButton;
+    
     private int currentDialogue;
 
     [TextArea]
@@ -23,13 +23,13 @@ public class DialogueManager : MonoBehaviour
     void Awake() {
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox, audioSourceGroup);
 
-        skipButton.onClick.AddListener(delegate { SkipDialogue(); });
+        
         cachedDialogue = dialogue[0];
         currentDialogue = 0;
     }
 
 
-    private void SkipDialogue()
+    public void SkipDialogue()
     {
         PlayDialogue(cachedDialogue);
         currentDialogue++;

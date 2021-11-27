@@ -1148,6 +1148,30 @@ MonoBehaviour:
   minigameName: Skuffespil
   beginText: Stuff
   timeToComplete: 5
+  timeByPoints:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 3.5259564
+      value: 2.4627728
+      inSlope: -0.25052148
+      outSlope: -0.25052148
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.25730762
+    - serializedVersion: 3
+      time: 5.5593824
+      value: 1.5298042
+      inSlope: -0.06808841
+      outSlope: -0.06808841
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.45670807
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   timeReward: 4
   countdownTime: 3
   overrideCountdown: 1
@@ -1233,6 +1257,7 @@ MonoBehaviour:
   - {fileID: 5396804816288401651}
   drawerOpenAmount: {x: 0, y: -0.7, z: 0}
   foundItemObject: {fileID: 848111150}
+  drawer: {fileID: 5396804816899666869}
 --- !u!1 &5396804818119273329
 GameObject:
   m_ObjectHideFlags: 0

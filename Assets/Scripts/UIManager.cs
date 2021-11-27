@@ -7,7 +7,9 @@ public class UIManager : MonoBehaviour
 {
     public Text text;
     public Text globalTimerText;
-    public Text localTimerText;
+    public Slider localTimeSlider;
+    public Image localTimerBar;
+    public Gradient localTimerColors;
 
     private int lastGlobalTime;
     private int currentLocalTime;
@@ -20,7 +22,8 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateLocalTimer(float time)
     {
-        currentLocalTime = Mathf.Clamp(Mathf.RoundToInt(time-0.5f),0,1000);
+        localTimeSlider.value = time;
+        localTimerBar.color = localTimerColors.Evaluate(time);
     }
     public void UpdateGlobalTimer(float time)
     {
@@ -28,7 +31,7 @@ public class UIManager : MonoBehaviour
         {
             globalTimerText.text = Mathf.RoundToInt(time + 0.5f).ToString();
             lastGlobalTime = Mathf.RoundToInt(time + 0.5f);
-            localTimerText.text = currentLocalTime.ToString();
+            
 
         }
         

@@ -125,7 +125,7 @@ public class Minigame : MonoBehaviour
 
 
             localTimer -= Time.deltaTime;
-            localTime.Raise(localTimer);
+            localTime.Raise(localTimer/timeToComplete);
 
             if (localTimer <= 0)
             {

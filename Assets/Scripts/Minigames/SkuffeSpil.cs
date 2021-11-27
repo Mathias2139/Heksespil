@@ -87,7 +87,7 @@ public class SkuffeSpil : MonoBehaviour
             drawerOpen[input-1] = !drawerOpen[input-1];
             if(drawerOpen[input - 1] == false)
             {
-                ShakeDrawer();
+                StartCoroutine(ShakeDrawer());
             }
             if (drawerOpen[itemPosition] && !drawerOpen[itemPosition + 3])
             {
@@ -100,12 +100,20 @@ public class SkuffeSpil : MonoBehaviour
         
     }
 
-    private void ShakeDrawer()
+    IEnumerator ShakeDrawer()
     {
-        for (int i = 0; i < 10; i++)
+        while (true)
         {
-            drawer.rotation *= Quaternion.Euler(new Vector3(0, 0, Random.Range(-5, 5)));
+
+            for (int i = 0; i < 10; i++)
+            {
+                Debug.Log("Shaking" + Quaternion.Euler(new Vector3(0, 0, Random.Range(-500, 500)) + drawer.rotation.eulerAngles));
+                drawer.rotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-500, 500)) + drawer.rotation.eulerAngles);
+                new WaitForSeconds(0.1f);
+            }
+            drawer.rotation = Quaternion.Euler(Vector3.zero);
+            StopAllCoroutines();
+            yield return new WaitForEndOfFrame();
         }
-        drawer.rotation = Quaternion.Euler(Vector3.zero);
     }
 }

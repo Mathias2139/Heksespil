@@ -89,6 +89,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""Value"",
+                    ""id"": ""4a0f7a77-7bb3-419a-9de1-7b25e678e0f3"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -289,6 +297,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""9"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4cc27e6-5176-4826-8781-2b76db23fd26"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -306,6 +325,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player__7 = m_Player.FindAction("7", throwIfNotFound: true);
         m_Player__8 = m_Player.FindAction("8", throwIfNotFound: true);
         m_Player__9 = m_Player.FindAction("9", throwIfNotFound: true);
+        m_Player_MousePosition = m_Player.FindAction("MousePosition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -364,6 +384,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player__7;
     private readonly InputAction m_Player__8;
     private readonly InputAction m_Player__9;
+    private readonly InputAction m_Player_MousePosition;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -377,6 +398,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @_7 => m_Wrapper.m_Player__7;
         public InputAction @_8 => m_Wrapper.m_Player__8;
         public InputAction @_9 => m_Wrapper.m_Player__9;
+        public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -413,6 +435,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @_9.started -= m_Wrapper.m_PlayerActionsCallbackInterface.On_9;
                 @_9.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.On_9;
                 @_9.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.On_9;
+                @MousePosition.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePosition;
+                @MousePosition.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePosition;
+                @MousePosition.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePosition;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -444,6 +469,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @_9.started += instance.On_9;
                 @_9.performed += instance.On_9;
                 @_9.canceled += instance.On_9;
+                @MousePosition.started += instance.OnMousePosition;
+                @MousePosition.performed += instance.OnMousePosition;
+                @MousePosition.canceled += instance.OnMousePosition;
             }
         }
     }
@@ -459,5 +487,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void On_7(InputAction.CallbackContext context);
         void On_8(InputAction.CallbackContext context);
         void On_9(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
 }
