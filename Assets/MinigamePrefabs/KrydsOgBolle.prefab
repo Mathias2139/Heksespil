@@ -826,6 +826,12 @@ MonoBehaviour:
   minigameName: Kryds og Bolle
   beginText: Toe
   timeToComplete: 10
+  timeByPoints:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   timeReward: 5
   countdownTime: 3
   overrideCountdown: 1
@@ -895,8 +901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   symbols:
-  - {fileID: 8720604468809159126, guid: 2eafffdc2bac01b48a5c8d19982512d0, type: 3}
   - {fileID: -3739395637988037281, guid: 2eafffdc2bac01b48a5c8d19982512d0, type: 3}
+  - {fileID: 8720604468809159126, guid: 2eafffdc2bac01b48a5c8d19982512d0, type: 3}
   board:
   - squareRenderer: {fileID: 1841222502}
     isEmpty: 1

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class CutsceneManager : MonoBehaviour
     private int currentImage = 0;
     public Image imageRenderer;
     private DialogueManager dialogue;
+    public UnityEvent events;
     public string sceneToLoad;
     void Start()
     {
@@ -31,6 +33,7 @@ public class CutsceneManager : MonoBehaviour
         cam.transform.position = camPos + (new Vector3((pos.x - (Screen.width/2)) / 400, (pos.y - (Screen.height / 2)) / 300, 0) );
     }
 
+    
     public void NextImage()
     {
         currentImage++;
@@ -44,7 +47,13 @@ public class CutsceneManager : MonoBehaviour
         }
         
     }
-
+    public void NextDialogue(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            events.Invoke();
+        }
+    }
     public void MousePos(InputAction.CallbackContext context)
     {
         if (context.performed)

@@ -102,7 +102,7 @@ public class TacTacToe : MonoBehaviour
                 targetColumn = 3;
             }
 
-            Debug.Log("Player pressed: " + targetRow + ", " + targetColumn);
+            
 
             //Player Move
             if (board[targetSquare - 1].isEmpty)
