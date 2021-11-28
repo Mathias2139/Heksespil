@@ -7,12 +7,15 @@ public class UIManager : MonoBehaviour
 {
     public Text text;
     public Text globalTimerText;
+    public Slider[] globalTimerSliders;
     public Slider localTimeSlider;
     public Image localTimerBar;
     public Gradient localTimerColors;
 
+    private bool timerStarted;
     private int lastGlobalTime;
     private int currentLocalTime;
+    private float globalStartTime;
     
     public void UpdateCountdown(string recievedText)
     {
@@ -27,13 +30,18 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateGlobalTimer(float time)
     {
+        if (!timerStarted)
+        {
+            globalStartTime = time;
+            timerStarted = true;
+        }
         if(Mathf.RoundToInt(time + 0.5f) != lastGlobalTime)
         {
             globalTimerText.text = Mathf.RoundToInt(time + 0.5f).ToString();
             lastGlobalTime = Mathf.RoundToInt(time + 0.5f);
-            
-
         }
+        globalTimerSliders[0].value = time / globalStartTime;
+        globalTimerSliders[1].value = (time / globalStartTime) * -1 + 1;
         
     }
 
