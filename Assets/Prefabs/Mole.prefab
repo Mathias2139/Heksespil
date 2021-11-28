@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2763658239318122209}
   - component: {fileID: 8282125704584276712}
   - component: {fileID: 5638299059707807039}
-  - component: {fileID: -1902605501931743493}
+  - component: {fileID: 5808127751108951711}
+  - component: {fileID: 1670879561339836669}
   m_Layer: 0
   m_Name: Mole
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6664481160775860376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.84, y: -0.71966577, z: -7.753}
-  m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -87,7 +88,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7112447071247308852, guid: 796797f48a9a2e54e90d567f921491cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d7a7666722cd42408afc32d7b085423, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,17 +99,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &-1902605501931743493
-Animation:
+--- !u!95 &5808127751108951711
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6664481160775860376}
   m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b535d20e42f637d4ba8deb02389a8228, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &1670879561339836669
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6664481160775860376}
+  m_Enabled: 0
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: c64fb8268ec555144ae160e03f3f06b6, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 6400756721538d64f8e754678449a508, type: 2}
+  - {fileID: 7400000, guid: c64fb8268ec555144ae160e03f3f06b6, type: 2}
+  - {fileID: 7400000, guid: 86554eda6fc81ce4ca330a0cacf99e5a, type: 2}
+  - {fileID: 7400000, guid: 3039d19b237b1ce46b4e1ecc3d6a10e0, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
