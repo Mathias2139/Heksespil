@@ -104,6 +104,7 @@ public class SkuffeSpil : MonoBehaviour
                 audioplayer.clip = drawerOpeningSounds[Random.Range(0, drawerOpeningSounds.Length)];
                 audioplayer.Play();
             }
+
             if (drawerOpen[itemPosition] && !drawerOpen[itemPosition + 3])
             {
                 Debug.Log("Found Item");
@@ -116,8 +117,8 @@ public class SkuffeSpil : MonoBehaviour
     }
     private void Shake()
     {
-        rb.AddForce(Vector2.up * 1.5f, ForceMode2D.Impulse);
-        rb.AddTorque(Random.Range(-3, 3), ForceMode2D.Impulse);
+        rb.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
+        rb.AddTorque(Random.Range(-6, 6), ForceMode2D.Impulse);
     }
     IEnumerator ShakeDrawer()
     {

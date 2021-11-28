@@ -2795,7 +2795,7 @@ MonoBehaviour:
   - {fileID: 7180782629096888039, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
   - {fileID: 2831245128275075475, guid: f7b430e7f260e414fbfe3eab28d1bf18, type: 3}
   - {fileID: 5396804818044387249, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
-  runGame: 1
+  runGame: 0
   banPreviousGame: 1
   globalTimer: {fileID: 11400000, guid: 591ef2667dac74a4b859332ed046c2b9, type: 2}
   gameFinished: {fileID: 11400000, guid: 586b159bccee13948b4c0115c3694da7, type: 2}
@@ -7946,6 +7946,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1786878272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5396804816899666866, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+  m_PrefabInstance: {fileID: 5396804818111116073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &1786878273
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786878272}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -46.853596, y: -64.9851}
+      - {x: -42.79352, y: -64.85162}
+      - {x: 36.830673, y: -64.21296}
+      - {x: 42.52782, y: -65.33873}
+      - {x: 48.85604, y: 13.542416}
+      - {x: -47.96922, y: 15.763067}
+      - {x: -52.743572, y: 12.989264}
 --- !u!1 &1880098406
 GameObject:
   m_ObjectHideFlags: 0
@@ -8560,13 +8597,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 848111149, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -115.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084256095, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5396804818044387249, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: m_Name
       value: Skuffespil
       objectReference: {fileID: 0}
     - target: {fileID: 5396804818044387249, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5396804818044387250, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: m_RootOrder
@@ -8616,7 +8661,8 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 175052836}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2084256096, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
 --- !u!1001 &7180782629193207331
 PrefabInstance:
