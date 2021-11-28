@@ -2778,7 +2778,25 @@ MonoBehaviour:
   timeToComplete: 10
   timeByPoints:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.09573746
+      value: 0.721344
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -2852,15 +2870,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointer: {fileID: 1128115441}
   numberSprites:
-  - {fileID: 21300000, guid: 22264aa7cbbc5cc46bef8b5f89b0473d, type: 3}
-  - {fileID: 21300000, guid: bab8d5c918d4e0e4a8f5588df0dba0a6, type: 3}
-  - {fileID: 21300000, guid: 7e5a5b5976058e3458653cceb3f1279a, type: 3}
-  - {fileID: 21300000, guid: 596fbccac2bb396479ce595b1f10df5a, type: 3}
-  - {fileID: 21300000, guid: 1e58903142bb596429111f475e41b509, type: 3}
-  - {fileID: 21300000, guid: 2d22ae6cbf3f9c948998b9c9501221e5, type: 3}
-  - {fileID: 21300000, guid: e009573cae2cb1c4697f3a6b198df5f8, type: 3}
-  - {fileID: 21300000, guid: 4353897d6bece154390d93924a2da739, type: 3}
-  - {fileID: 21300000, guid: 1a23f2a69053fb64ea79e9d16edd4b49, type: 3}
+  - {fileID: -5919819572266388147, guid: 1fb880dd6eb73094e9291383f70cd352, type: 3}
+  - {fileID: 8628739808238645649, guid: 1fb880dd6eb73094e9291383f70cd352, type: 3}
+  - {fileID: -4997276764292491841, guid: 1fb880dd6eb73094e9291383f70cd352, type: 3}
+  - {fileID: 7555745844892204274, guid: 1fb880dd6eb73094e9291383f70cd352, type: 3}
+  - {fileID: 4313834547501322612, guid: 1fb880dd6eb73094e9291383f70cd352, type: 3}
+  - {fileID: -3909559487395528347, guid: 1fb880dd6eb73094e9291383f70cd352, type: 3}
+  - {fileID: 2381849893415205372, guid: 1fb880dd6eb73094e9291383f70cd352, type: 3}
+  - {fileID: -1777179790554912543, guid: 1fb880dd6eb73094e9291383f70cd352, type: 3}
+  - {fileID: 7544600477841916804, guid: 1fb880dd6eb73094e9291383f70cd352, type: 3}
   spriteRenderers:
   - {fileID: 374394643}
   - {fileID: 271046319}

@@ -16,9 +16,11 @@ public class SkuffeSpil : MonoBehaviour
     private Vector3[] drawerStartPositions;
     public Vector3 drawerOpenAmount;
     public Image foundItemObject;
+    public Transform drawer;
+    private Rigidbody2D rb;
     private void Start()
     {
-         
+        rb = drawer.GetComponent<Rigidbody2D>();
         randomItem = items[Random.Range(0, items.Length)];
         randomPosition = Random.Range(1, 9);
         itemPosition = randomPosition;
@@ -29,10 +31,12 @@ public class SkuffeSpil : MonoBehaviour
         drawerStartPositions = new Vector3[drawers.Length];
         foundItemObject.transform.localScale = Vector3.zero;
         foundItemObject.sprite = randomItem.look;
-        
+
+        foundItemObject.transform.position = drawers[randomPosition].transform.position - new Vector3(0, 0.3f, 0);
+
         for (int i = 0; i < drawers.Length; i++)
         {
-            drawerStartPositions[i] = drawers[i].position;
+            drawerStartPositions[i] = drawers[i].localPosition;
         }
         for (int i = 0; i < 9; i++)
         {
@@ -46,10 +50,10 @@ public class SkuffeSpil : MonoBehaviour
         drawerOpen[randomPosition] = false;
         for (int i = 0; i < drawers.Length; i++)
         {
-            drawers[i].position = drawerStartPositions[i] + drawerOpenAmount;
+            drawers[i].localPosition = drawerStartPositions[i] + drawerOpenAmount;
         }
 
-        foundItemObject.transform.position = drawerStartPositions[randomPosition] - new Vector3(0, 0.3f, 0);
+        
 
     }
     private void Update()
@@ -58,11 +62,11 @@ public class SkuffeSpil : MonoBehaviour
         {
             if (drawerOpen[i])
             {
-                drawers[i].position = Vector3.MoveTowards(drawers[i].position, drawerStartPositions[i] + drawerOpenAmount, 10 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
+                drawers[i].localPosition = Vector3.MoveTowards(drawers[i].localPosition, drawerStartPositions[i] + drawerOpenAmount, 100 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
             }
             else
             {
-                drawers[i].position = Vector3.MoveTowards(drawers[i].position, drawerStartPositions[i], 10*(1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);   
+                drawers[i].localPosition = Vector3.MoveTowards(drawers[i].localPosition, drawerStartPositions[i], 100*(1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);   
             }
             
         }
@@ -84,7 +88,10 @@ public class SkuffeSpil : MonoBehaviour
         if (allowInput)
         {
             drawerOpen[input-1] = !drawerOpen[input-1];
-
+            if(drawerOpen[input - 1] == false)
+            {
+                Shake();
+            }
             if (drawerOpen[itemPosition] && !drawerOpen[itemPosition + 3])
             {
                 Debug.Log("Found Item");
@@ -94,5 +101,26 @@ public class SkuffeSpil : MonoBehaviour
             }
         }
         
+    }
+    private void Shake()
+    {
+        rb.AddForce(Vector2.up * 1.5f, ForceMode2D.Impulse);
+        rb.AddTorque(Random.Range(-3, 3), ForceMode2D.Impulse);
+    }
+    IEnumerator ShakeDrawer()
+    {
+        while (true)
+        {
+
+            for (int i = 0; i < 10; i++)
+            {
+                
+                drawer.rotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-500, 500)) + drawer.rotation.eulerAngles);
+                new WaitForSeconds(0.1f);
+            }
+            drawer.rotation = Quaternion.Euler(Vector3.zero);
+            StopAllCoroutines();
+            yield return new WaitForEndOfFrame();
+        }
     }
 }
