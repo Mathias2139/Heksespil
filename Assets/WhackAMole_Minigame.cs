@@ -33,6 +33,15 @@ public class WhackAMole_Minigame : MonoBehaviour
             
         
     }
+    private void FixedUpdate()
+    {
+        // Holder styr på hvor mange moles der er i banen samtidigt
+        int moleCounter = 0;
+        for (int i = 0; i < moleArray.Length; i++)
+        {
+            moleCounter++;
+        }
+    } 
 
     public void StartGame()
     {
@@ -44,7 +53,7 @@ public class WhackAMole_Minigame : MonoBehaviour
     {
         if (allowInput)
         {
-            if (moleArray[input - 1] != null)
+            if (moleArray[input-1] != null)
             {
                 // Spille animation af kost 
                 // Animation.Play();
@@ -61,7 +70,7 @@ public class WhackAMole_Minigame : MonoBehaviour
     {
         int randomNumber = Random.Range(0, 9);
         Debug.Log(moleArray[randomNumber]);
-        if (moleCounter < 6)
+        if (moleCounter < 8)
         {
             if (moleArray[randomNumber] == null)
             {
@@ -69,7 +78,7 @@ public class WhackAMole_Minigame : MonoBehaviour
                 GameObject mole = Instantiate(Mole, RandomSpawn.transform.position, Quaternion.identity);
                 mole.GetComponent<Mole>().molePosition = randomNumber;
                 moleArray[randomNumber] = mole;
-                moleCounter = moleCounter+1;
+                // moleCounter = moleCounter+1;
             }
             else
             {
@@ -82,6 +91,6 @@ public class WhackAMole_Minigame : MonoBehaviour
     {
         // Spille animation af mole der bliver slået
         Destroy(moleArray[position]);
-        moleCounter = moleCounter - 1;
+        // moleCounter = moleCounter - 1;
     }
 }
