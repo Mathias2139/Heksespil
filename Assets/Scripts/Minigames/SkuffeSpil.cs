@@ -18,8 +18,12 @@ public class SkuffeSpil : MonoBehaviour
     public Image foundItemObject;
     public Transform drawer;
     private Rigidbody2D rb;
+    public AudioClip[] drawerOpeningSounds;
+    public AudioClip[] drawerClosingSounds;
+    private AudioSource audioplayer;
     private void Start()
     {
+        audioplayer = GetComponent<AudioSource>();
         rb = drawer.GetComponent<Rigidbody2D>();
         randomItem = items[Random.Range(0, items.Length)];
         randomPosition = Random.Range(1, 9);
@@ -90,7 +94,15 @@ public class SkuffeSpil : MonoBehaviour
             drawerOpen[input-1] = !drawerOpen[input-1];
             if(drawerOpen[input - 1] == false)
             {
+                //Play Random closing sound
+                audioplayer.clip = drawerClosingSounds[Random.Range(0, drawerClosingSounds.Length)];
+                audioplayer.Play();
                 Shake();
+            }
+            else
+            {
+                audioplayer.clip = drawerOpeningSounds[Random.Range(0, drawerOpeningSounds.Length)];
+                audioplayer.Play();
             }
             if (drawerOpen[itemPosition] && !drawerOpen[itemPosition + 3])
             {
