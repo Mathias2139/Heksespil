@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class CutsceneManager : MonoBehaviour
 {
     public Sprite[] images;
-    private Camera cam;
+    public Transform cam;
     private Vector3 camPos;
     private PlayerControls input;
     private Vector2 pos;
@@ -21,7 +21,7 @@ public class CutsceneManager : MonoBehaviour
     void Start()
     {
         input = new PlayerControls();
-        cam = Camera.main;
+        
         camPos = cam.transform.position;
         dialogue = GetComponent<DialogueManager>();
         dialogue.SkipDialogue();
