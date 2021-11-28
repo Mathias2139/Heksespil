@@ -174,6 +174,11 @@ public class Minigame : MonoBehaviour
     {
         startGame.Invoke();
     }
+
+    public void AddTime(float time)
+    {
+        globalTimeReward.Raise(time);
+    }
     public void EndGame(int won)
     {
         gameStarted = false;
