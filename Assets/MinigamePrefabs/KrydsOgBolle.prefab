@@ -1077,10 +1077,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigameName: Kryds og Bolle
   beginText: Toe
-  timeToComplete: 10
   timeByPoints:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.076490164
+      value: 10.010795
+      inSlope: -0.15467486
+      outSlope: -0.15467486
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.18602754
+    - serializedVersion: 3
+      time: 28.835752
+      value: 5.101616
+      inSlope: -0.18743569
+      outSlope: -0.18743569
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.17187887
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndScreenManager : MonoBehaviour
@@ -16,6 +17,7 @@ public class EndScreenManager : MonoBehaviour
     public DialogueManager scoreDisplay;
     private List<GameObject> leaderboardobjects;
     public Font leaderboardFont;
+    public string menuScene;
  
     private void Start()
     {
@@ -23,7 +25,7 @@ public class EndScreenManager : MonoBehaviour
         StartCoroutine(InvokeEvents());
         scoreDisplay.dialogue[0] = "<sp:3>" + stats.completedMinigames.ToString();
         DisplayLeaderboard();
-       
+        
     }
 
     public void DisplayLeaderboard()
@@ -46,6 +48,11 @@ public class EndScreenManager : MonoBehaviour
             leaderboardobjects.Add(entry);
         }
        
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(menuScene);
     }
 
     IEnumerator InvokeEvents()
