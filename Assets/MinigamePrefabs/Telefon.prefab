@@ -2775,27 +2775,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigameName: Telefon
   beginText: Dial
-  timeToComplete: 10
   timeByPoints:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.09573746
-      value: 0.721344
-      inSlope: 2
-      outSlope: 2
+      time: 0.076490164
+      value: 10.010795
+      inSlope: -0.32981753
+      outSlope: -0.32981753
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.07076294
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 28.835752
+      value: 5.101616
+      inSlope: -0.04006459
+      outSlope: -0.04006459
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.2632332
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

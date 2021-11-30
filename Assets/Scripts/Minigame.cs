@@ -10,7 +10,7 @@ public class Minigame : MonoBehaviour
     [Header("Minigame Setup")]
     public string minigameName;
     public string beginText;
-    public int timeToComplete;
+    private int timeToComplete;
     public AnimationCurve timeByPoints;
     public int timeReward;
     [Space(15)]
@@ -45,6 +45,8 @@ public class Minigame : MonoBehaviour
     
     private void Awake()
     {
+        timeToComplete = Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed));
+
         if (overrideCountdown)
         {
             countdownTime = overrideWords.Length;
@@ -174,6 +176,8 @@ public class Minigame : MonoBehaviour
     {
         startGame.Invoke();
     }
+
+  
     public void EndGame(int won)
     {
         gameStarted = false;

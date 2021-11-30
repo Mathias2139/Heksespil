@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MA.Events;
 
 public class WhackAMole_Minigame : MonoBehaviour
 {
@@ -11,10 +12,13 @@ public class WhackAMole_Minigame : MonoBehaviour
     private float spawnTotalTime;
     private GameObject[] moleArray;
     public int moleCounter;
+    private Minigame minigame;
+    public FloatEvent globalTime;
     
     // Start is called before the first frame update
     void Start()
     {
+        minigame = GetComponent<Minigame>();
         spawnTotalTime = 1.5f;
         moleArray = new GameObject[9];
     }
@@ -26,8 +30,17 @@ public class WhackAMole_Minigame : MonoBehaviour
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= spawnTotalTime)
         {
-            AddMole();
-            spawnTotalTime = Random.Range(0.5f, 1.5f);
+            if(spawnTotalTime < 0.7f)
+            {
+                AddMole();
+                AddMole();
+            }
+            else
+            {
+                AddMole();
+            }
+            
+            spawnTotalTime = Random.Range(0.3f, 1.3f);
             spawnTimer = 0;
         }
             
@@ -58,6 +71,7 @@ public class WhackAMole_Minigame : MonoBehaviour
                 // Spille animation af kost 
                 // Animation.Play();
                 RemoveMole(input-1);
+                globalTime.Raise(1);
             }
             else
             {
@@ -76,7 +90,9 @@ public class WhackAMole_Minigame : MonoBehaviour
             {
                 GameObject RandomSpawn = SpawnPoints[randomNumber];
                 GameObject mole = Instantiate(Mole, RandomSpawn.transform.position, Quaternion.identity);
+                mole.transform.SetParent(this.gameObject.transform);
                 mole.GetComponent<Mole>().molePosition = randomNumber;
+                
                 moleArray[randomNumber] = mole;
                 // moleCounter = moleCounter+1;
             }

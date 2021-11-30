@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
     public FloatEvent localTime;
     private PlayerControls input;
     private bool[] held;
-    public string endscene;
+    public Animator transition;
+    public StringEvent countdown;
 
     private GameObject currentMinigame;
     private int previousMinigame;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        //transition.SetBool("In", true);
         stats.completedMinigames = 0;
         stats.minigamesPlayed = 0;
         input = new PlayerControls();
@@ -46,10 +48,21 @@ public class GameManager : MonoBehaviour
         globalTimer.Raise(globalTime);
         if(globalTime <= 0)
         {
-            SceneManager.LoadScene(endscene);
+            countdown.Raise("Time Up!");
+            currentMinigame.GetComponent<Minigame>().startGame.Invoke();
+            ChangeScene();
         }
 
     }
+
+    private void ChangeScene()
+    {
+        
+        Debug.Log("Swithing SCenes");
+        transition.SetBool("In", true);
+        //SceneManager.LoadScene(endscene);
+    }
+
     public void MinigameCompleted(bool won)
     {
         //Add score and time

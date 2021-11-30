@@ -18,6 +18,7 @@ public class CutsceneManager : MonoBehaviour
     private DialogueManager dialogue;
     public UnityEvent events;
     public string sceneToLoad;
+    public Animator animator;
     void Start()
     {
         input = new PlayerControls();
@@ -43,7 +44,8 @@ public class CutsceneManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(sceneToLoad);
+            animator.SetBool("In", true);
+            //SceneManager.LoadScene(sceneToLoad);
         }
         
     }
