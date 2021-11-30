@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MA.Events;
 
 public class Mole : MonoBehaviour
 {
     public int molePosition;
     private float moleTimer;
     public float totalMoleTime;
-
+    
+    public FloatEvent globaltime;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class Mole : MonoBehaviour
         if (moleTimer >= totalMoleTime)
             {
             // Spille animation af mole der går ned
+            globaltime.Raise(-1);
             Destroy(this.gameObject);
         }
     }

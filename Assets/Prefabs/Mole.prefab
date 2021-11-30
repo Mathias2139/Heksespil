@@ -47,7 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   molePosition: 0
-  totalMoleTime: 3
+  totalMoleTime: 0.7
+  globaltime: {fileID: 11400000, guid: 3c2d01670eb023a4e9a27327dda66b19, type: 2}
 --- !u!212 &5638299059707807039
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -45,7 +45,7 @@ public class Minigame : MonoBehaviour
     
     private void Awake()
     {
-        timeToComplete = Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.completedMinigames));
+        timeToComplete = Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed));
 
         if (overrideCountdown)
         {
@@ -177,10 +177,7 @@ public class Minigame : MonoBehaviour
         startGame.Invoke();
     }
 
-    public void AddTime(float time)
-    {
-        globalTimeReward.Raise(time);
-    }
+  
     public void EndGame(int won)
     {
         gameStarted = false;
