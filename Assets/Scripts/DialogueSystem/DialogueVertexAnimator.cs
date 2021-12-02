@@ -11,7 +11,10 @@ public class DialogueVertexAnimator {
     private readonly TMP_Text textBox;
     private readonly float textAnimationScale;
     private readonly AudioSourceGroup audioSourceGroup;
-    private float secondPer = 150;
+    public float secondPer = 150;
+    public float sPCDebug = 150;
+    static private float secondsPerCharacter;
+
     public DialogueVertexAnimator(TMP_Text _textBox, AudioSourceGroup _audioSourceGroup) {
         textBox = _textBox;
         audioSourceGroup = _audioSourceGroup;
@@ -23,7 +26,7 @@ public class DialogueVertexAnimator {
     private static readonly Vector3 vecZero = Vector3.zero;
     public IEnumerator AnimateTextIn(List<DialogueCommand> commands, string processedMessage, AudioClip voice_sound, Action onFinish) {
         textAnimating = true;
-        float secondsPerCharacter = 1f / secondPer;
+        secondsPerCharacter = 1f / secondPer;
         float timeOfLastCharacter = 0;
 
         TextAnimInfo[] textAnimInfo = SeparateOutTextAnimInfo(commands);
@@ -115,7 +118,10 @@ public class DialogueVertexAnimator {
             yield return null;
         }
     }
-
+    public void ChangeSpeed(float value)
+    {
+        secondsPerCharacter = 1f / value;
+    }
     private void ExecuteCommandsForCurrentIndex(List<DialogueCommand> commands, int visableCharacterIndex, ref float secondsPerCharacter, ref float timeOfLastCharacter) {
         for (int i = 0; i < commands.Count; i++) {
             DialogueCommand command = commands[i];
@@ -126,6 +132,8 @@ public class DialogueVertexAnimator {
                         break;
                     case DialogueCommandType.TextSpeedChange:
                         secondsPerCharacter = 1f / command.floatValue;
+                        sPCDebug = 1f / command.floatValue;
+                        Debug.Log(sPCDebug);
                         break;
                 }
                 commands.RemoveAt(i);

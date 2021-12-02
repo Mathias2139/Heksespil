@@ -3413,8 +3413,8 @@ MonoBehaviour:
   typingClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
   audioSourceGroup: {fileID: 1677125806}
   dialogue:
-  - <sp:20>We gotta clean the house!<p:short> <size=90%>now,</size><p:short> <size=130%>now,</size><p:short><anim:shake>
-    <size=160%>now</size></anim> <size=100%> people!</size>
+  - "She hasn\u2019t cleaned her room<sp:3>...<sp:0> <sp:30> or scared away the rats<sp:3>...<p:normal><sp:30>
+    or summoned <anim:wave>the eldritch beings</anim> doing the entertainment!"
   - "<sp:20>I want this place looking like <color=lightblue>Disney on ice\u2122</color>
     in <p:short> ONE <p:normal>MINUTE <size=160%>! </size>"
   - <sp:20>Get<p:tiny> rid of the couches.<p:short> We can't let people know we <sp:7><anim:shake><size=150%>SIT!
