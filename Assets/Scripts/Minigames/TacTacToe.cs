@@ -147,7 +147,7 @@ public class TacTacToe : MonoBehaviour
         
 
     }
-    IEnumerator AIDelay(bool delay)
+   IEnumerator AIDelay(bool delay)
     {
         while (true)
         {
@@ -163,6 +163,7 @@ public class TacTacToe : MonoBehaviour
     }
     private void AIMove()
     {
+
         //AI Move
         List<int> emptySpots = new List<int>();
         FindEmptySpot(emptySpots);
