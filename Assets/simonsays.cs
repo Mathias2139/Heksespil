@@ -15,18 +15,22 @@ public class simonsays : MonoBehaviour
     void Start()
     {//HVAD DER SKER I STARTEN
         tal = new int[50];
+        for (int i = 0; i < tal.Length; i++)
+        {
+            tal[i] = Random.Range(0, 9);
+        }
         cimonsays = GetComponent<Minigame>();
         et = Random.Range(1, 9);
         to = Random.Range(1, 9);
         tre = Random.Range(1, 9);
         fire = Random.Range(1, 9);
 
-        //lav en random kode som er X lang
         // koden skal vises på skærmen
 
     }
     public void Input (int input)
     {//hvad der SKER NÅR SPILLEREN KLIKKER PÅ NOGET
+
        //for hver input skal det checkes om det er rigtigt eller forkert
        //hvis det er rigtigt så går den videre til næste tal 
        //hvis det er forkert så går den ikke videre
