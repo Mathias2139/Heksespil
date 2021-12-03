@@ -37,23 +37,36 @@ public class CutsceneManager : MonoBehaviour
     
     public void NextImage()
     {
+
         currentImage++;
-        if(currentImage < images.Length)
+        if (currentImage < images.Length)
         {
             imageRenderer.sprite = images[currentImage];
+            dialogue.SkipDialogue();
         }
         else
         {
             animator.SetBool("In", true);
             //SceneManager.LoadScene(sceneToLoad);
         }
-        
     }
     public void NextDialogue(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            events.Invoke();
+            currentImage++;
+            if (currentImage < images.Length)
+            {
+                imageRenderer.sprite = images[currentImage];
+                    dialogue.SkipDialogue();
+            }
+            else
+            {
+                animator.SetBool("In", true);
+                //SceneManager.LoadScene(sceneToLoad);
+            }
+
+            
         }
     }
     public void MousePos(InputAction.CallbackContext context)

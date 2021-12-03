@@ -1075,6 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0133a5cfc582c0448bd92c883af4240e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigameType: 1
   minigameName: Kryds og Bolle
   beginText: Toe
   timeByPoints:
@@ -1083,20 +1084,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.076490164
       value: 10.010795
-      inSlope: -0.32981753
-      outSlope: -0.32981753
+      inSlope: -0.36810377
+      outSlope: -0.36810377
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.07076294
+      outWeight: 0.059136588
     - serializedVersion: 3
-      time: 28.835752
-      value: 5.101616
-      inSlope: -0.04006459
-      outSlope: -0.04006459
+      time: 29.950987
+      value: 4.0100327
+      inSlope: -0.03511376
+      outSlope: -0.03511376
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.2632332
+      inWeight: 0.23158157
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

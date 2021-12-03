@@ -1759,23 +1759,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0133a5cfc582c0448bd92c883af4240e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigameType: 2
   minigameName: Skuffespil
   beginText: Stuff
   timeByPoints:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.043222666
-      value: 6.9903593
-      inSlope: -0.11567916
-      outSlope: -0.11567916
+      time: -0.16962266
+      value: 7.0066366
+      inSlope: -0.16435601
+      outSlope: -0.16435601
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.066600405
+      outWeight: 0.09519134
     - serializedVersion: 3
-      time: 30.152586
-      value: 5.0553207
+      time: 30.323027
+      value: 4.009926
       inSlope: -0.0125838015
       outSlope: -0.0125838015
       tangentMode: 0
@@ -1872,9 +1873,13 @@ MonoBehaviour:
   foundItemObject: {fileID: 848111150}
   drawer: {fileID: 5396804816899666869}
   drawerOpeningSounds:
-  - {fileID: 8300000, guid: d13d6f15cdd6ad44e94ede6960287a4f, type: 3}
+  - {fileID: 8300000, guid: efa861acfea0ead499b9e58c53e89629, type: 3}
+  - {fileID: 8300000, guid: 76035977f44d73e4eb6603c0b82d4e1a, type: 3}
+  - {fileID: 8300000, guid: bed27bcefd0d1f741a4f97079b4c9b7a, type: 3}
   drawerClosingSounds:
-  - {fileID: 8300000, guid: 940f10121df9fd94a87d46adb56cfc95, type: 3}
+  - {fileID: 8300000, guid: 057fb838e2369e746b7005468089d78b, type: 3}
+  - {fileID: 8300000, guid: 817d532a020aca641a4e1d3dcf07e568, type: 3}
+  - {fileID: 8300000, guid: bb36c28236d58f94b9da1fcc9710844a, type: 3}
 --- !u!82 &5396804818111116075
 AudioSource:
   m_ObjectHideFlags: 0

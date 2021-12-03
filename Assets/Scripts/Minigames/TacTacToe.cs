@@ -13,6 +13,7 @@ public class TacTacToe : MonoBehaviour
     public bool startRandom;
     private List<int> xMoves;
     private List<int> oMoves;
+    
 
     public int[,] winCombos = new int[8, 3]
         {
@@ -132,6 +133,7 @@ public class TacTacToe : MonoBehaviour
                     }
                 }
 
+                allowInput = false;
                 StartCoroutine(AIDelay(true));
                 Debug.Log("StartingCoroutine");
             }
@@ -155,7 +157,7 @@ public class TacTacToe : MonoBehaviour
                 StopAllCoroutines();
             }
             delay = false;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.35f - manager.currentGameState.minigamesPlayed/100);
 
         }
     }
@@ -259,7 +261,7 @@ public class TacTacToe : MonoBehaviour
             startRandom = !startRandom;
 
             //Find Random
-
+            allowInput = true;
 
         }
         else
@@ -267,6 +269,7 @@ public class TacTacToe : MonoBehaviour
             GameFinish(4);
             allowInput = false;
         }
+
     }
     private bool EvaluatePosition(int piece, int[] board, int emptySpot)
     {

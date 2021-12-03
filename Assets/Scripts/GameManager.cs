@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         //transition.SetBool("In", true);
+        stats.tracker = new List<GameStats.GameTracker>();
         stats.completedMinigames = 0;
         stats.minigamesPlayed = 0;
         input = new PlayerControls();
