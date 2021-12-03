@@ -71,7 +71,6 @@ public class WhackAMole_Minigame : MonoBehaviour
                 // Spille animation af kost 
                 // Animation.Play();
                 RemoveMole(input-1);
-                globalTime.Raise(1);
             }
             else
             {
@@ -83,7 +82,7 @@ public class WhackAMole_Minigame : MonoBehaviour
     public void AddMole()
     {
         int randomNumber = Random.Range(0, 9);
-        Debug.Log(moleArray[randomNumber]);
+        //Debug.Log(moleArray[randomNumber]);
         if (moleCounter < 8)
         {
             if (moleArray[randomNumber] == null)
@@ -105,8 +104,6 @@ public class WhackAMole_Minigame : MonoBehaviour
 
     public void RemoveMole(int position)
     {
-        // Spille animation af mole der bliver slået
-        Destroy(moleArray[position]);
-        // moleCounter = moleCounter - 1;
+        moleArray[position].GetComponent<Mole>().MoleHit();
     }
 }
