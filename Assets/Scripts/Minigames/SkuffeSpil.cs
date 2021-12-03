@@ -121,20 +121,4 @@ public class SkuffeSpil : MonoBehaviour
         rb.AddTorque(Random.Range(-7, 7), ForceMode2D.Impulse);
        
     }
-    IEnumerator ShakeDrawer()
-    {
-        while (true)
-        {
-
-            for (int i = 0; i < 10; i++)
-            {
-                
-                drawer.rotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-500, 500)) + drawer.rotation.eulerAngles);
-                new WaitForSeconds(0.1f);
-            }
-            drawer.rotation = Quaternion.Euler(Vector3.zero);
-            StopAllCoroutines();
-            yield return new WaitForEndOfFrame();
-        }
-    }
 }
