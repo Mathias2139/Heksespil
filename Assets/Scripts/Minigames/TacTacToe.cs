@@ -13,6 +13,7 @@ public class TacTacToe : MonoBehaviour
     public bool startRandom;
     private List<int> xMoves;
     private List<int> oMoves;
+    
 
     public int[,] winCombos = new int[8, 3]
         {
@@ -132,127 +133,9 @@ public class TacTacToe : MonoBehaviour
                     }
                 }
 
-                //AI Move
-                List<int> emptySpots = new List<int>();
-                FindEmptySpot(emptySpots);
-                if (emptySpots.Count != 0)
-                {
-                    if (!startRandom)
-                    {
-                        int bestScore = -100;
-                        int bestMove = 0;
-                        for (int i = 0; i < emptySpots.Count; i++)
-                        {
-
-                            int[] simboard = new int[9];
-                            int j = 0;
-                            foreach (Square symbol in board)
-                            {
-                                simboard[j] = symbol.symbol;
-                                j++;
-                            }
-
-                            int score = -100;
-                            if (EvaluatePosition(0, simboard, emptySpots[i]) == true)
-                            {
-                                
-                                score = 10;
-                            }
-                            else if (EvaluatePosition(1, simboard, emptySpots[i]) == true)
-                            {
-                                
-                                if (score < -10)
-                                {
-                                    score = -10;
-                                }
-
-                            }
-                            if (EvaluatePosition(0, simboard, emptySpots[i]) == false)
-                            {
-                                if (score < -50)
-                                {
-                                    score = -50;
-                                }
-                            }
-                            else if (EvaluatePosition(1, simboard, emptySpots[i]) == false)
-                            {
-                                if (score < -50)
-                                {
-                                    score = -50;
-                                }
-                            }
-
-                            if (score > bestScore)
-                            {
-                                bestScore = score;
-                                bestMove = emptySpots[i];
-                                Debug.Log(bestMove);
-                            }
-
-                        }
-                        if (bestScore == -100)
-                        {
-                            System.Random random = new System.Random();
-                            bestMove = emptySpots[random.Next(emptySpots.Count)];
-
-                        }
-                        board[bestMove].squareRenderer.sprite = symbols[1];
-                        board[bestMove].isEmpty = false;
-                        board[bestMove].symbol = 0;
-                        oMoves.Add(bestMove);
-                        /*
-                        if (oMoves.Count > 3)
-                        {
-                            board[oMoves[0]].squareRenderer.sprite = null;
-                            board[oMoves[0]].isEmpty = true;
-                            board[oMoves[0]].symbol = 2;
-                            oMoves.RemoveAt(0);
-                        }
-                        */
-                    }
-                    else
-                    {
-                        System.Random random = new System.Random();
-                        int index = random.Next(emptySpots.Count);
-
-                        board[emptySpots[index]].squareRenderer.sprite = symbols[1];
-                        board[emptySpots[index]].isEmpty = false;
-                        board[emptySpots[index]].symbol = 0;
-                        oMoves.Add(emptySpots[index]);
-                        /*
-                        if (oMoves.Count > 3)
-                        {
-                            board[oMoves[0]].squareRenderer.sprite = null;
-                            board[oMoves[0]].isEmpty = true;
-                            board[oMoves[0]].symbol = 2;
-                            oMoves.RemoveAt(0);
-                        }
-                        */
-                    }
-                    
-                    if (oMoves.Count >= 3)
-                    {
-                        
-                        if (CheckForWinner(0))
-                        {
-                            Debug.Log("O Wins");
-                            GameFinish(2);
-                            allowInput = false;
-                            return;
-                            
-                        }
-                    }
-                    startRandom = !startRandom;
-
-                    //Find Random
-                    
-                    
-                }
-                else
-                {
-                    GameFinish(4);
-                    allowInput = false;
-                }
+                allowInput = false;
+                StartCoroutine(AIDelay(true));
+                Debug.Log("StartingCoroutine");
             }
             else
             {
@@ -264,7 +147,130 @@ public class TacTacToe : MonoBehaviour
         
 
     }
+    IEnumerator AIDelay(bool delay)
+    {
+        while (true)
+        {
+            if (!delay)
+            {
+                AIMove();
+                StopAllCoroutines();
+            }
+            delay = false;
+            yield return new WaitForSeconds(0.35f - manager.currentGameState.minigamesPlayed/100);
 
+        }
+    }
+    private void AIMove()
+    {
+        //AI Move
+        List<int> emptySpots = new List<int>();
+        FindEmptySpot(emptySpots);
+        if (emptySpots.Count != 0)
+        {
+            if (!startRandom)
+            {
+                int bestScore = -100;
+                int bestMove = 0;
+                for (int i = 0; i < emptySpots.Count; i++)
+                {
+
+                    int[] simboard = new int[9];
+                    int j = 0;
+                    foreach (Square symbol in board)
+                    {
+                        simboard[j] = symbol.symbol;
+                        j++;
+                    }
+
+                    int score = -100;
+                    if (EvaluatePosition(0, simboard, emptySpots[i]) == true)
+                    {
+
+                        score = 10;
+                    }
+                    else if (EvaluatePosition(1, simboard, emptySpots[i]) == true)
+                    {
+
+                        if (score < -10)
+                        {
+                            score = -10;
+                        }
+
+                    }
+                    if (EvaluatePosition(0, simboard, emptySpots[i]) == false)
+                    {
+                        if (score < -50)
+                        {
+                            score = -50;
+                        }
+                    }
+                    else if (EvaluatePosition(1, simboard, emptySpots[i]) == false)
+                    {
+                        if (score < -50)
+                        {
+                            score = -50;
+                        }
+                    }
+
+                    if (score > bestScore)
+                    {
+                        bestScore = score;
+                        bestMove = emptySpots[i];
+                        Debug.Log(bestMove);
+                    }
+
+                }
+                if (bestScore == -100)
+                {
+                    System.Random random = new System.Random();
+                    bestMove = emptySpots[random.Next(emptySpots.Count)];
+
+                }
+                board[bestMove].squareRenderer.sprite = symbols[1];
+                board[bestMove].isEmpty = false;
+                board[bestMove].symbol = 0;
+                oMoves.Add(bestMove);
+              
+            }
+            else
+            {
+                System.Random random = new System.Random();
+                int index = random.Next(emptySpots.Count);
+
+                board[emptySpots[index]].squareRenderer.sprite = symbols[1];
+                board[emptySpots[index]].isEmpty = false;
+                board[emptySpots[index]].symbol = 0;
+                oMoves.Add(emptySpots[index]);
+                //play Animation
+                
+            }
+
+            if (oMoves.Count >= 3)
+            {
+
+                if (CheckForWinner(0))
+                {
+                    Debug.Log("O Wins");
+                    GameFinish(2);
+                    allowInput = false;
+                    return;
+
+                }
+            }
+            startRandom = !startRandom;
+
+            //Find Random
+            allowInput = true;
+
+        }
+        else
+        {
+            GameFinish(4);
+            allowInput = false;
+        }
+
+    }
     private bool EvaluatePosition(int piece, int[] board, int emptySpot)
     {
         

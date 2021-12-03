@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Minigame : MonoBehaviour
 {
     [Header("Minigame Setup")]
+    
     public string minigameName;
     public string beginText;
     private int timeToComplete;
@@ -221,10 +222,49 @@ public class Minigame : MonoBehaviour
             if(won == 1)
             {
                 gameFinished.Raise(true);
+                int alreadyTracked = 100;
+                for (int i = 0; i < currentGameState.tracker.Count; i++)
+                {
+                    if (currentGameState.tracker[i].name == minigameName)
+                    {
+                        alreadyTracked = i;
+                    }
+                };
+                
+                if (alreadyTracked!= 100)
+                {
+                    currentGameState.tracker[alreadyTracked].timesPlayed++;
+                    currentGameState.tracker[alreadyTracked].timesWon++;
+
+                }
+                else
+                {
+                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 1, 1));
+                }
+                
             }
             else
             {
                 gameFinished.Raise(false);
+                int alreadyTracked = 100;
+                for (int i = 0; i < currentGameState.tracker.Count; i++)
+                {
+                    if (currentGameState.tracker[i].name == minigameName)
+                    {
+                        alreadyTracked = i;
+                    }
+                };
+
+                if (alreadyTracked != 100)
+                {
+                    currentGameState.tracker[alreadyTracked].timesPlayed++;
+                    
+
+                }
+                else
+                {
+                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 0, 1));
+                }
             }
             
             if(broadcast != null)

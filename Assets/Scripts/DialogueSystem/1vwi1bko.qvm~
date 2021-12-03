@@ -32,16 +32,17 @@ public class DialogueManager : MonoBehaviour
     public void SkipDialogue()
     {
         
-        Debug.Log(dialogueVertexAnimator.sPCDebug);
-        if(dialogueVertexAnimator.sPCDebug != float.PositiveInfinity)
+        Debug.Log(dialogueVertexAnimator.secondPer);
+        if(dialogueVertexAnimator.secondPer != 0)
         {
+            
             if (currentDialogue > dialogue.Length - 1)
             {
                 Debug.Log("Dialogue over");
             }
             else
             {
-                //Debug.Log(currentDialogue);
+                Debug.Log(currentDialogue);
                 cachedDialogue = dialogue[currentDialogue];
             }
             PlayDialogue(cachedDialogue);
@@ -49,7 +50,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            dialogueVertexAnimator.ChangeSpeed(150);
+            dialogueVertexAnimator.secondPer = 150;
         }
     }
 

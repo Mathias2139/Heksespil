@@ -164,8 +164,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -682,18 +682,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143420918}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SkipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2143420920}
         m_TargetAssemblyTypeName: CutsceneManager, Assembly-CSharp
         m_MethodName: NextImage
@@ -1080,18 +1068,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143420918}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SkipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2143420920}
         m_TargetAssemblyTypeName: CutsceneManager, Assembly-CSharp
         m_MethodName: NextImage
@@ -1476,18 +1452,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143420918}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SkipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2143420920}
         m_TargetAssemblyTypeName: CutsceneManager, Assembly-CSharp
         m_MethodName: NextImage
@@ -1620,18 +1584,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143420918}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SkipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2143420920}
         m_TargetAssemblyTypeName: CutsceneManager, Assembly-CSharp
         m_MethodName: NextImage
@@ -1764,18 +1716,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143420918}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SkipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2143420920}
         m_TargetAssemblyTypeName: CutsceneManager, Assembly-CSharp
         m_MethodName: NextImage
@@ -1908,18 +1848,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143420918}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SkipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2143420920}
         m_TargetAssemblyTypeName: CutsceneManager, Assembly-CSharp
         m_MethodName: NextImage
@@ -2052,18 +1980,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143420918}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SkipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2143420920}
         m_TargetAssemblyTypeName: CutsceneManager, Assembly-CSharp
         m_MethodName: NextImage
@@ -2326,18 +2242,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143420918}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SkipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2143420920}
         m_TargetAssemblyTypeName: CutsceneManager, Assembly-CSharp
         m_MethodName: NextImage
@@ -2558,8 +2462,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2726,18 +2630,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143420918}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SkipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2143420920}
         m_TargetAssemblyTypeName: CutsceneManager, Assembly-CSharp
         m_MethodName: NextImage
@@ -2829,8 +2721,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3031,8 +2923,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3158,8 +3050,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3410,15 +3302,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 2129441184}
-  typingClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
+  typingClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   audioSourceGroup: {fileID: 1677125806}
   dialogue:
-  - <sp:20>We gotta clean the house!<p:short> <size=90%>now,</size><p:short> <size=130%>now,</size><p:short><anim:shake>
-    <size=160%>now</size></anim> <size=100%> people!</size>
-  - "<sp:20>I want this place looking like <color=lightblue>Disney on ice\u2122</color>
-    in <p:short> ONE <p:normal>MINUTE <size=160%>! </size>"
-  - <sp:20>Get<p:tiny> rid of the couches.<p:short> We can't let people know we <sp:7><anim:shake><size=150%>SIT!
-    </size></anim>
+  - "Today is <color=purple>Wendy the witch\u2019s</color> 12th birthday!"
+  - "She\u2019s invited all her friends and is super excited!"
+  - "The only problem is, she hasn\u2019t done any of the things she was supposed
+    to do before her guests arrive."
+  - "She hasn\u2019t cleaned her room<sp:3>...<sp:0> <sp:30> or scared away the rats<sp:3>...<sp:0>
+    <sp:30> or summoned <color=red><anim:wave>the eldritch beings</anim></color>
+    doing the entertainment!"
+  - "But she\u2019s not too worried. She can still make it. It\u2019s just time for
+    a little\u2026 <anim:wave>Last Minute Magic!</anim>"
 --- !u!4 &2143420919
 Transform:
   m_ObjectHideFlags: 0
@@ -3449,6 +3344,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 72c06a7099504f447a06de547c3d55a5, type: 3}
   - {fileID: 21300000, guid: 3f3ef85cee28f7b47b17098b7a53ece7, type: 3}
   - {fileID: 21300000, guid: 3d12aba0d70f8e741858a7eac02dcf37, type: 3}
+  - {fileID: 21300000, guid: 72c06a7099504f447a06de547c3d55a5, type: 3}
+  - {fileID: 21300000, guid: 3f3ef85cee28f7b47b17098b7a53ece7, type: 3}
+  - {fileID: 21300000, guid: 3d12aba0d70f8e741858a7eac02dcf37, type: 3}
+  - {fileID: 21300000, guid: 72c06a7099504f447a06de547c3d55a5, type: 3}
   cam: {fileID: 335099868}
   imageRenderer: {fileID: 1891704472}
   events:
