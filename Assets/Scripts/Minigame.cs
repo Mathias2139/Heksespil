@@ -8,9 +8,10 @@ using UnityEngine.UI;
 public class Minigame : MonoBehaviour
 {
     [Header("Minigame Setup")]
+    
     public string minigameName;
     public string beginText;
-    public int timeToComplete;
+    private int timeToComplete;
     public AnimationCurve timeByPoints;
     public int timeReward;
     [Space(15)]
@@ -45,6 +46,8 @@ public class Minigame : MonoBehaviour
     
     private void Awake()
     {
+        timeToComplete = Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed));
+
         if (overrideCountdown)
         {
             countdownTime = overrideWords.Length;
@@ -175,10 +178,7 @@ public class Minigame : MonoBehaviour
         startGame.Invoke();
     }
 
-    public void AddTime(float time)
-    {
-        globalTimeReward.Raise(time);
-    }
+  
     public void EndGame(int won)
     {
         gameStarted = false;
@@ -222,10 +222,49 @@ public class Minigame : MonoBehaviour
             if(won == 1)
             {
                 gameFinished.Raise(true);
+                int alreadyTracked = 100;
+                for (int i = 0; i < currentGameState.tracker.Count; i++)
+                {
+                    if (currentGameState.tracker[i].name == minigameName)
+                    {
+                        alreadyTracked = i;
+                    }
+                };
+                
+                if (alreadyTracked!= 100)
+                {
+                    currentGameState.tracker[alreadyTracked].timesPlayed++;
+                    currentGameState.tracker[alreadyTracked].timesWon++;
+
+                }
+                else
+                {
+                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 1, 1));
+                }
+                
             }
             else
             {
                 gameFinished.Raise(false);
+                int alreadyTracked = 100;
+                for (int i = 0; i < currentGameState.tracker.Count; i++)
+                {
+                    if (currentGameState.tracker[i].name == minigameName)
+                    {
+                        alreadyTracked = i;
+                    }
+                };
+
+                if (alreadyTracked != 100)
+                {
+                    currentGameState.tracker[alreadyTracked].timesPlayed++;
+                    
+
+                }
+                else
+                {
+                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 0, 1));
+                }
             }
             
             if(broadcast != null)

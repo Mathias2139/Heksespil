@@ -31,18 +31,26 @@ public class DialogueManager : MonoBehaviour
 
     public void SkipDialogue()
     {
-        PlayDialogue(cachedDialogue);
-        currentDialogue++;
-        if (currentDialogue > dialogue.Length-1)
+        
+        Debug.Log(dialogueVertexAnimator.sPCDebug);
+        if(dialogueVertexAnimator.sPCDebug != float.PositiveInfinity)
         {
-            Debug.Log("Dialogue over");
+            if (currentDialogue > dialogue.Length - 1)
+            {
+                Debug.Log("Dialogue over");
+            }
+            else
+            {
+                //Debug.Log(currentDialogue);
+                cachedDialogue = dialogue[currentDialogue];
+            }
+            PlayDialogue(cachedDialogue);
+            currentDialogue++;
         }
         else
         {
-            Debug.Log(currentDialogue);
-            cachedDialogue = dialogue[currentDialogue];
+            dialogueVertexAnimator.ChangeSpeed(150);
         }
-        
     }
 
     public void AutoPlay()

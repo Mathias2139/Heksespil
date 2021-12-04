@@ -246,11 +246,11 @@ RectTransform:
   m_LocalScale: {x: 1.0472, y: 1.0472, z: 1.0472}
   m_Children: []
   m_Father: {fileID: 840993671}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -164.99998, y: 148}
+  m_AnchoredPosition: {x: -179, y: 148}
   m_SizeDelta: {x: 284.5472, y: 88.9203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96113806
@@ -380,11 +380,11 @@ RectTransform:
   m_LocalScale: {x: 1.0472, y: 1.0472, z: 1.0472}
   m_Children: []
   m_Father: {fileID: 840993671}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -164.99998, y: 69}
+  m_AnchoredPosition: {x: -179, y: 69}
   m_SizeDelta: {x: 284.5472, y: 88.9203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228504129
@@ -597,11 +597,11 @@ RectTransform:
   m_Children:
   - {fileID: 1315874269}
   m_Father: {fileID: 840993671}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -43}
+  m_AnchoredPosition: {x: -14.000021, y: -42.999985}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &247321963
@@ -752,11 +752,11 @@ RectTransform:
   m_Children:
   - {fileID: 1834430181}
   m_Father: {fileID: 840993671}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -169.08, y: -76.383255}
+  m_AnchoredPosition: {x: -183.08002, y: -76.383255}
   m_SizeDelta: {x: 292.71, y: 65.1185}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &334743480
@@ -941,7 +941,6 @@ MonoBehaviour:
   textBox: {fileID: 2123283427}
   typingClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
   audioSourceGroup: {fileID: 1200986401}
-  skipButton: {fileID: 247321963}
   dialogue:
   - Here
 --- !u!1 &419380757
@@ -976,11 +975,11 @@ RectTransform:
   m_Children:
   - {fileID: 244685605}
   m_Father: {fileID: 840993671}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -250.03, y: 72.194}
+  m_AnchoredPosition: {x: -264.03003, y: 72.194}
   m_SizeDelta: {x: 153.04, y: 60.8689}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419380759
@@ -1099,11 +1098,11 @@ RectTransform:
   m_Children:
   - {fileID: 885571423}
   m_Father: {fileID: 840993671}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -94.057, y: 72.194}
+  m_AnchoredPosition: {x: -108.05702, y: 72.194}
   m_SizeDelta: {x: 166.89, y: 60.8689}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553283821
@@ -1233,7 +1232,6 @@ MonoBehaviour:
   textBox: {fileID: 1483732724}
   typingClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
   audioSourceGroup: {fileID: 1200986401}
-  skipButton: {fileID: 247321963}
   dialogue:
   - 
 --- !u!1 &840993667
@@ -1327,6 +1325,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1913890451}
   - {fileID: 96113805}
   - {fileID: 228504128}
   - {fileID: 1206667163}
@@ -1758,11 +1757,11 @@ RectTransform:
   m_LocalScale: {x: 1.0472, y: 1.0472, z: 1.0472}
   m_Children: []
   m_Father: {fileID: 840993671}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165, y: -12}
+  m_AnchoredPosition: {x: -179.00002, y: -12}
   m_SizeDelta: {x: 284.5472, y: 88.9203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206667164
@@ -2234,7 +2233,7 @@ RectTransform:
   m_Children:
   - {fileID: 1483732723}
   m_Father: {fileID: 840993671}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2450,6 +2449,7 @@ GameObject:
   - component: {fileID: 1603760175}
   - component: {fileID: 1603760174}
   - component: {fileID: 1603760173}
+  - component: {fileID: 1603760176}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2522,6 +2522,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1603760176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603760172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1631045127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +2647,7 @@ MonoBehaviour:
   timeBetweenEvents: 02000000010000000100000001000000
   scoreDisplay: {fileID: 1960217964}
   leaderboardFont: {fileID: 12800000, guid: 8785d35c134b14a45aef2c2e07fa422c, type: 3}
+  menuScene: 
 --- !u!4 &1631045129
 Transform:
   m_ObjectHideFlags: 0
@@ -2786,7 +2820,6 @@ MonoBehaviour:
   textBox: {fileID: 96113806}
   typingClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
   audioSourceGroup: {fileID: 1200986401}
-  skipButton: {fileID: 247321963}
   dialogue:
   - <sp:10>Your score
 --- !u!4 &1846307732
@@ -2803,6 +2836,81 @@ Transform:
   m_Father: {fileID: 296391834}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1913890450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1913890451}
+  - component: {fileID: 1913890453}
+  - component: {fileID: 1913890452}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1913890451
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913890450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 840993671}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1913890452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913890450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.40118623, g: 0.36973903, b: 0.41509432, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1913890453
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913890450}
+  m_CullTransparentMesh: 1
 --- !u!1 &1960217963
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,7 +2943,6 @@ MonoBehaviour:
   textBox: {fileID: 228504129}
   typingClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
   audioSourceGroup: {fileID: 1200986401}
-  skipButton: {fileID: 247321963}
   dialogue:
   - <sp:2>53
 --- !u!4 &1960217965
@@ -2898,7 +3005,6 @@ MonoBehaviour:
   textBox: {fileID: 1206667164}
   typingClip: {fileID: 8300000, guid: e113cc52b11c7ea43a2c422550c7676a, type: 3}
   audioSourceGroup: {fileID: 1200986401}
-  skipButton: {fileID: 247321963}
   dialogue:
   - Enter your name
 --- !u!1 &2123283424

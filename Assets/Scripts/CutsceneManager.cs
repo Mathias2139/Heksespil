@@ -18,6 +18,7 @@ public class CutsceneManager : MonoBehaviour
     private DialogueManager dialogue;
     public UnityEvent events;
     public string sceneToLoad;
+    public Animator animator;
     void Start()
     {
         input = new PlayerControls();
@@ -36,22 +37,36 @@ public class CutsceneManager : MonoBehaviour
     
     public void NextImage()
     {
+
         currentImage++;
-        if(currentImage < images.Length)
+        if (currentImage < images.Length)
         {
             imageRenderer.sprite = images[currentImage];
+            dialogue.SkipDialogue();
         }
         else
         {
-            SceneManager.LoadScene(sceneToLoad);
+            animator.SetBool("In", true);
+            //SceneManager.LoadScene(sceneToLoad);
         }
-        
     }
     public void NextDialogue(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            events.Invoke();
+            currentImage++;
+            if (currentImage < images.Length)
+            {
+                imageRenderer.sprite = images[currentImage];
+                    dialogue.SkipDialogue();
+            }
+            else
+            {
+                animator.SetBool("In", true);
+                //SceneManager.LoadScene(sceneToLoad);
+            }
+
+            
         }
     }
     public void MousePos(InputAction.CallbackContext context)
