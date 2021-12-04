@@ -133,7 +133,7 @@ public class DialogueVertexAnimator {
                     case DialogueCommandType.TextSpeedChange:
                         secondsPerCharacter = 1f / command.floatValue;
                         sPCDebug = 1f / command.floatValue;
-                        Debug.Log(sPCDebug);
+                        //Debug.Log(sPCDebug);
                         break;
                 }
                 commands.RemoveAt(i);
