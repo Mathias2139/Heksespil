@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c4bc9a22bf84648b2e436e2446c6bb, type: 3}
   m_Name: Stats
   m_EditorClassIdentifier: 
-  completedMinigames: 14
-  minigamesPlayed: 33
+  completedMinigames: 10
+  minigamesPlayed: 2
+  tracker:
+  - name: Whack-A-Mole
+    timesWon: 0
+    timesPlayed: 1
+  - name: Kryds og Bolle
+    timesWon: 0
+    timesPlayed: 1
