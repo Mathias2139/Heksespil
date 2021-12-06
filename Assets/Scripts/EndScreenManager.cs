@@ -18,13 +18,24 @@ public class EndScreenManager : MonoBehaviour
     private List<GameObject> leaderboardobjects;
     public Font leaderboardFont;
     public string menuScene;
+    private bool StatsShown;
  
     private void Start()
     {
         leaderboardobjects = new List<GameObject>();
-        StartCoroutine(InvokeEvents());
+        
         scoreDisplay.dialogue[0] = "<sp:3>" + stats.completedMinigames.ToString();
         DisplayLeaderboard();
+        
+    }
+
+    public void ShowStats()
+    {
+        if (!StatsShown)
+        {
+            StatsShown = true;
+            StartCoroutine(InvokeEvents());
+        }
         
     }
 
