@@ -19,16 +19,38 @@ public class EndScreenManager : MonoBehaviour
     public Font leaderboardFont;
     public string menuScene;
     private bool StatsShown;
- 
+    private int endscreenState = 0;
+    public GameObject backbutton;
     private void Start()
     {
         leaderboardobjects = new List<GameObject>();
         
         scoreDisplay.dialogue[0] = "<sp:3>" + stats.completedMinigames.ToString();
         DisplayLeaderboard();
-        
+        AdvanceEndscreen();
     }
 
+    public void AdvanceEndscreen()
+    {
+        switch (endscreenState)
+        {
+            case 0:
+                //Play result dialogue
+                endscreenState++;
+                break;
+            case 1:
+                ShowStats();
+                endscreenState++;
+                break;
+            case 2:
+                //Show Bargraph
+                backbutton.SetActive(true);
+                endscreenState++;
+                break;
+            case 3:
+                break;
+        }
+    }
     public void ShowStats()
     {
         if (!StatsShown)

@@ -15,11 +15,13 @@ public class GameStats : ScriptableObject
         public string name;
         public int timesWon;
         public int timesPlayed;
-        public GameTracker(string name, int timesWon, int timesPlayed)
+        public Sprite sprite;
+        public GameTracker(string name, int timesWon, int timesPlayed, Sprite sprite)
         {
             this.name = name;
             this.timesWon = timesWon;
             this.timesPlayed = timesPlayed;
+            this.sprite = sprite;
         }
     }
 }
