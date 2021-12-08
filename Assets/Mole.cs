@@ -14,12 +14,14 @@ public class Mole : MonoBehaviour
     public AudioSource hit;
     private bool exitPlaying;
     private Coroutine exitRoutine;
+    private bool isHit;
 
     // Start is called before the first frame update
     void Start()
     {
         mole_Animator = GetComponent<Animator>();
         exitPlaying = false;
+        isHit = false;
     }
 
     // Update is called once per frame
@@ -65,9 +67,14 @@ public class Mole : MonoBehaviour
         {
             StopCoroutine(exitRoutine);
         }
+        if (isHit == false)
+        {
+            isHit = true;
             hit.Play();
             mole_Animator.SetTrigger("Hit");
             globaltime.Raise(1);
-            Destroy(this.gameObject,1);
+            Destroy(this.gameObject, 1);
+        }    
+        
     }
 }
