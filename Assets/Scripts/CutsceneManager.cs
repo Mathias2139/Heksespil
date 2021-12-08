@@ -15,7 +15,7 @@ public class CutsceneManager : MonoBehaviour
     private Vector2 pos;
     private int currentImage = 0;
     public Image imageRenderer;
-    private DialogueManager dialogue;
+    private ScrapbookDialogueManager dialogue;
     public UnityEvent events;
     public string sceneToLoad;
     public Animator animator;
@@ -24,14 +24,14 @@ public class CutsceneManager : MonoBehaviour
         input = new PlayerControls();
         
         camPos = cam.transform.position;
-        dialogue = GetComponent<DialogueManager>();
+        dialogue = GetComponent<ScrapbookDialogueManager>();
         dialogue.SkipDialogue();
     }
 
     // Update is called once per frame
     void Update()
     {
-        cam.transform.position = camPos + (new Vector3((pos.x - (Screen.width/2)) / 400, (pos.y - (Screen.height / 2)) / 300, 0) );
+        //cam.transform.localPosition = camPos + (new Vector3((pos.x - (Screen.width/2)) / 400, (pos.y - (Screen.height / 2)) / 300, 0) );
     }
 
     

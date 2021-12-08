@@ -39,7 +39,7 @@ public class SubmitHighscore : MonoBehaviour
                 leaderboard.leaderboard.Insert(i, new Leaderboard.entry(text.text, stats.completedMinigames));
                 newScoreText.transform.SetSiblingIndex(i);
                 newScoreText.SetActive(true);
-                newScoreManager.dialogue[0] = "<anim:wave>"+stats.completedMinigames.ToString() + " - " + text.text + "</anim>";
+                newScoreManager.dialogue[0] = "<sp:10><anim:wave>"+stats.completedMinigames.ToString() + " - " + text.text + "</anim>";
                 newScoreManager.AutoPlay();
                 
 
