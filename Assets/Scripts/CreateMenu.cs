@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class CreateMenu : MonoBehaviour
 {
-    [MenuItem("GameObject/ Heksespil/Minigame",false,10)]
+    /*[MenuItem("GameObject/ Heksespil/Minigame",false,10)]
     static void CreateCustomGameObject(MenuCommand menuCommand)
     {
         // Create a custom game object
@@ -42,4 +42,5 @@ public class CreateMenu : MonoBehaviour
         Undo.RegisterCreatedObjectUndo(go, "Create " + go.name);
         Selection.activeObject = go;
     }
+    */
 }
