@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using MA.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,11 +24,13 @@ public class GameManager : MonoBehaviour
     private bool[] held;
     public Animator transition;
     public StringEvent countdown;
-
+    private float currentTimeGain = 0;
+    private float timeGainResetTimer = 3;
     private GameObject currentMinigame;
     private int previousMinigame;
     private int randomNumber;
-
+    public Animation globalTimerAnimation;
+    public GameObject globalTimerAdd;
     private void Start()
     {
         //transition.SetBool("In", true);
@@ -46,14 +49,39 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         globalTime -= Time.deltaTime;
-        globalTimer.Raise(globalTime);
+        
         if(globalTime <= 0)
         {
             countdown.Raise("Time Up!");
             currentMinigame.GetComponent<Minigame>().startGame.Invoke();
             ChangeScene();
         }
+        if(currentTimeGain != 0)
+        {
+            
+            timeGainResetTimer -= Time.deltaTime;
+            if(timeGainResetTimer <= 0)
+            {
+                //Play Add Time Animation
+                globalTimerAnimation.Play("ApplyTime");
+            }
+        }
+        else
+        {
+            globalTimerAdd.SetActive(false);
+        }
 
+        globalTimer.Raise(Mathf.Max(globalTime-currentTimeGain,0));
+        if(globalTime <= currentTimeGain)
+        {
+            globalTime = currentTimeGain;
+        }
+    }
+
+    public void ResetTimeGain()
+    {
+        currentTimeGain = 0;
+        timeGainResetTimer = 3;
     }
 
     private void ChangeScene()
@@ -129,9 +157,21 @@ public class GameManager : MonoBehaviour
 
     public void AddTime(float time)
     {
+        globalTimerAdd.SetActive(true);
+        globalTime += (time);
+        currentTimeGain += time;
+        //Play TimeGainIncrease Animation
+        if (currentTimeGain > 0)
+        {
+            globalTimerAdd.GetComponent<Text>().text = "+" + Mathf.RoundToInt(currentTimeGain).ToString();
+        }
+        else
+        {
+            globalTimerAdd.GetComponent<Text>().text = Mathf.RoundToInt(currentTimeGain).ToString();
+        }
         
-        globalTime += (time + 0.01f);
-        
+        globalTimerAnimation.Play("TimeGainIncrease");
+        timeGainResetTimer = 3;
     }
     private void LateUpdate()
     {

@@ -1075,8 +1075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0133a5cfc582c0448bd92c883af4240e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigameType: 1
   minigameName: Kryds og Bolle
+  gameIcon: {fileID: -5640798556129938080, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
   beginText: Toe
   timeByPoints:
     serializedVersion: 2

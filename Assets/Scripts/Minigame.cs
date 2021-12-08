@@ -10,6 +10,7 @@ public class Minigame : MonoBehaviour
     [Header("Minigame Setup")]
     
     public string minigameName;
+    public Sprite gameIcon;
     public string beginText;
     private int timeToComplete;
     public AnimationCurve timeByPoints;
@@ -239,7 +240,7 @@ public class Minigame : MonoBehaviour
                 }
                 else
                 {
-                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 1, 1));
+                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 1, 1, gameIcon));
                 }
                 
             }
@@ -263,7 +264,7 @@ public class Minigame : MonoBehaviour
                 }
                 else
                 {
-                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 0, 1));
+                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 0, 1, gameIcon));
                 }
             }
             
