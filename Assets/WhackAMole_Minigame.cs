@@ -82,7 +82,6 @@ public class WhackAMole_Minigame : MonoBehaviour
     public void AddMole()
     {
         int randomNumber = Random.Range(0, 9);
-        //Debug.Log(moleArray[randomNumber]);
         if (moleCounter < 8)
         {
             if (moleArray[randomNumber] == null)
@@ -91,7 +90,6 @@ public class WhackAMole_Minigame : MonoBehaviour
                 GameObject mole = Instantiate(Mole, RandomSpawn.transform.position, Quaternion.identity);
                 mole.transform.SetParent(this.gameObject.transform);
                 mole.GetComponent<Mole>().molePosition = randomNumber;
-                
                 moleArray[randomNumber] = mole;
                 // moleCounter = moleCounter+1;
             }
