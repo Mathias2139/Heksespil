@@ -16,6 +16,18 @@ MonoBehaviour:
   minigamesPlayed: 1
   tracker:
   - name: Whack-A-Mole
-    timesWon: 0
-    timesPlayed: 1
+    timesWon: 5
+    timesPlayed: 5
+    sprite: {fileID: 9102573440031638504, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
+  - name: Whack-A-Mole
+    timesWon: 3
+    timesPlayed: 4
     sprite: {fileID: 988898319601108913, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
+  - name: Whack-A-Mole
+    timesWon: 9
+    timesPlayed: 2
+    sprite: {fileID: 5062666878470025574, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
+  - name: Whack-A-Mole
+    timesWon: 2
+    timesPlayed: 5
+    sprite: {fileID: -5640798556129938080, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}

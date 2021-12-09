@@ -50,6 +50,36 @@ TextureImporter:
   - first:
       213: -3043608638793035845
     second: Skuffe_15
+  - first:
+      213: 6603878434384437320
+    second: Skuffe_16
+  - first:
+      213: 4958606939729605388
+    second: Skuffe_17
+  - first:
+      213: 5834375873085997801
+    second: Skuffe_18
+  - first:
+      213: 6821757089123254105
+    second: Skuffe_19
+  - first:
+      213: 8419770801199919281
+    second: Skuffe_20
+  - first:
+      213: -8280316510884314289
+    second: Skuffe_21
+  - first:
+      213: -2824020610763638217
+    second: Skuffe_22
+  - first:
+      213: 2992998563559643376
+    second: Skuffe_23
+  - first:
+      213: 5103885541138606316
+    second: Skuffe_24
+  - first:
+      213: 7614579858634127522
+    second: Skuffe_25
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -409,10 +439,10 @@ TextureImporter:
       name: Skuffe_11
       rect:
         serializedVersion: 2
-        x: 1896
-        y: 1458
-        width: 2112
-        height: 505
+        x: 1869
+        y: 1368
+        width: 2165
+        height: 786
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,9 +461,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1887
-        y: 2116
+        y: 2272
         width: 2119
-        height: 1185
+        height: 745
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,12 +481,12 @@ TextureImporter:
       name: Skuffe_13
       rect:
         serializedVersion: 2
-        x: 4334
-        y: 2190
+        x: 4253
+        y: 2514
         width: 399
         height: 325
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -472,12 +502,12 @@ TextureImporter:
       name: Skuffe_14
       rect:
         serializedVersion: 2
-        x: 4803
-        y: 2235
+        x: 4733
+        y: 2559
         width: 256
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -493,12 +523,12 @@ TextureImporter:
       name: Skuffe_15
       rect:
         serializedVersion: 2
-        x: 5181
-        y: 2239
+        x: 5110
+        y: 2574
         width: 284
         height: 392
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -506,6 +536,216 @@ TextureImporter:
       bones: []
       spriteID: bbf4e69911ee2c5d0800000000000000
       internalID: -3043608638793035845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_16
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 3329
+        width: 2696
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840e85d7270b5ab50800000000000000
+      internalID: 6603878434384437320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_17
+      rect:
+        serializedVersion: 2
+        x: 4232
+        y: 1926
+        width: 556
+        height: 538
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03be576db280d440800000000000000
+      internalID: 4958606939729605388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_18
+      rect:
+        serializedVersion: 2
+        x: 4827
+        y: 1631
+        width: 545
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e28669d1fdd7f050800000000000000
+      internalID: 5834375873085997801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_19
+      rect:
+        serializedVersion: 2
+        x: 5389
+        y: 1905
+        width: 516
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fb139edefbbae50800000000000000
+      internalID: 6821757089123254105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_20
+      rect:
+        serializedVersion: 2
+        x: 4205
+        y: 1116
+        width: 525
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b03abf0fe809d470800000000000000
+      internalID: 8419770801199919281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_21
+      rect:
+        serializedVersion: 2
+        x: 4806
+        y: 895
+        width: 577
+        height: 595
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4340fc1108661d80800000000000000
+      internalID: -8280316510884314289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_22
+      rect:
+        serializedVersion: 2
+        x: 5398
+        y: 1151
+        width: 522
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a3d0187301fc8d0800000000000000
+      internalID: -2824020610763638217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_23
+      rect:
+        serializedVersion: 2
+        x: 4220
+        y: 157
+        width: 525
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f81a320654498920800000000000000
+      internalID: 2992998563559643376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_24
+      rect:
+        serializedVersion: 2
+        x: 4765
+        y: 331
+        width: 600
+        height: 429
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8a1ddabd4a4d640800000000000000
+      internalID: 5103885541138606316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skuffe_25
+      rect:
+        serializedVersion: 2
+        x: 5395
+        y: 418
+        width: 530
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a83bb3a90c6ca960800000000000000
+      internalID: 7614579858634127522
       vertices: []
       indices: 
       edges: []

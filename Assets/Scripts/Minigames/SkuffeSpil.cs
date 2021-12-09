@@ -13,7 +13,11 @@ public class SkuffeSpil : MonoBehaviour
     private int randomPosition;
     private bool[] drawerOpen;
     public Transform[] drawers;
+    public Transform[] drawerFronts;
+    public float[] drawerOpenAmounts;
+    
     private Vector3[] drawerStartPositions;
+    private Vector3[] drawerFrontsSP;
     public Vector3 drawerOpenAmount;
     public Image foundItemObject;
     public Transform drawer;
@@ -21,6 +25,7 @@ public class SkuffeSpil : MonoBehaviour
     public AudioClip[] drawerOpeningSounds;
     public AudioClip[] drawerClosingSounds;
     private AudioSource audioplayer;
+    
     private void Start()
     {
         audioplayer = GetComponent<AudioSource>();
@@ -33,14 +38,19 @@ public class SkuffeSpil : MonoBehaviour
         minigame.beginText = randomItem.discription;
         drawerOpen = new bool[12];
         drawerStartPositions = new Vector3[drawers.Length];
+        drawerFrontsSP = new Vector3[drawerFronts.Length];
         foundItemObject.transform.localScale = Vector3.zero;
         foundItemObject.sprite = randomItem.look;
-
+        
         foundItemObject.transform.position = drawers[randomPosition].transform.position - new Vector3(0, 0.3f, 0);
 
         for (int i = 0; i < drawers.Length; i++)
         {
             drawerStartPositions[i] = drawers[i].localPosition;
+        }
+        for (int i = 0; i < drawerFronts.Length; i++)
+        {
+            drawerFrontsSP[i] = drawerFronts[i].localPosition;
         }
         for (int i = 0; i < 9; i++)
         {
@@ -66,14 +76,17 @@ public class SkuffeSpil : MonoBehaviour
         {
             if (drawerOpen[i])
             {
-                drawers[i].localPosition = Vector3.MoveTowards(drawers[i].localPosition, drawerStartPositions[i] + drawerOpenAmount, 100 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
+                drawers[i].localPosition = Vector3.MoveTowards(drawers[i].localPosition, new Vector3(drawerStartPositions[i].x, drawerStartPositions[i].y + drawerOpenAmounts[i], drawerStartPositions[i].z), 100 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
+                drawerFronts[i].localPosition = Vector3.MoveTowards(drawerFronts[i].localPosition, new Vector3(drawerFrontsSP[i].x, drawerFrontsSP[i].y + drawerOpenAmounts[i], drawerFrontsSP[i].z), 100 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
             }
             else
             {
-                drawers[i].localPosition = Vector3.MoveTowards(drawers[i].localPosition, drawerStartPositions[i], 100*(1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);   
+                drawers[i].localPosition = Vector3.MoveTowards(drawers[i].localPosition, drawerStartPositions[i], 100*(1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
+                drawerFronts[i].localPosition = Vector3.MoveTowards(drawerFronts[i].localPosition, drawerFrontsSP[i], 100 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
             }
             
         }
+        
     }
     public void StartGame()
     {

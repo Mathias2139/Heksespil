@@ -7,6 +7,9 @@ public class Barchart_Controller : MonoBehaviour
 {
     public GameObject barPrefab;
     public GameStats stats;
+    public RectTransform textTemplate;
+    public float graphHeight;
+    public GameObject parent;
 
     private void Start()
     {
@@ -44,5 +47,18 @@ public class Barchart_Controller : MonoBehaviour
                 image.color = Color.clear;
             }
         }
+
+
+        int seperatorCount = Mathf.Min(8,bestScore+1);
+        for (int i = 0; i < seperatorCount; i++)
+        {
+            RectTransform labelY = Instantiate(textTemplate);
+            labelY.SetParent(parent.transform, false);
+            labelY.gameObject.SetActive(true);
+            float normalizedValue = i * 1f / seperatorCount;
+            labelY.anchoredPosition = new Vector2(-7f, normalizedValue * graphHeight);
+            labelY.GetComponent<Text>().text = Mathf.RoundToInt((normalizedValue * bestScore)+0.5f).ToString();
+        }
+
     }
 }
