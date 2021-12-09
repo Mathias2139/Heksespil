@@ -15,6 +15,7 @@ public class Minigame : MonoBehaviour
     private int timeToComplete;
     public AnimationCurve timeByPoints;
     public int timeReward;
+    public bool winByTimeGain = false;
     [Space(15)]
     private Coroutine broadcast;
     [Header("Countdown Settings")]
@@ -35,8 +36,10 @@ public class Minigame : MonoBehaviour
     [HideInInspector]
     public FloatEvent localTime;
     public StringEvent countdown;
-    
-    
+    [HideInInspector]
+    public float timeGain;
+
+
     [Space(15)]
     private float localTimer;
     [Header("Canvas Setup")]
@@ -189,20 +192,38 @@ public class Minigame : MonoBehaviour
             case 1:
                 countdown.Raise("You Won");
                 globalTimeReward.Raise(timeReward);
+                TrackWon();
                 
                 
                 break;
             case 2:
                 countdown.Raise("You Lost");
                 globalTimeReward.Raise(-localTimer);
+                TrackLost();
                 
                 break;
             case 3:
                 countdown.Raise("Time Up");
+                if (winByTimeGain == true)
+                {
+                    if (timeGain > 0)
+                    {
+                        TrackWon();
+                    }
+                    else
+                    {
+                        TrackLost();
+                    }
+                }
+                else
+                {
+                    TrackLost();
+                }
                 
                 break;
             case 4:
                 countdown.Raise("Tie");
+                TrackLost();
                 
                 
                 break;
@@ -223,57 +244,64 @@ public class Minigame : MonoBehaviour
             if(won == 1)
             {
                 gameFinished.Raise(true);
-                int alreadyTracked = 100;
-                for (int i = 0; i < currentGameState.tracker.Count; i++)
-                {
-                    if (currentGameState.tracker[i].name == minigameName)
-                    {
-                        alreadyTracked = i;
-                    }
-                };
-                
-                if (alreadyTracked!= 100)
-                {
-                    currentGameState.tracker[alreadyTracked].timesPlayed++;
-                    currentGameState.tracker[alreadyTracked].timesWon++;
-
-                }
-                else
-                {
-                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 1, 1, gameIcon));
-                }
-                
             }
             else
             {
                 gameFinished.Raise(false);
-                int alreadyTracked = 100;
-                for (int i = 0; i < currentGameState.tracker.Count; i++)
-                {
-                    if (currentGameState.tracker[i].name == minigameName)
-                    {
-                        alreadyTracked = i;
-                    }
-                };
-
-                if (alreadyTracked != 100)
-                {
-                    currentGameState.tracker[alreadyTracked].timesPlayed++;
-                    
-
-                }
-                else
-                {
-                    currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 0, 1, gameIcon));
-                }
             }
-            
-            if(broadcast != null)
+
+            if (broadcast != null)
             {
                 StopCoroutine(broadcast);
             }
             StopAllCoroutines();
             yield return new WaitForEndOfFrame();
+        }
+    }
+
+    private void TrackWon()
+    {
+        int alreadyTracked = 100;
+        for (int i = 0; i < currentGameState.tracker.Count; i++)
+        {
+            if (currentGameState.tracker[i].name == minigameName)
+            {
+                alreadyTracked = i;
+            }
+        };
+
+        if (alreadyTracked != 100)
+        {
+            currentGameState.tracker[alreadyTracked].timesPlayed++;
+            currentGameState.tracker[alreadyTracked].timesWon++;
+
+        }
+        else
+        {
+            currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 1, 1, gameIcon));
+        }
+    }
+
+    private void TrackLost()
+    {
+        int alreadyTracked = 100;
+        for (int i = 0; i < currentGameState.tracker.Count; i++)
+        {
+            if (currentGameState.tracker[i].name == minigameName)
+            {
+                alreadyTracked = i;
+            }
+        };
+
+        if (alreadyTracked != 100)
+        {
+            currentGameState.tracker[alreadyTracked].timesPlayed++;
+
+
+        }
+        else
+        {
+            currentGameState.tracker.Add(new GameStats.GameTracker(minigameName, 0, 1, gameIcon));
         }
     }
 }

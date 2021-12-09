@@ -13,13 +13,12 @@ public class WhackAMole_Minigame : MonoBehaviour
     private GameObject[] moleArray;
     public int moleCounter;
     private Minigame minigame;
-    public FloatEvent globalTime;
     
     // Start is called before the first frame update
     void Start()
     {
         minigame = GetComponent<Minigame>();
-        spawnTotalTime = 1.5f;
+        spawnTotalTime = 2;
         moleArray = new GameObject[9];
     }
 
@@ -58,7 +57,7 @@ public class WhackAMole_Minigame : MonoBehaviour
 
     public void StartGame()
     {
-        allowInput = true;
+        allowInput = !allowInput;
     }
 
 
@@ -82,7 +81,7 @@ public class WhackAMole_Minigame : MonoBehaviour
     public void AddMole()
     {
         int randomNumber = Random.Range(0, 9);
-        if (moleCounter < 8)
+        if (moleCounter < 8 && allowInput == true)
         {
             if (moleArray[randomNumber] == null)
             {

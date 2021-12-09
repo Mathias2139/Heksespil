@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public Animator transition;
     public StringEvent countdown;
     private float currentTimeGain = 0;
-    private float timeGainResetTimer = 3;
+    private float timeGainResetTimer = 1.5f;
     private GameObject currentMinigame;
     private int previousMinigame;
     private int randomNumber;
@@ -58,8 +58,10 @@ public class GameManager : MonoBehaviour
         }
         if(currentTimeGain != 0)
         {
-            
+
+            currentMinigame.GetComponent<Minigame>().timeGain = currentTimeGain;
             timeGainResetTimer -= Time.deltaTime;
+            Debug.Log(timeGainResetTimer);
             if(timeGainResetTimer <= 0)
             {
                 //Play Add Time Animation
@@ -81,7 +83,7 @@ public class GameManager : MonoBehaviour
     public void ResetTimeGain()
     {
         currentTimeGain = 0;
-        timeGainResetTimer = 3;
+        timeGainResetTimer = 1.5f;
     }
 
     private void ChangeScene()
@@ -171,7 +173,7 @@ public class GameManager : MonoBehaviour
         }
         
         globalTimerAnimation.Play("TimeGainIncrease");
-        timeGainResetTimer = 3;
+        timeGainResetTimer = 1.5f;
     }
     private void LateUpdate()
     {

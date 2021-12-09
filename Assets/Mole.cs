@@ -12,16 +12,14 @@ public class Mole : MonoBehaviour
     public FloatEvent globaltime;
     public AudioSource exit;
     public AudioSource hit;
-    private bool exitPlaying;
+    private bool exitPlaying = false;
     private Coroutine exitRoutine;
-    private bool isHit;
+    private bool isHit = false;
 
     // Start is called before the first frame update
     void Start()
     {
         mole_Animator = GetComponent<Animator>();
-        exitPlaying = false;
-        isHit = false;
     }
 
     // Update is called once per frame
@@ -31,31 +29,12 @@ public class Mole : MonoBehaviour
         if (moleTimer >= totalMoleTime && exitPlaying == false) 
         {
             exitPlaying = true;
-            if (exitRoutine == null)
-            {
                 exit.Play();
                 mole_Animator.SetTrigger("Exit");
-                exitRoutine = StartCoroutine(MoleDelay(true));
-            }
         }
     }
 
-    IEnumerator MoleDelay(bool delay)
-    {
-        while (true)
-        {
-            if (!delay)
-            {
-                ExitMole();
-                StopAllCoroutines();
-            }
-            delay = false;
-            yield return new WaitForSeconds(0.5f);
-
-        }
-    }
-
-    private void ExitMole()
+    public void ExitMole()
     {
             globaltime.Raise(-1);
             Destroy(this.gameObject);
@@ -65,7 +44,7 @@ public class Mole : MonoBehaviour
     {
         if (exitRoutine != null)
         {
-            StopCoroutine(exitRoutine);
+            StopAllCoroutines();
         }
         if (isHit == false)
         {
