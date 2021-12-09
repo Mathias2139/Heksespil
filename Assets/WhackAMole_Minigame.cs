@@ -18,7 +18,7 @@ public class WhackAMole_Minigame : MonoBehaviour
     void Start()
     {
         minigame = GetComponent<Minigame>();
-        spawnTotalTime = 2;
+        spawnTotalTime = 1.3f;
         moleArray = new GameObject[9];
     }
 
