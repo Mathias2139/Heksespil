@@ -59,7 +59,10 @@ public class GameManager : MonoBehaviour
         if(currentTimeGain != 0)
         {
 
-            currentMinigame.GetComponent<Minigame>().timeGain = currentTimeGain;
+            if (currentMinigame != null)
+            {
+                currentMinigame.GetComponent<Minigame>().timeGain = currentTimeGain;
+            }
             timeGainResetTimer -= Time.deltaTime;
             Debug.Log(timeGainResetTimer);
             if(timeGainResetTimer <= 0)

@@ -15,6 +15,7 @@ public class Mole : MonoBehaviour
     private bool exitPlaying = false;
     private Coroutine exitRoutine;
     private bool isHit = false;
+    public bool timeUp = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +37,11 @@ public class Mole : MonoBehaviour
 
     public void ExitMole()
     {
+        if (!timeUp)
+        {
             globaltime.Raise(-1);
-            Destroy(this.gameObject);
+        }
+        Destroy(this.gameObject);
     }
 
     public void MoleHit()
