@@ -20,6 +20,7 @@ public class SkuffeSpil : MonoBehaviour
     private Vector3[] drawerFrontsSP;
     public Vector3 drawerOpenAmount;
     public Image foundItemObject;
+    public Transform foundItemParent;
     public Transform drawer;
     private Rigidbody2D rb;
     public AudioClip[] drawerOpeningSounds;
@@ -42,7 +43,8 @@ public class SkuffeSpil : MonoBehaviour
         foundItemObject.transform.localScale = Vector3.zero;
         foundItemObject.sprite = randomItem.look;
         
-        foundItemObject.transform.position = drawers[randomPosition].transform.position - new Vector3(0, 0.3f, 0);
+        foundItemObject.transform.position = drawers[randomPosition].transform.position - new Vector3(0, -drawerOpenAmounts[randomPosition] / 12, 0);
+        
 
         for (int i = 0; i < drawers.Length; i++)
         {
@@ -74,7 +76,12 @@ public class SkuffeSpil : MonoBehaviour
     {
         for (int i = 0; i < drawers.Length; i++)
         {
-            if (drawerOpen[i])
+            if (drawerOpen[i] && drawerOpen[i + 3])
+            {
+                drawers[i].localPosition = Vector3.MoveTowards(drawers[i].localPosition, new Vector3(drawerStartPositions[i].x, drawerStartPositions[i].y + drawerOpenAmounts[i] + 1, drawerStartPositions[i].z), 50 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
+                drawerFronts[i].localPosition = Vector3.MoveTowards(drawerFronts[i].localPosition, new Vector3(drawerFrontsSP[i].x, drawerFrontsSP[i].y + drawerOpenAmounts[i] + 1, drawerFrontsSP[i].z), 50 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
+            }
+            else if(drawerOpen[i])
             {
                 drawers[i].localPosition = Vector3.MoveTowards(drawers[i].localPosition, new Vector3(drawerStartPositions[i].x, drawerStartPositions[i].y + drawerOpenAmounts[i], drawerStartPositions[i].z), 100 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
                 drawerFronts[i].localPosition = Vector3.MoveTowards(drawerFronts[i].localPosition, new Vector3(drawerFrontsSP[i].x, drawerFrontsSP[i].y + drawerOpenAmounts[i], drawerFrontsSP[i].z), 100 * (1 + minigame.currentGameState.completedMinigames / 20) * Time.deltaTime);
@@ -90,14 +97,7 @@ public class SkuffeSpil : MonoBehaviour
     }
     public void StartGame()
     {
-        if (allowInput == true)
-        {
-            allowInput = false;
-        }
-        else
-        {
-            allowInput = true;
-        }
+        allowInput = !allowInput;
 
     }
     public void Input(int input)
@@ -122,6 +122,7 @@ public class SkuffeSpil : MonoBehaviour
             {
                 Debug.Log("Found Item");
                 foundItemObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                drawerFronts[randomPosition].transform.SetSiblingIndex(9);
                 minigame.EndGame(1);
                 allowInput = false;
             }
@@ -130,8 +131,9 @@ public class SkuffeSpil : MonoBehaviour
     }
     private void Shake()
     {
-        rb.AddForce(Vector2.up * 7, ForceMode2D.Impulse);
-        rb.AddTorque(Random.Range(-7, 7), ForceMode2D.Impulse);
+        int shakeDir = Random.Range(-7, 7);
+        rb.AddForce((Vector2.up * 5) + new Vector2(-shakeDir/4,0), ForceMode2D.Impulse);
+        rb.AddTorque(shakeDir, ForceMode2D.Impulse);
        
     }
 }

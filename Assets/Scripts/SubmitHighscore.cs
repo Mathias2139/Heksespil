@@ -41,7 +41,9 @@ public class SubmitHighscore : MonoBehaviour
                 newScoreText.SetActive(true);
                 newScoreManager.dialogue[0] = "<sp:10><anim:wave>"+stats.completedMinigames.ToString() + " - " + text.text + "</anim>";
                 newScoreManager.AutoPlay();
-                
+                string potion = JsonUtility.ToJson(leaderboard);
+                System.IO.File.WriteAllText(Application.persistentDataPath + "/Leaderboard.json", potion);
+                Debug.Log(Application.persistentDataPath + "/Leaderboard.json");
 
                 //manager.DisplayLeaderboard();
                 return;
