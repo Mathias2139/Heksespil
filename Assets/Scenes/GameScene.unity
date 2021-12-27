@@ -8152,6 +8152,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
+      propertyPath: spawnTotalTimeDistribution.m_Curve.Array.data[1].time
+      value: 1.0041504
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
+      propertyPath: spawnTotalTimeDistribution.m_Curve.Array.data[1].value
+      value: 0.80293655
+      objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721784, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_RootOrder
       value: 9

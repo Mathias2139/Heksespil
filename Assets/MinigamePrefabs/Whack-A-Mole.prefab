@@ -1575,6 +1575,31 @@ MonoBehaviour:
   - {fileID: 584704011}
   Mole: {fileID: 6664481160775860376, guid: 50b3e24f4e627684aa6366cfa713453d, type: 3}
   moleCounter: 0
+  spawnTotalTimeDistribution:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0083351135
+      value: 0.30394822
+      inSlope: 1.1928357
+      outSlope: 1.1928357
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.09205009
+    - serializedVersion: 3
+      time: 1.0041504
+      value: 0.8162155
+      inSlope: 0.066555865
+      outSlope: 0.066555865
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.21337663
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  stats: {fileID: 11400000, guid: 9be70091218cf314e8451da3430b663c, type: 2}
 --- !u!1 &3996061336006832625
 GameObject:
   m_ObjectHideFlags: 0

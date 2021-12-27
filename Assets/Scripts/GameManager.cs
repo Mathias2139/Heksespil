@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
                 currentMinigame.GetComponent<Minigame>().timeGain = currentTimeGain;
             }
             timeGainResetTimer -= Time.deltaTime;
-            Debug.Log(timeGainResetTimer);
             if(timeGainResetTimer <= 0)
             {
                 //Play Add Time Animation

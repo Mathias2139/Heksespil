@@ -12,13 +12,15 @@ public class WhackAMole_Minigame : MonoBehaviour
     private float spawnTotalTime;
     private GameObject[] moleArray;
     public int moleCounter;
+    public AnimationCurve spawnTotalTimeDistribution;
     private Minigame minigame;
+    public GameStats stats;
     
     // Start is called before the first frame update
     void Start()
     {
         minigame = GetComponent<Minigame>();
-        spawnTotalTime = 1;
+        spawnTotalTime = 100;
         moleArray = new GameObject[9];
     }
 
@@ -26,20 +28,16 @@ public class WhackAMole_Minigame : MonoBehaviour
     void Update()
     {
         // Spawne nye moles
-        spawnTimer += Time.deltaTime;
+        if (allowInput == true)
+        {
+            spawnTimer += Time.deltaTime;
+        }
         if (spawnTimer >= spawnTotalTime)
         {
-            if(spawnTotalTime < 0.7f)
-            {
-                AddMole();
-                AddMole();
-            }
-            else
-            {
-                AddMole();
-            }
-            
-            spawnTotalTime = Random.Range(0.3f, 1.3f);
+            AddMole();
+            spawnTotalTime = spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f))-Mathf.Min(stats.minigamesPlayed/125,0.4f);
+            Debug.Log(spawnTotalTime);
+            // Skal være afhængig af antal spillede minigames, og skal laves om til en kurve
             spawnTimer = 0;
         }
             
@@ -58,6 +56,8 @@ public class WhackAMole_Minigame : MonoBehaviour
     public void StartGame()
     {
         allowInput = !allowInput;
+        AddMole();
+        spawnTotalTime = spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f)) - Mathf.Min(stats.minigamesPlayed / 125, 0.4f);
         if (!allowInput)
         {
             for (int i = 0; i < 9; i++)
