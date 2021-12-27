@@ -2782,25 +2782,26 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.076490164
       value: 10.010795
-      inSlope: -0.36810377
-      outSlope: -0.36810377
+      inSlope: -0.2999334
+      outSlope: -0.2999334
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.059136588
+      outWeight: 0.06864087
     - serializedVersion: 3
-      time: 30.192686
-      value: 4.9993515
-      inSlope: -0.03511376
-      outSlope: -0.03511376
+      time: 50.258774
+      value: 4.034233
+      inSlope: -0.054523047
+      outSlope: -0.054523047
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.23158157
+      inWeight: 0.18267797
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   timeReward: 6
+  winByTimeGain: 0
   countdownTime: 3
   overrideCountdown: 0
   overrideWords: []
@@ -2824,6 +2825,7 @@ MonoBehaviour:
   globalTime: {fileID: 0}
   localTime: {fileID: 11400000, guid: 2d125fec822cbe94eb08fdb0e2f7570b, type: 2}
   countdown: {fileID: 11400000, guid: 6759f2581fcc7624f984a197b0a236e5, type: 2}
+  timeGain: 0
   canvi:
   - {fileID: 2831245129599072879}
   - {fileID: 761248914}
