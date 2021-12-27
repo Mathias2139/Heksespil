@@ -131,8 +131,8 @@ public class SkuffeSpil : MonoBehaviour
     }
     private void Shake()
     {
-        int shakeDir = Random.Range(-7, 7);
-        rb.AddForce((Vector2.up * 5) + new Vector2(-shakeDir/4,0), ForceMode2D.Impulse);
+        int shakeDir = Random.Range(-4, 4);
+        rb.AddForce((Vector2.up * 2) + new Vector2(-shakeDir/5,0), ForceMode2D.Impulse);
         rb.AddTorque(shakeDir, ForceMode2D.Impulse);
        
     }
