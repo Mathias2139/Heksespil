@@ -378,7 +378,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9ac63def-6988-4061-946e-aa440c044d64"",
-                    ""path"": ""<Keyboard>/9"",
+                    ""path"": ""<Keyboard>/numpad9"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
