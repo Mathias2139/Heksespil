@@ -137,7 +137,7 @@ public class Minigame : MonoBehaviour
             if (localTimer <= 0)
             {
                 EndGame(3);
-                StartGame();
+                
             }
         }
     }
@@ -228,8 +228,8 @@ public class Minigame : MonoBehaviour
                 
                 break;
         }
-      
-        
+        StartGame();
+
     }
 
     public IEnumerator BroadcastEndGame(int won, int loop)
