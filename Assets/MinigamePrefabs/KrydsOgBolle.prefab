@@ -1494,7 +1494,7 @@ MonoBehaviour:
   hand: {fileID: 510510860}
   paw: {fileID: 1076813821}
   pawIdle: {fileID: 828107400}
-  handAndPawMoveSpeed: 20
+  handAndPawMoveSpeed: 25
   squareOffset: {x: 0, y: 0.7, z: 0}
   handNoPiece: {fileID: 21300000, guid: eb319db706c11e54cbe088dd32bfb2f7, type: 3}
   handYesPiece: {fileID: 21300000, guid: cc738882d2dcb1b48af9b0f1fe5e6d3f, type: 3}
