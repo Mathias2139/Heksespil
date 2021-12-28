@@ -16,11 +16,13 @@ public class Mole : MonoBehaviour
     private Coroutine exitRoutine;
     private bool isHit = false;
     public bool timeUp = false;
+    public GameStats stats;
 
     // Start is called before the first frame update
     void Start()
     {
         mole_Animator = GetComponent<Animator>();
+        totalMoleTime = totalMoleTime - Mathf.Min(stats.minigamesPlayed / 70, 0.4f);
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class Mole : MonoBehaviour
             exitPlaying = true;
                 exit.Play();
                 mole_Animator.SetTrigger("Exit");
+            // Kalder også ExitMole-funktion via animationen
         }
     }
 

@@ -182,6 +182,7 @@ MonoBehaviour:
   exit: {fileID: 9045680608557399973}
   hit: {fileID: 713847799964231692}
   timeUp: 0
+  stats: {fileID: 11400000, guid: 9be70091218cf314e8451da3430b663c, type: 2}
 --- !u!212 &5638299059707807039
 SpriteRenderer:
   m_ObjectHideFlags: 0
