@@ -51,7 +51,8 @@ public class Minigame : MonoBehaviour
     private void Awake()
     {
         timeToComplete = Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed));
-        timeReward = (timeToComplete / 2) + 1;
+        timeReward = (timeToComplete / 2) + Mathf.Clamp(Mathf.RoundToInt(1+ (currentGameState.minigamesPlayed*1f)/40),0,3);
+        
         if (overrideCountdown)
         {
             countdownTime = overrideWords.Length;
