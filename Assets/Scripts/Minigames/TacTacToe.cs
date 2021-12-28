@@ -10,9 +10,23 @@ public class TacTacToe : MonoBehaviour
     private Minigame manager;
     public Sprite[] symbols;
     public Square[] board;
-    public bool startRandom;
+    public bool aiStarts;
+    private bool startRandom = true;
     private List<int> xMoves;
     private List<int> oMoves;
+    public Transform handIdle;
+    public Transform handReady;
+    public Transform hand;
+    public Transform paw;
+    public Transform pawIdle;
+    private bool aiStarted = false;
+    public float handAndPawMoveSpeed = 100;
+    private bool movingTowardTarget;
+    public Vector3 squareOffset;
+    private Coroutine playerRoutine;
+    private Coroutine aiRoutine;
+    private int playerChosenSquare = 10;
+    private bool aiPawsTurn;
     
 
     public int[,] winCombos = new int[8, 3]
@@ -50,20 +64,62 @@ public class TacTacToe : MonoBehaviour
     }
     public void StartGame()
     {
+        if (aiStarts && !aiStarted)
+        {
+            aiStarted = true;
+            startRandom = false;
+            AIMove();
+        }
         if (allowInput == true)
         {
             allowInput = false;
         }
         else
         {
-            allowInput = true;
+            if (!aiStarted)
+            {
+                allowInput = true;
+            }
+            
+
         }
     }
-   
+
+    private void Update()
+    {
+        if (!movingTowardTarget)
+        {
+            if (allowInput)
+            {
+                hand.position = Vector3.MoveTowards(hand.position, handReady.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 100) * Time.deltaTime);
+            }
+            else
+            {
+                hand.position = Vector3.MoveTowards(hand.position, handIdle.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 100) * Time.deltaTime);
+            }
+        }
+        if(playerChosenSquare != 10)
+        {
+            hand.position = Vector3.MoveTowards(hand.position, board[playerChosenSquare].squareRenderer.transform.position + squareOffset, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 100) * Time.deltaTime);
+            if (Vector3.Distance(hand.position, board[playerChosenSquare].squareRenderer.transform.position + squareOffset) <= 0.001f)
+            {
+                PlayerMove(playerChosenSquare);
+                movingTowardTarget = false;
+                playerChosenSquare = 10;
+            }
+        }
+        if (!aiPawsTurn)
+        {
+            paw.position = Vector3.MoveTowards(paw.position, pawIdle.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 100) * Time.deltaTime);
+        }
+        
+    }
+
     public void Input(int targetSquare)
     {
         if (allowInput)
         {
+            /*
             int targetRow = 1;
             switch (targetSquare)
             {
@@ -102,40 +158,16 @@ public class TacTacToe : MonoBehaviour
             {
                 targetColumn = 3;
             }
-
+            */
             
 
             //Player Move
             if (board[targetSquare - 1].isEmpty)
             {
-                board[targetSquare - 1].squareRenderer.sprite = symbols[0];
-                board[targetSquare - 1].isEmpty = false;
-                board[targetSquare - 1].symbol = 1;
-                xMoves.Add(targetSquare - 1);
-                /*
-                if (xMoves.Count > 3)
-                {
-                    board[xMoves[0]].squareRenderer.sprite = null;
-                    board[xMoves[0]].isEmpty = true;
-                    board[xMoves[0]].symbol = 2;
-                    xMoves.RemoveAt(0);
-                }
-                */
-                if (xMoves.Count >= 3)
-                {
-                    
-                    if (CheckForWinner(1))
-                    {
-                        
-                        GameFinish(1);
-                        allowInput = false;
-                        return;
-                    }
-                }
-
-                allowInput = false;
-                StartCoroutine(AIDelay(true));
-                Debug.Log("StartingCoroutine");
+                //Play Animation
+                movingTowardTarget = true;
+                StopAllCoroutines();
+                playerChosenSquare = targetSquare-1;
             }
             else
             {
@@ -147,19 +179,63 @@ public class TacTacToe : MonoBehaviour
         
 
     }
-   IEnumerator AIDelay(bool delay)
+    IEnumerator PlayerDelay(int targetSquare)
     {
         while (true)
         {
-            if (!delay)
+            
+            yield return new WaitForEndOfFrame();
+        }
+    }
+   IEnumerator AIDelay(int index)
+    {
+        while (true)
+        {
+            aiPawsTurn = true;
+            paw.position = Vector3.MoveTowards(paw.position, board[index].squareRenderer.transform.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 100) * Time.deltaTime);
+            if (Vector3.Distance(paw.position, board[index].squareRenderer.transform.position) <= 0.001f)
             {
-                AIMove();
+                
+                AiPlacePiece(index);
+                aiPawsTurn = false;
                 StopAllCoroutines();
             }
-            delay = false;
-            yield return new WaitForSeconds(0.35f - manager.currentGameState.minigamesPlayed/100);
+            
+            yield return new WaitForEndOfFrame();
 
         }
+    }
+    private void PlayerMove(int targetSquare)
+    {
+        board[targetSquare].squareRenderer.sprite = symbols[0];
+        board[targetSquare].isEmpty = false;
+        board[targetSquare].symbol = 1;
+        xMoves.Add(targetSquare);
+        /*
+        if (xMoves.Count > 3)
+        {
+            board[xMoves[0]].squareRenderer.sprite = null;
+            board[xMoves[0]].isEmpty = true;
+            board[xMoves[0]].symbol = 2;
+            xMoves.RemoveAt(0);
+        }
+        */
+        if (xMoves.Count >= 3)
+        {
+
+            if (CheckForWinner(1))
+            {
+
+                GameFinish(1);
+                allowInput = false;
+                movingTowardTarget = false;
+                return;
+            }
+        }
+
+        allowInput = false;
+        AIMove();
+        
     }
     private void AIMove()
     {
@@ -218,7 +294,7 @@ public class TacTacToe : MonoBehaviour
                     {
                         bestScore = score;
                         bestMove = emptySpots[i];
-                        Debug.Log(bestMove);
+                        
                     }
 
                 }
@@ -226,43 +302,31 @@ public class TacTacToe : MonoBehaviour
                 {
                     System.Random random = new System.Random();
                     bestMove = emptySpots[random.Next(emptySpots.Count)];
-
+                    
+                   
+                    
+                    
+                    
                 }
-                board[bestMove].squareRenderer.sprite = symbols[1];
-                board[bestMove].isEmpty = false;
-                board[bestMove].symbol = 0;
-                oMoves.Add(bestMove);
-              
+                Debug.Log(bestMove);
+                StopAllCoroutines();
+                StartCoroutine(AIDelay(bestMove));
+
             }
             else
             {
                 System.Random random = new System.Random();
                 int index = random.Next(emptySpots.Count);
-
-                board[emptySpots[index]].squareRenderer.sprite = symbols[1];
-                board[emptySpots[index]].isEmpty = false;
-                board[emptySpots[index]].symbol = 0;
-                oMoves.Add(emptySpots[index]);
-                //play Animation
                 
+                
+                StopAllCoroutines();
+                
+                StartCoroutine(AIDelay(emptySpots[index]));
+                //play Animation
+
             }
 
-            if (oMoves.Count >= 3)
-            {
-
-                if (CheckForWinner(0))
-                {
-                    Debug.Log("O Wins");
-                    GameFinish(2);
-                    allowInput = false;
-                    return;
-
-                }
-            }
-            startRandom = !startRandom;
-
-            //Find Random
-            allowInput = true;
+            
 
         }
         else
@@ -271,6 +335,30 @@ public class TacTacToe : MonoBehaviour
             allowInput = false;
         }
 
+    }
+    private void AiPlacePiece(int bestMoves)
+    {
+        board[bestMoves].squareRenderer.sprite = symbols[1];
+        board[bestMoves].isEmpty = false;
+        board[bestMoves].symbol = 0;
+        oMoves.Add(bestMoves);
+
+        if (oMoves.Count >= 3)
+        {
+
+            if (CheckForWinner(0))
+            {
+                Debug.Log("O Wins");
+                GameFinish(2);
+                allowInput = false;
+                return;
+
+            }
+        }
+        startRandom = !startRandom;
+
+        //Find Random
+        allowInput = true;
     }
     private bool EvaluatePosition(int piece, int[] board, int emptySpot)
     {
@@ -289,8 +377,6 @@ public class TacTacToe : MonoBehaviour
 
     private void FindEmptySpot(List<int> spots)
     {
-        
-            
         for (int i = 0; i < 9; i++)
         {
             if (board[i].isEmpty)
@@ -298,6 +384,7 @@ public class TacTacToe : MonoBehaviour
                 spots.Add(i);
             }
         }
+        Debug.Log(spots.Count + " empty spots");
     }
 
     private bool CheckForWinner(int piece)
