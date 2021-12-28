@@ -51,7 +51,8 @@ public class Minigame : MonoBehaviour
     private void Awake()
     {
         timeToComplete = Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed));
-
+        timeReward = (timeToComplete / 2) + Mathf.Clamp(Mathf.RoundToInt(1+ (currentGameState.minigamesPlayed*1f)/40),0,3);
+        
         if (overrideCountdown)
         {
             countdownTime = overrideWords.Length;
@@ -121,6 +122,7 @@ public class Minigame : MonoBehaviour
         {
             canvas.worldCamera = Camera.main;
         }
+        
         localTimer = timeToComplete;
         localTime.Raise(timeToComplete);
     }
@@ -198,7 +200,7 @@ public class Minigame : MonoBehaviour
                 break;
             case 2:
                 countdown.Raise("You Lost");
-                globalTimeReward.Raise(-localTimer);
+                globalTimeReward.Raise(-(localTimer+ (Mathf.RoundToInt(timeByPoints.Evaluate(0)) - Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed)))));
                 TrackLost();
                 
                 break;
@@ -217,6 +219,7 @@ public class Minigame : MonoBehaviour
                 }
                 else
                 {
+                    globalTimeReward.Raise(-(Mathf.RoundToInt(timeByPoints.Evaluate(0)) - Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed))));
                     TrackLost();
                 }
                 

@@ -2867,7 +2867,7 @@ MonoBehaviour:
   - {fileID: 5396804818044387249, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
   - {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
   - {fileID: 2860926911007498351, guid: 6b83fc1c8ca312a4aba2c9e9569da272, type: 3}
-  runGame: 0
+  runGame: 1
   banPreviousGame: 1
   globalTimer: {fileID: 11400000, guid: 591ef2667dac74a4b859332ed046c2b9, type: 2}
   gameFinished: {fileID: 11400000, guid: 586b159bccee13948b4c0115c3694da7, type: 2}
@@ -8150,7 +8150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: spawnTotalTimeDistribution.m_Curve.Array.data[0].time
@@ -9049,6 +9049,14 @@ PrefabInstance:
     - target: {fileID: 5396804818044387250, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].time
+      value: 60.18466
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396804818044387251, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
+      propertyPath: timeByPoints.m_Curve.Array.data[1].value
+      value: 3.0083692
       objectReference: {fileID: 0}
     - target: {fileID: 5396804818119273330, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
       propertyPath: m_Camera
