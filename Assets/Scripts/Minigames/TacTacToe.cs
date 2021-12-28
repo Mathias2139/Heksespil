@@ -516,7 +516,8 @@ public class TacTacToe : MonoBehaviour
     private void GameFinish(int won)
     {
         manager.EndGame(won);
-
+        hand.GetComponent<SpriteRenderer>().sprite = handNoPiece;
+        movingTowardTarget = false;
         allowInput = false;
     }
     private void GameWon()
