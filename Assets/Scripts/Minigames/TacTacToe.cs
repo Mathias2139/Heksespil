@@ -27,6 +27,8 @@ public class TacTacToe : MonoBehaviour
     private Coroutine aiRoutine;
     private int playerChosenSquare = 10;
     private bool aiPawsTurn;
+    public Sprite handNoPiece;
+    public Sprite handYesPiece;
     
 
     public int[,] winCombos = new int[8, 3]
@@ -95,7 +97,7 @@ public class TacTacToe : MonoBehaviour
             }
             else
             {
-                hand.position = Vector3.MoveTowards(hand.position, handIdle.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 100) * Time.deltaTime);
+                hand.position = Vector3.MoveTowards(hand.position, handIdle.position, 2 * handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 100) * Time.deltaTime);
             }
         }
         if(playerChosenSquare != 10)
@@ -233,6 +235,7 @@ public class TacTacToe : MonoBehaviour
             }
         }
 
+        hand.GetComponent<SpriteRenderer>().sprite = handNoPiece;
         allowInput = false;
         AIMove();
         
@@ -358,6 +361,7 @@ public class TacTacToe : MonoBehaviour
         startRandom = !startRandom;
 
         //Find Random
+        hand.GetComponent<SpriteRenderer>().sprite = handYesPiece;
         allowInput = true;
     }
     private bool EvaluatePosition(int piece, int[] board, int emptySpot)

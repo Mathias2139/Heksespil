@@ -9132,6 +9132,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 510510860, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -438
+      objectReference: {fileID: 0}
+    - target: {fileID: 510510861, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: m_Size.x
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 510510861, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: m_Size.y
+      value: 751.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 510510861, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc738882d2dcb1b48af9b0f1fe5e6d3f, type: 3}
+    - target: {fileID: 514053500, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076813822, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2e5079a7bb0c2ca44b9a6011d9117639, type: 3}
     - target: {fileID: 1704629113, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
       propertyPath: m_Camera
       value: 
@@ -9181,9 +9205,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7180782629096888038, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: handAndPawMoveSpeed
-      value: 20
+      propertyPath: aiStarts
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7180782629096888038, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: handNoPiece
+      value: 
+      objectReference: {fileID: 21300000, guid: eb319db706c11e54cbe088dd32bfb2f7, type: 3}
+    - target: {fileID: 7180782629096888038, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: handYesPiece
+      value: 
+      objectReference: {fileID: 21300000, guid: cc738882d2dcb1b48af9b0f1fe5e6d3f, type: 3}
     - target: {fileID: 7180782629096888039, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
       propertyPath: m_Name
       value: KrydsOgBolle
