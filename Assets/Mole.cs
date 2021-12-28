@@ -42,7 +42,7 @@ public class Mole : MonoBehaviour
     {
         if (!timeUp)
         {
-            globaltime.Raise(-1);
+            globaltime.Raise(-0.75f);
         }
         Destroy(this.gameObject);
     }
@@ -58,7 +58,7 @@ public class Mole : MonoBehaviour
             isHit = true;
             hit.Play();
             mole_Animator.SetTrigger("Hit");
-            globaltime.Raise(1);
+            globaltime.Raise(0.5f);
             Destroy(this.gameObject, 1);
         }    
         
