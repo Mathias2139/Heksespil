@@ -2867,7 +2867,7 @@ MonoBehaviour:
   - {fileID: 5396804818044387249, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
   - {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
   - {fileID: 2860926911007498351, guid: 6b83fc1c8ca312a4aba2c9e9569da272, type: 3}
-  runGame: 0
+  runGame: 1
   banPreviousGame: 1
   globalTimer: {fileID: 11400000, guid: 591ef2667dac74a4b859332ed046c2b9, type: 2}
   gameFinished: {fileID: 11400000, guid: 586b159bccee13948b4c0115c3694da7, type: 2}
@@ -9132,30 +9132,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 510510860, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -438
-      objectReference: {fileID: 0}
-    - target: {fileID: 510510861, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: m_Size.x
-      value: 275
-      objectReference: {fileID: 0}
-    - target: {fileID: 510510861, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: m_Size.y
-      value: 751.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 510510861, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: cc738882d2dcb1b48af9b0f1fe5e6d3f, type: 3}
-    - target: {fileID: 514053500, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -446
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076813822, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2e5079a7bb0c2ca44b9a6011d9117639, type: 3}
     - target: {fileID: 1704629113, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
       propertyPath: m_Camera
       value: 
@@ -9204,21 +9180,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7180782629096888038, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: aiStarts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7180782629096888038, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: handNoPiece
-      value: 
-      objectReference: {fileID: 21300000, guid: eb319db706c11e54cbe088dd32bfb2f7, type: 3}
-    - target: {fileID: 7180782629096888038, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
-      propertyPath: handYesPiece
-      value: 
-      objectReference: {fileID: 21300000, guid: cc738882d2dcb1b48af9b0f1fe5e6d3f, type: 3}
     - target: {fileID: 7180782629096888039, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
       propertyPath: m_Name
       value: KrydsOgBolle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180782629096888039, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d439cffa0e6484381775f4e89722b5, type: 3}
