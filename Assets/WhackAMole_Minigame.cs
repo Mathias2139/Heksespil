@@ -57,7 +57,7 @@ public class WhackAMole_Minigame : MonoBehaviour
     {
         allowInput = !allowInput;
         AddMole();
-        spawnTotalTime = spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f)) - Mathf.Min(stats.minigamesPlayed / 125, 0.4f);
+        spawnTotalTime = Mathf.Clamp(spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f)) - Mathf.Min(stats.minigamesPlayed / 66, 0.6f),0,1000);
         if (!allowInput)
         {
             for (int i = 0; i < 9; i++)
