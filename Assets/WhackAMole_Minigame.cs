@@ -10,11 +10,13 @@ public class WhackAMole_Minigame : MonoBehaviour
     public GameObject Mole;
     private float spawnTimer;
     private float spawnTotalTime;
-    private GameObject[] moleArray;
+    public GameObject[] moleArray;
     public int moleCounter;
     public AnimationCurve spawnTotalTimeDistribution;
     private Minigame minigame;
     public GameStats stats;
+    public Transform broomPosition;
+    public Animator broomAnimation;
     
     // Start is called before the first frame update
     void Start()
@@ -75,6 +77,8 @@ public class WhackAMole_Minigame : MonoBehaviour
     {
         if (allowInput)
         {
+            broomPosition.position = new Vector3(SpawnPoints[input - 1].transform.position.x, SpawnPoints[input - 1].transform.position.y, broomPosition.position.z);
+            broomAnimation.SetTrigger("Smack");
             if (moleArray[input-1] != null)
             {
                 // Spille animation af kost 
@@ -91,7 +95,7 @@ public class WhackAMole_Minigame : MonoBehaviour
     public void AddMole()
     {
         int randomNumber = Random.Range(0, 9);
-        if (moleCounter < 8 && allowInput == true)
+        if (moleCounter < 9 && allowInput == true)
         {
             if (moleArray[randomNumber] == null)
             {
@@ -100,7 +104,7 @@ public class WhackAMole_Minigame : MonoBehaviour
                 mole.transform.SetParent(this.gameObject.transform);
                 mole.GetComponent<Mole>().molePosition = randomNumber;
                 moleArray[randomNumber] = mole;
-                // moleCounter = moleCounter+1;
+                moleCounter = moleCounter+1;
             }
             else
             {
