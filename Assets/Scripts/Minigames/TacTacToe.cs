@@ -209,19 +209,23 @@ public class TacTacToe : MonoBehaviour
     }
     private void PlayerMove(int targetSquare)
     {
+        foreach (Square square in board)
+        {
+            if (!square.isEmpty)
+            {
+                int random = UnityEngine.Random.Range(0, 2);
+                square.squareRenderer.GetComponent<Rigidbody2D>().AddTorque((random-0.5f) * (manager.currentGameState.minigamesPlayed/15), ForceMode2D.Impulse);
+            }
+        }
+
         board[targetSquare].squareRenderer.sprite = symbols[0];
         board[targetSquare].isEmpty = false;
         board[targetSquare].symbol = 1;
         xMoves.Add(targetSquare);
-        /*
-        if (xMoves.Count > 3)
-        {
-            board[xMoves[0]].squareRenderer.sprite = null;
-            board[xMoves[0]].isEmpty = true;
-            board[xMoves[0]].symbol = 2;
-            xMoves.RemoveAt(0);
-        }
-        */
+
+        
+
+
         if (xMoves.Count >= 3)
         {
 
@@ -341,6 +345,17 @@ public class TacTacToe : MonoBehaviour
     }
     private void AiPlacePiece(int bestMoves)
     {
+        foreach (Square square in board)
+        {
+            if (!square.isEmpty)
+            {
+                int random = UnityEngine.Random.Range(0, 2);
+                Vector2 random2d = new Vector2(UnityEngine.Random.Range(-1, 2), UnityEngine.Random.Range(-1, 2));
+                square.squareRenderer.GetComponent<Rigidbody2D>().AddTorque((random - 0.5f) * (manager.currentGameState.minigamesPlayed / 12), ForceMode2D.Impulse);
+                square.squareRenderer.GetComponent<Rigidbody2D>().AddForce(random2d * (manager.currentGameState.minigamesPlayed / 12), ForceMode2D.Impulse);
+            }
+        }
+
         board[bestMoves].squareRenderer.sprite = symbols[1];
         board[bestMoves].isEmpty = false;
         board[bestMoves].symbol = 0;
