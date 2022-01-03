@@ -7,16 +7,17 @@ public class WhackAMole_Minigame : MonoBehaviour
 {
     private bool allowInput = false;
     public List<GameObject> SpawnPoints;
-    public GameObject Mole;
+    public GameObject[] Mole;
     private float spawnTimer;
     private float spawnTotalTime;
-    public GameObject[] moleArray;
+    private GameObject[] moleArray;
     public int moleCounter;
     public AnimationCurve spawnTotalTimeDistribution;
     private Minigame minigame;
     public GameStats stats;
     public Transform broomPosition;
     public Animator broomAnimation;
+    private int molesSpawned;
     
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,7 @@ public class WhackAMole_Minigame : MonoBehaviour
         if (spawnTimer >= spawnTotalTime)
         {
             AddMole();
-            spawnTotalTime = spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f))-Mathf.Min(stats.minigamesPlayed/125,0.4f);
+            spawnTotalTime = Mathf.Clamp(spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f))-Mathf.Min(stats.minigamesPlayed/125,0.4f),0,1000);
             Debug.Log(spawnTotalTime);
             // Skal være afhængig af antal spillede minigames, og skal laves om til en kurve
             spawnTimer = 0;
@@ -45,15 +46,6 @@ public class WhackAMole_Minigame : MonoBehaviour
             
         
     }
-    private void FixedUpdate()
-    {
-        // Holder styr på hvor mange moles der er i banen samtidigt
-        int moleCounter = 0;
-        for (int i = 0; i < moleArray.Length; i++)
-        {
-            moleCounter++;
-        }
-    } 
 
     public void StartGame()
     {
@@ -81,35 +73,42 @@ public class WhackAMole_Minigame : MonoBehaviour
             broomAnimation.SetTrigger("Smack");
             if (moleArray[input-1] != null)
             {
-                // Spille animation af kost 
-                // Animation.Play();
                 RemoveMole(input-1);
-            }
-            else
-            {
-                // Spille animation af kost
             }
         }
     }
 
+    private List<int> FindEmptySpots()
+    {
+        List<int> emptyspots = new List<int>();
+        for (int i = 0; i < moleArray.Length; i++)
+        {
+            if (moleArray[i] == null)
+            {
+                emptyspots.Add(i);
+            }
+        }
+        return emptyspots;
+    }
+
     public void AddMole()
     {
-        int randomNumber = Random.Range(0, 9);
-        if (moleCounter < 9 && allowInput == true)
+        List<int> emptyspots = FindEmptySpots();
+        int randomNumber = Random.Range(0, emptyspots.Count);
+        int emptyNumber = emptyspots[randomNumber];
+        if (allowInput == true)
         {
-            if (moleArray[randomNumber] == null)
+            GameObject RandomSpawn = SpawnPoints[emptyNumber];
+            int animal = 1;
+            if (molesSpawned >3)
             {
-                GameObject RandomSpawn = SpawnPoints[randomNumber];
-                GameObject mole = Instantiate(Mole, RandomSpawn.transform.position, Quaternion.identity);
-                mole.transform.SetParent(this.gameObject.transform);
-                mole.GetComponent<Mole>().molePosition = randomNumber;
-                moleArray[randomNumber] = mole;
-                moleCounter = moleCounter+1;
+                animal = Mathf.Clamp(Random.Range(0, 6), 0, 1);
             }
-            else
-            {
-                AddMole();
-            }
+            GameObject mole = Instantiate(Mole[animal], RandomSpawn.transform.position, Quaternion.identity);
+            mole.transform.SetParent(this.gameObject.transform);
+            mole.GetComponent<Mole>().molePosition = emptyNumber;
+            moleArray[emptyNumber] = mole;
+            molesSpawned++;
         }
     }
 

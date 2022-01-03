@@ -8148,10 +8148,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Whack-A-Mole
       objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721784, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_RootOrder
       value: 9

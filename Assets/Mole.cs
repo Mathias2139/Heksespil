@@ -17,6 +17,8 @@ public class Mole : MonoBehaviour
     private bool isHit = false;
     public bool timeUp = false;
     public GameStats stats;
+    public float timeOnHit = 0.5f;
+    public float timeOnLeave = -0.75f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +44,8 @@ public class Mole : MonoBehaviour
     {
         if (!timeUp)
         {
-            globaltime.Raise(-0.75f);
+            globaltime.Raise(timeOnLeave);
+            //-0,75f
         }
         Destroy(this.gameObject);
     }
@@ -58,7 +61,8 @@ public class Mole : MonoBehaviour
             isHit = true;
             hit.Play();
             mole_Animator.SetTrigger("Hit");
-            globaltime.Raise(0.5f);
+            globaltime.Raise(timeOnHit);
+            //0.5f
             Destroy(this.gameObject, 1);
         }    
         
