@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class Påklædningspil : MonoBehaviour
 {
     private bool allowInput = false;
-    public Color[] clothingOptions;
-    public Image[] bodySprites;
-    public Image[] mirrorSprites;
+    public Sprite[] headClothingOptions;
+    public Sprite[] midClothingOptions;
+    public Sprite[] bottomClothingOptions;
+    private Sprite[][] clothingOptions;
+    public SpriteRenderer[] bodySprites;
+    public SpriteRenderer[] mirrorSprites;
     private int[] correctCombination;
     private int[] currentCombination;
     private int[] currentNumber;
@@ -24,27 +27,33 @@ public class Påklædningspil : MonoBehaviour
         currentCombination = new int[3];
         currentNumber = new int[3];
         convertedNumber = new int[3];
+        clothingOptions = new Sprite[3][];
+
+        clothingOptions[0] = headClothingOptions;
+        clothingOptions[1] = midClothingOptions;
+        clothingOptions[2] = bottomClothingOptions;
+
 
         Debug.Log("Start game");
         for (int i = 0; i < 3; i++)
         {
-            correctCombination[i] = Random.Range(0, clothingOptions.Length);
+            correctCombination[i] = Random.Range(0, headClothingOptions.Length);
         }
         for (int i = 0; i < 3; i++)
         {
-            currentCombination[i] = Random.Range(0, clothingOptions.Length);
+            currentCombination[i] = Random.Range(0, headClothingOptions.Length);
             if(currentCombination[i] == correctCombination[i])
             {
-                currentCombination[i] = (currentCombination[i] + 2) % clothingOptions.Length;
+                currentCombination[i] = (currentCombination[i] + 2) % headClothingOptions.Length;
             }
-            bodySprites[i].color = clothingOptions[currentCombination[i]];
+            bodySprites[i].sprite = clothingOptions[i][currentCombination[i]];
             currentNumber[i] = currentCombination[i];
             ConvertAndDisplay(i);
         }
         
         for (int i = 0; i < 3; i++)
         {
-            mirrorSprites[i].color = clothingOptions[correctCombination[i]];
+            mirrorSprites[i].sprite = clothingOptions[i][correctCombination[i]];
         }
     }
     public void StartGame()
@@ -105,8 +114,8 @@ public class Påklædningspil : MonoBehaviour
     private void ConvertAndDisplay(int value)
     {
         
-        convertedNumber[value] = currentNumber[value] % clothingOptions.Length;
+        convertedNumber[value] = currentNumber[value] % headClothingOptions.Length;
         currentCombination[value] = convertedNumber[value];
-        bodySprites[value].color = clothingOptions[convertedNumber[value]];
+        bodySprites[value].sprite = clothingOptions[value][convertedNumber[value]];
     }
 }
