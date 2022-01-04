@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8152,22 +8152,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: spawnTotalTimeDistribution.m_Curve.Array.data[0].time
-      value: 0.001285553
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: spawnTotalTimeDistribution.m_Curve.Array.data[1].time
-      value: 1.0041504
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: spawnTotalTimeDistribution.m_Curve.Array.data[0].value
-      value: -0.21514179
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: spawnTotalTimeDistribution.m_Curve.Array.data[1].value
-      value: 0.80293655
-      objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721784, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -8212,46 +8196,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[0].time
-      value: 0.076490164
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[1].time
-      value: 50.258774
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[0].value
-      value: 10.010795
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[1].value
-      value: 4.034233
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[0].inSlope
-      value: -0.2999334
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[1].inSlope
-      value: -0.054523047
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[0].outSlope
-      value: -0.2999334
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[1].inWeight
-      value: 0.18267797
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[1].outSlope
-      value: -0.054523047
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721785, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: timeByPoints.m_Curve.Array.data[0].outWeight
-      value: 0.06864087
-      objectReference: {fileID: 0}
+    - target: {fileID: 3996061336006832626, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 175052836}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
 --- !u!1 &1880098406
