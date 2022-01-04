@@ -219,7 +219,7 @@ public class Minigame : MonoBehaviour
                 }
                 else
                 {
-                    globalTimeReward.Raise(-(Mathf.RoundToInt(timeByPoints.Evaluate(0)) - Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed))));
+                    globalTimeReward.Raise(-(Mathf.RoundToInt(timeByPoints.Evaluate(0)/2) - Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed))));
                     TrackLost();
                 }
                 
