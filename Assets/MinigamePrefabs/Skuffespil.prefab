@@ -2317,6 +2317,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 38867d6ee706b264ab15cd2f26d77be8, type: 2}
   - {fileID: 11400000, guid: 9a32132938888c84eb523f27980cc565, type: 2}
   - {fileID: 11400000, guid: 7b6d07542f7a55b4d96e0c9bbdbec1e5, type: 2}
+  - {fileID: 11400000, guid: 6279be0f0dc18a14f93f1a714c6eb87a, type: 2}
+  - {fileID: 11400000, guid: b1e31ac0a26822e4eae7982def57b209, type: 2}
+  - {fileID: 11400000, guid: 9566588377ba2b34a86a0b7c4e49a9d6, type: 2}
+  - {fileID: 11400000, guid: 5087feedeae35ce4baabd23d007c4c21, type: 2}
   drawers:
   - {fileID: 5396804816699980537}
   - {fileID: 5396804817757063467}

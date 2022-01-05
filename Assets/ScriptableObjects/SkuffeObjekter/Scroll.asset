@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46764be64a5bf8948be78cb5952b8299, type: 3}
-  m_Name: Tryllestav
+  m_Name: Scroll
   m_EditorClassIdentifier: 
-  look: {fileID: 21300000, guid: a3366a0a0fa11a0438b30592186803bd, type: 3}
-  discription: Wand
+  look: {fileID: 21300000, guid: c9c678c1fcce0494fa7ec3fb5a788637, type: 3}
+  discription: Scroll
