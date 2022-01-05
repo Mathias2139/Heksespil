@@ -11,7 +11,7 @@ public class Påklædningspil : MonoBehaviour
     public Sprite[] bottomClothingOptions;
     private Sprite[][] clothingOptions;
     public SpriteRenderer[] bodySprites;
-    public SpriteRenderer[] mirrorSprites;
+    public Image[] mirrorSprites;
     private int[] correctCombination;
     private int[] currentCombination;
     private int[] currentNumber;
