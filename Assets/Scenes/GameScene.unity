@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &76233098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2867,7 +2867,7 @@ MonoBehaviour:
   - {fileID: 5396804818044387249, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
   - {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
   - {fileID: 2860926911007498351, guid: 6b83fc1c8ca312a4aba2c9e9569da272, type: 3}
-  runGame: 0
+  runGame: 1
   banPreviousGame: 1
   globalTimer: {fileID: 11400000, guid: 591ef2667dac74a4b859332ed046c2b9, type: 2}
   gameFinished: {fileID: 11400000, guid: 586b159bccee13948b4c0115c3694da7, type: 2}
@@ -2877,6 +2877,7 @@ MonoBehaviour:
   countdown: {fileID: 11400000, guid: 6759f2581fcc7624f984a197b0a236e5, type: 2}
   globalTimerAnimation: {fileID: 895409692}
   globalTimerAdd: {fileID: 1698322849}
+  outfit: {fileID: 11400000, guid: 54ed39b8024477f488a8f918cb50de1d, type: 2}
 --- !u!114 &1615371153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9190,6 +9191,10 @@ PrefabInstance:
     - target: {fileID: 2860926911007498351, guid: 6b83fc1c8ca312a4aba2c9e9569da272, type: 3}
       propertyPath: m_Name
       value: "P\xE5kl\xE6dning"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860926911007498351, guid: 6b83fc1c8ca312a4aba2c9e9569da272, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2860926912331496339, guid: 6b83fc1c8ca312a4aba2c9e9569da272, type: 3}
       propertyPath: m_Camera
