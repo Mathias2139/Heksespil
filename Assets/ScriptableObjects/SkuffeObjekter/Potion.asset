@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46764be64a5bf8948be78cb5952b8299, type: 3}
   m_Name: Potion
   m_EditorClassIdentifier: 
-  look: {fileID: -3043608638793035845, guid: 26577f59d2d3304489f05dbe87cad920, type: 3}
+  look: {fileID: 21300000, guid: 07ae252ce850f8f4c8696314be95368b, type: 3}
   discription: Potion

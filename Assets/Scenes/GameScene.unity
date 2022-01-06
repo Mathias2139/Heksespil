@@ -2877,6 +2877,7 @@ MonoBehaviour:
   countdown: {fileID: 11400000, guid: 6759f2581fcc7624f984a197b0a236e5, type: 2}
   globalTimerAnimation: {fileID: 895409692}
   globalTimerAdd: {fileID: 1698322849}
+  outfit: {fileID: 11400000, guid: 54ed39b8024477f488a8f918cb50de1d, type: 2}
 --- !u!114 &1615371153
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     private int randomNumber;
     public Animation globalTimerAnimation;
     public GameObject globalTimerAdd;
+    public LastOutfit outfit;
     private void Start()
     {
         //transition.SetBool("In", true);
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
         input = new PlayerControls();
         held = new bool[9];
         globalTime = startTime;
+        outfit.lastOutfit = new int[0];
         if (runGame)
         {
             SpawnNextMinigame();
