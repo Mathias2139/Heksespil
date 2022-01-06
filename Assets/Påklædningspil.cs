@@ -18,6 +18,7 @@ public class Påklædningspil : MonoBehaviour
     private int[] convertedNumber;
     private Minigame minigame;
     public LastOutfit outfit;
+    public Animator[] arrows;
 
 
 
@@ -93,32 +94,38 @@ public class Påklædningspil : MonoBehaviour
             {
                 case (1):
                     currentNumber[2]--;
+                    arrows[0].SetTrigger("Click");
                     ConvertAndDisplay(2);
                     break;
                 case (2):
                     break;
                 case (3):
                     currentNumber[2]++;
+                    arrows[1].SetTrigger("Click");
                     ConvertAndDisplay(2);
                     break;
                 case (4):
                     currentNumber[1]--;
+                    arrows[2].SetTrigger("Click");
                     ConvertAndDisplay(1);
                     break;
                 case (5):
                     break;
                 case (6):
                     currentNumber[1]++;
+                    arrows[3].SetTrigger("Click");
                     ConvertAndDisplay(1);
                     break;
                 case (7):
                     currentNumber[0]--;
+                    arrows[4].SetTrigger("Click");
                     ConvertAndDisplay(0);
                     break;
                 case (8):
                     break;
                 case (9):
                     currentNumber[0]++;
+                    arrows[5].SetTrigger("Click");
                     ConvertAndDisplay(0);
                     break;
             }
