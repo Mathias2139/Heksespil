@@ -18,6 +18,7 @@ public class WhackAMole_Minigame : MonoBehaviour
     public Transform broomPosition;
     public Animator broomAnimation;
     private int molesSpawned;
+    public AudioSource[] BroomSounds;
     
     // Start is called before the first frame update
     void Start()
@@ -71,6 +72,7 @@ public class WhackAMole_Minigame : MonoBehaviour
         {
             broomPosition.position = new Vector3(SpawnPoints[input - 1].transform.position.x, SpawnPoints[input - 1].transform.position.y, broomPosition.position.z);
             broomAnimation.SetTrigger("Smack");
+            BroomSounds[Random.Range(0, BroomSounds.Length)].Play();
             if (moleArray[input-1] != null)
             {
                 RemoveMole(input-1);
