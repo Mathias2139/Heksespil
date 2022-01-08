@@ -29,7 +29,8 @@ public class TacTacToe : MonoBehaviour
     private bool aiPawsTurn;
     public Sprite handNoPiece;
     public Sprite handYesPiece;
-    
+    private AudioSource audioPlayer;
+    public AudioClip[] slidingClips;
 
     public int[,] winCombos = new int[8, 3]
         {
@@ -62,7 +63,7 @@ public class TacTacToe : MonoBehaviour
         manager = GetComponent<Minigame>();
         xMoves = new List<int>();
         oMoves = new List<int>();
-       
+        audioPlayer = GetComponent<AudioSource>();
     }
     public void StartGame()
     {
@@ -169,6 +170,7 @@ public class TacTacToe : MonoBehaviour
                 //Play Animation
                 movingTowardTarget = true;
                 StopAllCoroutines();
+                PlaySound();
                 playerChosenSquare = targetSquare-1;
             }
             else
@@ -317,6 +319,7 @@ public class TacTacToe : MonoBehaviour
                 }
                 Debug.Log(bestMove);
                 StopAllCoroutines();
+                PlaySound();
                 StartCoroutine(AIDelay(bestMove));
 
             }
@@ -327,7 +330,7 @@ public class TacTacToe : MonoBehaviour
                 
                 
                 StopAllCoroutines();
-                
+                PlaySound();
                 StartCoroutine(AIDelay(emptySpots[index]));
                 //play Animation
 
@@ -342,6 +345,20 @@ public class TacTacToe : MonoBehaviour
             allowInput = false;
         }
 
+    }
+    private void PlaySound()
+    {
+        int random = UnityEngine.Random.Range(0, 2);
+        if(manager.currentGameState.minigamesPlayed > 15)
+        {
+            random += 2;
+        }
+        if (manager.currentGameState.minigamesPlayed > 30)
+        {
+            random += 2;
+        }
+        audioPlayer.clip = slidingClips[random];
+        audioPlayer.Play();
     }
     private void AiPlacePiece(int bestMoves)
     {
