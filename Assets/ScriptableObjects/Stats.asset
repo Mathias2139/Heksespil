@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   completedMinigames: 0
-  minigamesPlayed: 0
+  minigamesPlayed: 41
   tracker: []

@@ -19,6 +19,10 @@ public class Påklædningspil : MonoBehaviour
     private Minigame minigame;
     public LastOutfit outfit;
     public Animator[] arrows;
+    public AudioClip[] topChangeClips;
+    public AudioClip[] midChangeClips;
+    public AudioClip[] bottomChangeClips;
+    private AudioSource audioPlayer;
 
 
 
@@ -30,6 +34,8 @@ public class Påklædningspil : MonoBehaviour
         currentNumber = new int[3];
         convertedNumber = new int[3];
         clothingOptions = new Sprite[3][];
+
+        audioPlayer = GetComponent<AudioSource>();
 
         clothingOptions[0] = headClothingOptions;
         clothingOptions[1] = midClothingOptions;
@@ -95,6 +101,7 @@ public class Påklædningspil : MonoBehaviour
                 case (1):
                     currentNumber[2]--;
                     arrows[0].SetTrigger("Click");
+                    PlayBottomSound();
                     ConvertAndDisplay(2);
                     break;
                 case (2):
@@ -102,11 +109,13 @@ public class Påklædningspil : MonoBehaviour
                 case (3):
                     currentNumber[2]++;
                     arrows[1].SetTrigger("Click");
+                    PlayBottomSound();
                     ConvertAndDisplay(2);
                     break;
                 case (4):
                     currentNumber[1]--;
                     arrows[2].SetTrigger("Click");
+                    PlayMidSound();
                     ConvertAndDisplay(1);
                     break;
                 case (5):
@@ -114,11 +123,13 @@ public class Påklædningspil : MonoBehaviour
                 case (6):
                     currentNumber[1]++;
                     arrows[3].SetTrigger("Click");
+                    PlayMidSound();
                     ConvertAndDisplay(1);
                     break;
                 case (7):
                     currentNumber[0]--;
                     arrows[4].SetTrigger("Click");
+                    PlayTopSound();
                     ConvertAndDisplay(0);
                     break;
                 case (8):
@@ -126,6 +137,7 @@ public class Påklædningspil : MonoBehaviour
                 case (9):
                     currentNumber[0]++;
                     arrows[5].SetTrigger("Click");
+                    PlayTopSound();
                     ConvertAndDisplay(0);
                     break;
             }
@@ -142,6 +154,39 @@ public class Påklædningspil : MonoBehaviour
         }
     }
 
+    private void PlayTopSound()
+    {
+        int played = 0;
+        played += UnityEngine.Random.Range(0, 2);
+        if(minigame.currentGameState.minigamesPlayed > 20)
+        {
+            played += 2;
+        }
+        audioPlayer.clip = topChangeClips[played];
+        audioPlayer.Play();
+    }
+    private void PlayMidSound()
+    {
+        int played = 0;
+        played += UnityEngine.Random.Range(0, 2);
+        if (minigame.currentGameState.minigamesPlayed > 20)
+        {
+            played += 2;
+        }
+        audioPlayer.clip = midChangeClips[played];
+        audioPlayer.Play();
+    }
+    private void PlayBottomSound()
+    {
+        int played = 0;
+        played += UnityEngine.Random.Range(0, 2);
+        if (minigame.currentGameState.minigamesPlayed > 20)
+        {
+            played += 2;
+        }
+        audioPlayer.clip = bottomChangeClips[played];
+        audioPlayer.Play();
+    }
     private void ConvertAndDisplay(int value)
     {
         

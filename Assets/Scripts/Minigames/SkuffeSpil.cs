@@ -121,7 +121,7 @@ public class SkuffeSpil : MonoBehaviour
             if (drawerOpen[itemPosition] && !drawerOpen[itemPosition + 3])
             {
                 Debug.Log("Found Item");
-                foundItemObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                foundItemObject.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
                 drawerFronts[randomPosition].transform.SetSiblingIndex(9);
                 minigame.EndGame(1);
                 allowInput = false;
