@@ -8255,45 +8255,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 352076649, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -238
-      objectReference: {fileID: 0}
-    - target: {fileID: 457543990, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 238
-      objectReference: {fileID: 0}
-    - target: {fileID: 584704012, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1277725494, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -238
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382404463, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -238
-      objectReference: {fileID: 0}
-    - target: {fileID: 1447362538, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 238
-      objectReference: {fileID: 0}
-    - target: {fileID: 2129379197, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 238
-      objectReference: {fileID: 0}
-    - target: {fileID: 1157225740792339512, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_Name
       value: Whack-A-Mole
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721784, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_RootOrder
@@ -8343,26 +8307,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 175052836}
-    - target: {fileID: 7121451124015962840, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 7121451124015962840, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 7121451124015962840, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 7121451124015962840, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 7121451124015962840, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.17
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
 --- !u!1 &1880098406

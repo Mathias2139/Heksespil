@@ -20,13 +20,27 @@ public class Mole : MonoBehaviour
     public bool isFrog = false;
     public AudioSource[] Exits;
     public AudioSource[] Hits;
+    private SpriteRenderer sprite;
 
     // Start is called before the first frame update
     void Start()
     {
         mole_Animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
         totalMoleTime = totalMoleTime - Mathf.Min(stats.minigamesPlayed / 70, 0.4f);
 
+        if (molePosition + 1 >= 1 && molePosition + 1 < 4)
+        {
+            sprite.sortingLayerName = "Bottom";
+        }
+        else if (molePosition + 1 >= 4 && molePosition + 1 < 7)
+        {
+            sprite.sortingLayerName = "Mid";
+        }
+        else
+        {
+            sprite.sortingLayerName = "Top";
+        }
     }
 
     // Update is called once per frame
