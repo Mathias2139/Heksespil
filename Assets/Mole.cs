@@ -20,26 +20,40 @@ public class Mole : MonoBehaviour
     public bool isFrog = false;
     public AudioSource[] Exits;
     public AudioSource[] Hits;
-    private SpriteRenderer sprite;
+    public SpriteRenderer sprite;
+    public SpriteRenderer armSprite;
 
     // Start is called before the first frame update
     void Start()
     {
         mole_Animator = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
+        //sprite = GetComponent<SpriteRenderer>();
+        //armSprite = GetComponent<SpriteRenderer>();
         totalMoleTime = totalMoleTime - Mathf.Min(stats.minigamesPlayed / 70, 0.4f);
 
         if (molePosition + 1 >= 1 && molePosition + 1 < 4)
         {
             sprite.sortingOrder = 5;
+            if (isFrog == true)
+            {
+                armSprite.sortingOrder = 5;
+            }
         }
         else if (molePosition + 1 >= 4 && molePosition + 1 < 7)
         {
             sprite.sortingOrder = 3;
+            if (isFrog == true)
+            {
+                armSprite.sortingOrder = 3;
+            }
         }
         else
         {
             sprite.sortingOrder = 1;
+            if (isFrog == true)
+            {
+                armSprite.sortingOrder = 1;
+            }
         }
     }
 

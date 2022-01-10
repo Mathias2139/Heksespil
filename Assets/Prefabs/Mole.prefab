@@ -1096,6 +1096,8 @@ MonoBehaviour:
   - {fileID: 8380390791390961094}
   - {fileID: 1256718554930425438}
   - {fileID: 2004224589313812904}
+  sprite: {fileID: 5638299059707807039}
+  armSprite: {fileID: 0}
 --- !u!212 &5638299059707807039
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1145,7 +1147,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 2
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &5808127751108951711
 Animator:
