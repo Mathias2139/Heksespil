@@ -31,15 +31,15 @@ public class Mole : MonoBehaviour
 
         if (molePosition + 1 >= 1 && molePosition + 1 < 4)
         {
-            sprite.sortingLayerName = "Bottom";
+            sprite.sortingOrder = 5;
         }
         else if (molePosition + 1 >= 4 && molePosition + 1 < 7)
         {
-            sprite.sortingLayerName = "Mid";
+            sprite.sortingOrder = 3;
         }
         else
         {
-            sprite.sortingLayerName = "Top";
+            sprite.sortingOrder = 1;
         }
     }
 
