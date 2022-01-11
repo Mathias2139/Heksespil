@@ -2071,10 +2071,10 @@ MonoBehaviour:
   localTimerBar: {fileID: 1063131210}
   localTimerColors:
     serializedVersion: 2
-    key0: {r: 0.8773585, g: 0.16140087, b: 0.20185074, a: 1}
+    key0: {r: 0.7882353, g: 0.24705882, b: 0.26666668, a: 1}
     key1: {r: 1, g: 0.61960787, b: 0.003921569, a: 1}
-    key2: {r: 0.22574759, g: 0.5377358, b: 0.2497467, a: 0}
-    key3: {r: 0.1522784, g: 0.5471698, b: 0.30351338, a: 0}
+    key2: {r: 0.5529412, g: 0.6, b: 0.49019608, a: 0}
+    key3: {r: 0.40784314, g: 0.5294118, b: 0.45490196, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
@@ -2903,7 +2903,7 @@ MonoBehaviour:
   - {fileID: 5396804818044387249, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
   - {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
   - {fileID: 2860926911007498351, guid: 6b83fc1c8ca312a4aba2c9e9569da272, type: 3}
-  runGame: 0
+  runGame: 1
   banPreviousGame: 1
   globalTimer: {fileID: 11400000, guid: 591ef2667dac74a4b859332ed046c2b9, type: 2}
   gameFinished: {fileID: 11400000, guid: 586b159bccee13948b4c0115c3694da7, type: 2}
@@ -8277,7 +8277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721784, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_RootOrder
