@@ -157,33 +157,24 @@ public class Påklædningspil : MonoBehaviour
     private void PlayTopSound()
     {
         int played = 0;
-        played += UnityEngine.Random.Range(0, 2);
-        if(minigame.currentGameState.minigamesPlayed > 20)
-        {
-            played += 2;
-        }
+        played += UnityEngine.Random.Range(0, 4);
+        
         audioPlayer.clip = topChangeClips[played];
         audioPlayer.Play();
     }
     private void PlayMidSound()
     {
         int played = 0;
-        played += UnityEngine.Random.Range(0, 2);
-        if (minigame.currentGameState.minigamesPlayed > 20)
-        {
-            played += 2;
-        }
+        played += UnityEngine.Random.Range(0, 4);
+        
         audioPlayer.clip = midChangeClips[played];
         audioPlayer.Play();
     }
     private void PlayBottomSound()
     {
         int played = 0;
-        played += UnityEngine.Random.Range(0, 2);
-        if (minigame.currentGameState.minigamesPlayed > 20)
-        {
-            played += 2;
-        }
+        played += UnityEngine.Random.Range(0, 4);
+        
         audioPlayer.clip = bottomChangeClips[played];
         audioPlayer.Play();
     }

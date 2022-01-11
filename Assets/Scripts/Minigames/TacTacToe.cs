@@ -94,16 +94,16 @@ public class TacTacToe : MonoBehaviour
         {
             if (allowInput)
             {
-                hand.position = Vector3.MoveTowards(hand.position, handReady.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 30) * Time.deltaTime);
+                hand.position = Vector3.MoveTowards(hand.position, handReady.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 22) * Time.deltaTime);
             }
             else
             {
-                hand.position = Vector3.MoveTowards(hand.position, handIdle.position, 2 * handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 30) * Time.deltaTime);
+                hand.position = Vector3.MoveTowards(hand.position, handIdle.position, 2 * handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 22) * Time.deltaTime);
             }
         }
         if(playerChosenSquare != 10)
         {
-            hand.position = Vector3.MoveTowards(hand.position, board[playerChosenSquare].squareRenderer.transform.position + squareOffset, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 30) * Time.deltaTime);
+            hand.position = Vector3.MoveTowards(hand.position, board[playerChosenSquare].squareRenderer.transform.position + squareOffset, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 22) * Time.deltaTime);
             if (Vector3.Distance(hand.position, board[playerChosenSquare].squareRenderer.transform.position + squareOffset) <= 0.001f)
             {
                 PlayerMove(playerChosenSquare);
@@ -113,7 +113,7 @@ public class TacTacToe : MonoBehaviour
         }
         if (!aiPawsTurn)
         {
-            paw.position = Vector3.MoveTowards(paw.position, pawIdle.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 30) * Time.deltaTime);
+            paw.position = Vector3.MoveTowards(paw.position, pawIdle.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 22) * Time.deltaTime);
         }
         
     }
@@ -196,7 +196,7 @@ public class TacTacToe : MonoBehaviour
         while (true)
         {
             aiPawsTurn = true;
-            paw.position = Vector3.MoveTowards(paw.position, board[index].squareRenderer.transform.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 30) * Time.deltaTime);
+            paw.position = Vector3.MoveTowards(paw.position, board[index].squareRenderer.transform.position, handAndPawMoveSpeed * (1 + manager.currentGameState.minigamesPlayed / 22) * Time.deltaTime);
             if (Vector3.Distance(paw.position, board[index].squareRenderer.transform.position) <= 0.001f)
             {
                 
@@ -348,15 +348,8 @@ public class TacTacToe : MonoBehaviour
     }
     private void PlaySound()
     {
-        int random = UnityEngine.Random.Range(0, 2);
-        if(manager.currentGameState.minigamesPlayed > 15)
-        {
-            random += 2;
-        }
-        if (manager.currentGameState.minigamesPlayed > 30)
-        {
-            random += 2;
-        }
+        int random = UnityEngine.Random.Range(0, 6);
+       
         audioPlayer.clip = slidingClips[random];
         audioPlayer.Play();
     }
