@@ -39,7 +39,7 @@ public class WhackAMole_Minigame : MonoBehaviour
         if (spawnTimer >= spawnTotalTime)
         {
             AddMole();
-            spawnTotalTime = Mathf.Clamp(spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f))-Mathf.Min(stats.minigamesPlayed/125,0.4f),0,1000);
+            spawnTotalTime = Mathf.Clamp(spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f))-Mathf.Min(stats.minigamesPlayed/80,0.4f),0,1000);
             Debug.Log(spawnTotalTime);
             // Skal være afhængig af antal spillede minigames, og skal laves om til en kurve
             spawnTimer = 0;
