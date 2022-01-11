@@ -200,7 +200,7 @@ public class Minigame : MonoBehaviour
                 break;
             case 2:
                 countdown.Raise("You Lost");
-                globalTimeReward.Raise(-(localTimer+ (Mathf.RoundToInt(timeByPoints.Evaluate(0)) - Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed)))));
+                globalTimeReward.Raise(Mathf.Clamp(-(localTimer+(Mathf.RoundToInt(timeByPoints.Evaluate(0)) - Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed)))), -100, 0));
                 TrackLost();
                 
                 break;
@@ -219,13 +219,14 @@ public class Minigame : MonoBehaviour
                 }
                 else
                 {
-                    globalTimeReward.Raise(-(Mathf.RoundToInt(timeByPoints.Evaluate(0)/2) - Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed))));
+                    globalTimeReward.Raise(Mathf.Clamp(-(Mathf.RoundToInt(timeByPoints.Evaluate(0) / 1.2f) - Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed))), -100, 0));
                     TrackLost();
                 }
                 
                 break;
             case 4:
                 countdown.Raise("Tie");
+                globalTimeReward.Raise(Mathf.Clamp(-(localTimer + (Mathf.RoundToInt(timeByPoints.Evaluate(0) / 1.2f) - Mathf.RoundToInt(timeByPoints.Evaluate(currentGameState.minigamesPlayed)))), -100, 0));
                 TrackLost();
                 
                 
