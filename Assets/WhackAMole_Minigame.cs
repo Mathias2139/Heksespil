@@ -107,7 +107,7 @@ public class WhackAMole_Minigame : MonoBehaviour
                 animal = Mathf.Clamp(Random.Range(0, 6), 0, 1);
             }
             GameObject mole = Instantiate(Mole[animal], RandomSpawn.transform.position, Quaternion.identity);
-            mole.transform.SetParent(this.gameObject.transform);
+            mole.transform.SetParent(RandomSpawn.transform);
             mole.GetComponent<Mole>().molePosition = emptyNumber;
             moleArray[emptyNumber] = mole;
             molesSpawned++;

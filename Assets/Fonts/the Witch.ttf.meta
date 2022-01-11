@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 463340a78fa71c84fb653d7ed8eaa427
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - the Witch
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c2d052fe554a6c447aa1844fe9fd119c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -560,6 +560,7 @@ GameObject:
   - component: {fileID: 312273810}
   - component: {fileID: 312273809}
   - component: {fileID: 312273811}
+  - component: {fileID: 312273812}
   m_Layer: 0
   m_Name: Countdown
   m_TagString: Untagged
@@ -599,7 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -607,7 +608,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 463340a78fa71c84fb653d7ed8eaa427, type: 3}
     m_FontSize: 150
     m_FontStyle: 1
     m_BestFit: 0
@@ -644,6 +645,21 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &312273812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312273807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &348881722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,10 +2071,10 @@ MonoBehaviour:
   localTimerBar: {fileID: 1063131210}
   localTimerColors:
     serializedVersion: 2
-    key0: {r: 0.8773585, g: 0.16140087, b: 0.20185074, a: 1}
+    key0: {r: 0.7882353, g: 0.24705882, b: 0.26666668, a: 1}
     key1: {r: 1, g: 0.61960787, b: 0.003921569, a: 1}
-    key2: {r: 0.22574759, g: 0.5377358, b: 0.2497467, a: 0}
-    key3: {r: 0.1522784, g: 0.5471698, b: 0.30351338, a: 0}
+    key2: {r: 0.5529412, g: 0.6, b: 0.49019608, a: 0}
+    key3: {r: 0.40784314, g: 0.5294118, b: 0.45490196, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
@@ -2887,7 +2903,7 @@ MonoBehaviour:
   - {fileID: 5396804818044387249, guid: 9e9cd4761d074444195f1f0e83ee8086, type: 3}
   - {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
   - {fileID: 2860926911007498351, guid: 6b83fc1c8ca312a4aba2c9e9569da272, type: 3}
-  runGame: 0
+  runGame: 1
   banPreviousGame: 1
   globalTimer: {fileID: 11400000, guid: 591ef2667dac74a4b859332ed046c2b9, type: 2}
   gameFinished: {fileID: 11400000, guid: 586b159bccee13948b4c0115c3694da7, type: 2}
@@ -8258,6 +8274,10 @@ PrefabInstance:
     - target: {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_Name
       value: Whack-A-Mole
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721784, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_RootOrder
