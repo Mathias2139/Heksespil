@@ -111,6 +111,17 @@
                 },
                 {
                     "name": "",
+                    "id": "5466f297-5fa6-4b0a-a9e4-345863eb9c6f",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d4b925dc-cad4-4e95-b7fc-e684525e154d",
                     "path": "<Keyboard>/2",
                     "interactions": "",
@@ -123,7 +134,7 @@
                 {
                     "name": "",
                     "id": "9d2cb318-a11c-4efa-83a1-1714e1ad5bb6",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/numpad2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -155,6 +166,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f9405763-3b04-4cac-bb72-2bdc45ab9c5f",
+                    "path": "<Keyboard>/numpad3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3b324370-2cce-49c1-bca6-42aa0de655e7",
                     "path": "<Keyboard>/a",
                     "interactions": "",
@@ -168,6 +190,17 @@
                     "name": "",
                     "id": "7994dbde-b8b9-4720-8115-0d8c41f9ddf2",
                     "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5a3de04-0421-4ad8-a3e7-adcb12aab0fa",
+                    "path": "<Keyboard>/numpad4",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -199,6 +232,17 @@
                 },
                 {
                     "name": "",
+                    "id": "28d18407-1687-41cc-b692-627f44790402",
+                    "path": "<Keyboard>/numpad5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "25a8e76f-2eac-4a11-bcff-94a8dd89f5ec",
                     "path": "<Keyboard>/f",
                     "interactions": "",
@@ -212,6 +256,17 @@
                     "name": "",
                     "id": "16744901-0e3e-4f0a-8760-a914ffdeeb6c",
                     "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ddbacf1b-a882-4b02-b31f-828a8fe83890",
+                    "path": "<Keyboard>/numpad6",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -243,6 +298,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4672dff7-4998-457a-9cc1-8b2731f77314",
+                    "path": "<Keyboard>/numpad7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3e4c818b-0dc9-4a02-9c84-550ee2e5334e",
                     "path": "<Keyboard>/8",
                     "interactions": "",
@@ -265,6 +331,17 @@
                 },
                 {
                     "name": "",
+                    "id": "41183a04-e3b2-445e-bba8-97bce02f0424",
+                    "path": "<Keyboard>/numpad8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4cd227af-7ed0-4c8a-80ca-498888a5f6af",
                     "path": "<Keyboard>/9",
                     "interactions": "",
@@ -278,6 +355,17 @@
                     "name": "",
                     "id": "dff6cf2e-a7fa-4a1c-b00b-1e0d2dd61b05",
                     "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "9",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9ac63def-6988-4061-946e-aa440c044d64",
+                    "path": "<Keyboard>/numpad9",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -10,18 +10,49 @@ public class Mole : MonoBehaviour
     public float totalMoleTime;
     public Animator mole_Animator;
     public FloatEvent globaltime;
-    public AudioSource exit;
-    public AudioSource hit;
-    private bool exitPlaying;
+    private bool exitPlaying = false;
     private Coroutine exitRoutine;
-    private bool isHit;
+    private bool isHit = false;
+    public bool timeUp = false;
+    public GameStats stats;
+    public float timeOnHit = 0.5f;
+    public float timeOnLeave = -0.75f;
+    public bool isFrog = false;
+    public AudioSource[] Exits;
+    public AudioSource[] Hits;
+    public SpriteRenderer sprite;
+    public SpriteRenderer armSprite;
 
     // Start is called before the first frame update
     void Start()
     {
         mole_Animator = GetComponent<Animator>();
-        exitPlaying = false;
-        isHit = false;
+        totalMoleTime = totalMoleTime - Mathf.Min(stats.minigamesPlayed / 70, 0.3f);
+
+        if (molePosition + 1 >= 1 && molePosition + 1 < 4)
+        {
+            sprite.sortingOrder = 5;
+            if (isFrog == true)
+            {
+                armSprite.sortingOrder = 5;
+            }
+        }
+        else if (molePosition + 1 >= 4 && molePosition + 1 < 7)
+        {
+            sprite.sortingOrder = 3;
+            if (isFrog == true)
+            {
+                armSprite.sortingOrder = 3;
+            }
+        }
+        else
+        {
+            sprite.sortingOrder = 1;
+            if (isFrog == true)
+            {
+                armSprite.sortingOrder = 1;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -31,48 +62,35 @@ public class Mole : MonoBehaviour
         if (moleTimer >= totalMoleTime && exitPlaying == false) 
         {
             exitPlaying = true;
-            if (exitRoutine == null)
-            {
-                exit.Play();
-                mole_Animator.SetTrigger("Exit");
-                exitRoutine = StartCoroutine(MoleDelay(true));
-            }
+            Exits[Random.Range(0, Exits.Length)].Play();
+            mole_Animator.SetTrigger("Exit");
+            // Kalder også ExitMole-funktion via animationen
         }
     }
 
-    IEnumerator MoleDelay(bool delay)
+    public void ExitMole()
     {
-        while (true)
+        if (!timeUp)
         {
-            if (!delay)
-            {
-                ExitMole();
-                StopAllCoroutines();
-            }
-            delay = false;
-            yield return new WaitForSeconds(0.5f);
-
+            globaltime.Raise(timeOnLeave);
+            //-0,75f
         }
-    }
-
-    private void ExitMole()
-    {
-            globaltime.Raise(-1);
-            Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 
     public void MoleHit()
     {
         if (exitRoutine != null)
         {
-            StopCoroutine(exitRoutine);
+            StopAllCoroutines();
         }
         if (isHit == false)
         {
             isHit = true;
-            hit.Play();
+            Hits[Random.Range(0, Hits.Length)].Play();
             mole_Animator.SetTrigger("Hit");
-            globaltime.Raise(1);
+            globaltime.Raise(timeOnHit);
+            //0.5f
             Destroy(this.gameObject, 1);
         }    
         

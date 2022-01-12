@@ -67,6 +67,9 @@ public class EndScreenManager : MonoBehaviour
         {
             Destroy(obj);
         }
+        string leaderboardString = System.IO.File.ReadAllText(Application.persistentDataPath + "/Leaderboard.json");
+        Debug.Log(leaderboardString);
+        JsonUtility.FromJsonOverwrite(leaderboardString, leaderboard);
         for (int i = 0; i < Mathf.Min(leaderboard.leaderboard.Count, 7); i++)
         {
             GameObject entry = new GameObject("Entry " + leaderboard.leaderboard[i].name);

@@ -25,12 +25,13 @@ public class GameManager : MonoBehaviour
     public Animator transition;
     public StringEvent countdown;
     private float currentTimeGain = 0;
-    private float timeGainResetTimer = 3;
+    private float timeGainResetTimer = 1.5f;
     private GameObject currentMinigame;
     private int previousMinigame;
     private int randomNumber;
     public Animation globalTimerAnimation;
     public GameObject globalTimerAdd;
+    public LastOutfit outfit;
     private void Start()
     {
         //transition.SetBool("In", true);
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
         input = new PlayerControls();
         held = new bool[9];
         globalTime = startTime;
+        outfit.lastOutfit = new int[0];
         if (runGame)
         {
             SpawnNextMinigame();
@@ -58,7 +60,11 @@ public class GameManager : MonoBehaviour
         }
         if(currentTimeGain != 0)
         {
-            
+
+            if (currentMinigame != null)
+            {
+                currentMinigame.GetComponent<Minigame>().timeGain = currentTimeGain;
+            }
             timeGainResetTimer -= Time.deltaTime;
             if(timeGainResetTimer <= 0)
             {
@@ -81,7 +87,7 @@ public class GameManager : MonoBehaviour
     public void ResetTimeGain()
     {
         currentTimeGain = 0;
-        timeGainResetTimer = 3;
+        timeGainResetTimer = 1.5f;
     }
 
     private void ChangeScene()
@@ -171,7 +177,7 @@ public class GameManager : MonoBehaviour
         }
         
         globalTimerAnimation.Play("TimeGainIncrease");
-        timeGainResetTimer = 3;
+        timeGainResetTimer = 1.5f;
     }
     private void LateUpdate()
     {

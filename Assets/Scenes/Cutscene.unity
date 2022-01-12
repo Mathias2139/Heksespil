@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -163,10 +163,10 @@ AudioSource:
   m_GameObject: {fileID: 3285915}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.547
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -298,10 +298,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1306.3, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -418,8 +418,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
-  m_sharedMaterial: {fileID: -1413919308726348832, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
+  m_sharedMaterial: {fileID: -4912629244247277292, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1894,8 +1894,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
-  m_sharedMaterial: {fileID: -1413919308726348832, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
+  m_sharedMaterial: {fileID: -4912629244247277292, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2454,8 +2454,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
-  m_sharedMaterial: {fileID: -1413919308726348832, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
+  m_sharedMaterial: {fileID: -4912629244247277292, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3092,10 +3092,10 @@ AudioSource:
   m_GameObject: {fileID: 1748039139}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.547
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3351,10 +3351,10 @@ AudioSource:
   m_GameObject: {fileID: 1814092192}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.547
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3497,8 +3497,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
-  m_sharedMaterial: {fileID: -1413919308726348832, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
+  m_sharedMaterial: {fileID: -4912629244247277292, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3717,10 +3717,10 @@ AudioSource:
   m_GameObject: {fileID: 1912525020}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.547
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3874,10 +3874,10 @@ AudioSource:
   m_GameObject: {fileID: 2108212814}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.547
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4020,8 +4020,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
-  m_sharedMaterial: {fileID: -1413919308726348832, guid: 742d919fd39f5454ba81e1289972c875, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
+  m_sharedMaterial: {fileID: -4912629244247277292, guid: 0f78533c0a24a174da575bdf3e73d850, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

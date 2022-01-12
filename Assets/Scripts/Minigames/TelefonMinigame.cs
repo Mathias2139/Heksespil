@@ -17,6 +17,10 @@ public class TelefonMinigame : MonoBehaviour
     private Minigame minigame;
     private int moveTowards = 0;
     public Transform[] numberPositions;
+    public AudioClip[] slidingSounds;
+    private AudioSource audioPlayer;
+    public AudioClip Paperslide;
+    private int lastInput;
     
     
     void Start()
@@ -24,18 +28,21 @@ public class TelefonMinigame : MonoBehaviour
         random = new System.Random();
         minigame = GetComponent<Minigame>();
         phonenumber = GeneratePhoneNumber();
+        audioPlayer = GetComponent<AudioSource>();
         for (int i = 0; i < 8; i++)
         {
             spriteRenderers[i].sprite = numberSprites[phonenumber[i]];
         }
         GetComponent<Animation>().Play("Telefonspil_Papir");
+        audioPlayer.clip = Paperslide;
+        audioPlayer.Play();
     }
 
     private void Update()
     {
         if(moveTowards != 0)
         {
-            pointer.position = Vector3.MoveTowards(pointer.position, numberPositions[moveTowards].position, 12 * (1+minigame.currentGameState.completedMinigames/15) * Time.deltaTime);
+            pointer.position = Vector3.MoveTowards(pointer.position, numberPositions[moveTowards].position, 12 * (1+minigame.currentGameState.completedMinigames/8) * Time.deltaTime);
         }
     }
 
@@ -101,6 +108,11 @@ public class TelefonMinigame : MonoBehaviour
             }
             #endregion
             moveTowards = input;
+            if(input != lastInput)
+            {
+                PlaySound();
+            }
+            lastInput = input;
             if (input-1 == phonenumber[progress])
             {
                 spriteRenderers[progress].color = Color.green;
@@ -118,6 +130,13 @@ public class TelefonMinigame : MonoBehaviour
         }
     }
 
+    private void PlaySound()
+    {
+        int random = UnityEngine.Random.Range(0, 6);
+      
+        audioPlayer.clip = slidingSounds[random];
+        audioPlayer.Play();
+    }
     private void GameWon()
     {
         minigame.EndGame(1);
