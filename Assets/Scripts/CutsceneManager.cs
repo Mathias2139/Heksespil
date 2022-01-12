@@ -14,7 +14,7 @@ public class CutsceneManager : MonoBehaviour
     private PlayerControls input;
     private Vector2 pos;
     private int currentImage = 0;
-    public Image imageRenderer;
+    //public Image imageRenderer;
     private ScrapbookDialogueManager dialogue;
     public UnityEvent events;
     public string sceneToLoad;
@@ -41,7 +41,7 @@ public class CutsceneManager : MonoBehaviour
         currentImage++;
         if (currentImage < images.Length)
         {
-            imageRenderer.sprite = images[currentImage];
+            //imageRenderer.sprite = images[currentImage];
             dialogue.SkipDialogue();
         }
         else
@@ -57,7 +57,7 @@ public class CutsceneManager : MonoBehaviour
             currentImage++;
             if (currentImage < images.Length)
             {
-                imageRenderer.sprite = images[currentImage];
+                //imageRenderer.sprite = images[currentImage];
                     dialogue.SkipDialogue();
             }
             else
