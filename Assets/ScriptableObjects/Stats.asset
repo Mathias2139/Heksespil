@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c4bc9a22bf84648b2e436e2446c6bb, type: 3}
   m_Name: Stats
   m_EditorClassIdentifier: 
-  completedMinigames: 0
-  minigamesPlayed: 0
+  completedMinigames: 11
+  minigamesPlayed: 15
   tracker:
-  - name: 
+  - name: "P\xE5kl\xE6dning"
+    timesWon: 5
+    timesPlayed: 5
+    sprite: {fileID: 5062666878470025574, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
+  - name: Whack-A-Mole
     timesWon: 2
-    timesPlayed: 5
-    sprite: {fileID: 0}
-  - name: 
-    timesWon: 3
-    timesPlayed: 5
-    sprite: {fileID: 0}
-  - name: 
-    timesWon: 6
-    timesPlayed: 7
-    sprite: {fileID: 0}
+    timesPlayed: 4
+    sprite: {fileID: 988898319601108913, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
+  - name: Skuffespil
+    timesWon: 2
+    timesPlayed: 2
+    sprite: {fileID: 9102573440031638504, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
+  - name: Telefon
+    timesWon: 2
+    timesPlayed: 2
+    sprite: {fileID: 5062666878470025574, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
+  - name: Kryds og Bolle
+    timesWon: 2
+    timesPlayed: 2
+    sprite: {fileID: -5640798556129938080, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}

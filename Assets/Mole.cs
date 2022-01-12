@@ -28,6 +28,8 @@ public class Mole : MonoBehaviour
     {
         mole_Animator = GetComponent<Animator>();
         totalMoleTime = totalMoleTime - Mathf.Min(stats.minigamesPlayed / 70, 0.3f);
+        mole_Animator.SetFloat("Speed", 1f * (1f + (Mathf.Clamp(stats.minigamesPlayed / 30f, 0f, 1.5f))));
+        Debug.Log(1f * (1f + (Mathf.Clamp(stats.minigamesPlayed / 30f, 0f, 1.5f))));
 
         if (molePosition + 1 >= 1 && molePosition + 1 < 4)
         {
