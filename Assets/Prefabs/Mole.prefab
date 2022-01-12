@@ -1079,8 +1079,8 @@ MonoBehaviour:
   globaltime: {fileID: 11400000, guid: 3c2d01670eb023a4e9a27327dda66b19, type: 2}
   timeUp: 0
   stats: {fileID: 11400000, guid: 9be70091218cf314e8451da3430b663c, type: 2}
-  timeOnHit: 0.5
-  timeOnLeave: -0.75
+  timeOnHit: 0.75
+  timeOnLeave: -1
   isFrog: 0
   Exits:
   - {fileID: 9045680608557399973}

@@ -42,7 +42,7 @@ public class TelefonMinigame : MonoBehaviour
     {
         if(moveTowards != 0)
         {
-            pointer.position = Vector3.MoveTowards(pointer.position, numberPositions[moveTowards].position, 12 * (1+minigame.currentGameState.completedMinigames/10) * Time.deltaTime);
+            pointer.position = Vector3.MoveTowards(pointer.position, numberPositions[moveTowards].position, 12 * (1+minigame.currentGameState.completedMinigames/8) * Time.deltaTime);
         }
     }
 
@@ -132,15 +132,8 @@ public class TelefonMinigame : MonoBehaviour
 
     private void PlaySound()
     {
-        int random = UnityEngine.Random.Range(0, 2);
-        if(minigame.currentGameState.minigamesPlayed >= 15)
-        {
-            random += 2;
-        }
-        if (minigame.currentGameState.minigamesPlayed >= 30)
-        {
-            random += 2;
-        }
+        int random = UnityEngine.Random.Range(0, 6);
+      
         audioPlayer.clip = slidingSounds[random];
         audioPlayer.Play();
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -332,10 +332,10 @@ MonoBehaviour:
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
-  m_Antialiasing: 0
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
@@ -585,7 +585,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 565.58, y: 421.64}
+  m_SizeDelta: {x: 997.29, y: 421.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &312273809
 MonoBehaviour:
@@ -2071,10 +2071,10 @@ MonoBehaviour:
   localTimerBar: {fileID: 1063131210}
   localTimerColors:
     serializedVersion: 2
-    key0: {r: 0.7882353, g: 0.24705882, b: 0.26666668, a: 1}
+    key0: {r: 0.79607844, g: 0.21176471, b: 0.23137255, a: 1}
     key1: {r: 1, g: 0.61960787, b: 0.003921569, a: 1}
-    key2: {r: 0.5529412, g: 0.6, b: 0.49019608, a: 0}
-    key3: {r: 0.40784314, g: 0.5294118, b: 0.45490196, a: 0}
+    key2: {r: 0.23921569, g: 0.43137255, b: 0.3137255, a: 0}
+    key3: {r: 0.23921569, g: 0.43137255, b: 0.3137255, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
@@ -3280,6 +3280,7 @@ GameObject:
   - component: {fileID: 1698322853}
   - component: {fileID: 1698322852}
   - component: {fileID: 1698322851}
+  - component: {fileID: 1698322854}
   m_Layer: 0
   m_Name: GlobalTimerDisplay Add
   m_TagString: Untagged
@@ -3304,7 +3305,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 155.7, y: -1.8}
-  m_SizeDelta: {x: 143.39, y: 75.54}
+  m_SizeDelta: {x: 143.39, y: 102.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1698322851
 Animation:
@@ -3343,19 +3344,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 66
+    m_Font: {fileID: 12800000, guid: 463340a78fa71c84fb653d7ed8eaa427, type: 3}
+    m_FontSize: 49
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 159
-    m_Alignment: 3
+    m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 2
 --- !u!222 &1698322853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3364,6 +3365,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698322849}
   m_CullTransparentMesh: 1
+--- !u!114 &1698322854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698322849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2.5, y: -2.5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1731115109
 GameObject:
   m_ObjectHideFlags: 0
@@ -8562,6 +8578,7 @@ GameObject:
   - component: {fileID: 1915820914}
   - component: {fileID: 1915820917}
   - component: {fileID: 1915820916}
+  - component: {fileID: 1915820918}
   - component: {fileID: 1915820915}
   m_Layer: 0
   m_Name: GlobalTimerDisplay
@@ -8586,8 +8603,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45.799988, y: 0.7999878}
-  m_SizeDelta: {x: 143.39, y: 91.41}
+  m_AnchoredPosition: {x: 75.99, y: -4.94}
+  m_SizeDelta: {x: 203.76, y: 131.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1915820915
 Animation:
@@ -8626,8 +8643,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_Font: {fileID: 12800000, guid: 463340a78fa71c84fb653d7ed8eaa427, type: 3}
+    m_FontSize: 78
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -8638,7 +8655,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 34
 --- !u!222 &1915820917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8647,6 +8664,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915820913}
   m_CullTransparentMesh: 1
+--- !u!114 &1915820918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915820913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3.5, y: 3.5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2040628501
 GameObject:
   m_ObjectHideFlags: 0

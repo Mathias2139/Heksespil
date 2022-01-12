@@ -27,9 +27,7 @@ public class Mole : MonoBehaviour
     void Start()
     {
         mole_Animator = GetComponent<Animator>();
-        //sprite = GetComponent<SpriteRenderer>();
-        //armSprite = GetComponent<SpriteRenderer>();
-        totalMoleTime = totalMoleTime - Mathf.Min(stats.minigamesPlayed / 70, 0.4f);
+        totalMoleTime = totalMoleTime - Mathf.Min(stats.minigamesPlayed / 70, 0.3f);
 
         if (molePosition + 1 >= 1 && molePosition + 1 < 4)
         {

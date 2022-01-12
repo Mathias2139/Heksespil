@@ -13,5 +13,17 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   completedMinigames: 0
-  minigamesPlayed: 100
-  tracker: []
+  minigamesPlayed: 0
+  tracker:
+  - name: 
+    timesWon: 2
+    timesPlayed: 5
+    sprite: {fileID: 0}
+  - name: 
+    timesWon: 3
+    timesPlayed: 5
+    sprite: {fileID: 0}
+  - name: 
+    timesWon: 6
+    timesPlayed: 7
+    sprite: {fileID: 0}
