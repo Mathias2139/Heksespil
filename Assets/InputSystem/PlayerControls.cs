@@ -135,6 +135,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""6ece0278-3275-492e-bef4-f11ce96e833d"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""d4b925dc-cad4-4e95-b7fc-e684525e154d"",
                     ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
