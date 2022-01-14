@@ -1269,6 +1269,7 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &726382014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1397,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> parent of a0187a1 (Pull Commit)
 =======
 >>>>>>> parent of a0187a1 (Pull Commit)
 --- !u!1 &759550570
