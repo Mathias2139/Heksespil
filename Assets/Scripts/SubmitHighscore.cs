@@ -14,11 +14,12 @@ public class SubmitHighscore : MonoBehaviour
     public EndScreenManager manager;
     public DialogueManager newScoreManager;
     public GameObject newScoreText;
+    public AudioSource click;
    public void Submit()
     {
         if (!alreadySubmitted)
         {
-            
+            click.Play();
             AddToLeaderboard();
             alreadySubmitted = true;
             

@@ -7,8 +7,10 @@ public class ChangeMenuScript : MonoBehaviour
     public GameObject objectToShow;
     public GameObject objectToHide;
     public int[] myButtons;
+    public AudioSource click;
     public void ChangeMenu()
     {
+        click.Play();
         objectToHide.SetActive(false);
         objectToShow.SetActive(true);
     }

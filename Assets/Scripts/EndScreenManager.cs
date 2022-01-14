@@ -21,6 +21,7 @@ public class EndScreenManager : MonoBehaviour
     private bool StatsShown;
     private int endscreenState = 0;
     public GameObject backbutton;
+    public AudioSource click;
     private void Start()
     {
         leaderboardobjects = new List<GameObject>();
@@ -88,6 +89,7 @@ public class EndScreenManager : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        click.Play();
         SceneManager.LoadScene(menuScene);
     }
 
