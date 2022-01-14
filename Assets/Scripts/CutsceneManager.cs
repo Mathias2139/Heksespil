@@ -25,7 +25,7 @@ public class CutsceneManager : MonoBehaviour
         
         camPos = cam.transform.position;
         dialogue = GetComponent<ScrapbookDialogueManager>();
-        //dialogue.SkipDialogue();
+        dialogue.SkipDialogue();
     }
 
     // Update is called once per frame

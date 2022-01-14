@@ -13,7 +13,7 @@ public class ScrapbookDialogueManager : MonoBehaviour
     public AudioClip typingClip;
     public AudioSourceGroup audioSourceGroup;
     public Transform cam;
-    //public Transform[] camPoints;
+    public Transform[] camPoints;
     private Coroutine movingCamera;
 
 
@@ -65,7 +65,7 @@ public class ScrapbookDialogueManager : MonoBehaviour
     void Update()
     {
         //Debug.Log("Moving Camera Towards camPoint" + currentDialogue + " at " + camPoints[currentDialogue].position + ". Current progress " + Vector3.MoveTowards(cam.position, camPoints[currentDialogue].position, 100));
-        //cam.position = Vector3.MoveTowards(cam.position, camPoints[currentDialogue-1].position, 500 * Time.deltaTime);
+        cam.position = Vector3.MoveTowards(cam.position, camPoints[currentDialogue-1].position, 500 * Time.deltaTime);
     }
     private void PlayDialogue()
     {
@@ -74,7 +74,7 @@ public class ScrapbookDialogueManager : MonoBehaviour
         PlayDialogue(cachedDialogue);
         currentDialogue++;
     }
-    /*
+
     IEnumerator MoveCamera()
     {
         while (true)
@@ -92,14 +92,14 @@ public class ScrapbookDialogueManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
     }
-    
+
     public void AutoPlay()
     {
         Debug.Log("playing Dialogue");
         PlayDialogue(dialogue[0]);
     }
 
-    */
+
 
     private Coroutine typeRoutine = null;
     void PlayDialogue(string message) {
