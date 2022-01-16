@@ -166,7 +166,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.547
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4168,7 +4168,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 46
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.98823535, g: 0.98823535, b: 0.98823535, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5204,7 +5204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934746434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 315.3, y: -90.7, z: -362}
+  m_LocalPosition: {x: 313.8, y: -211.2, z: -378.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7862,7 +7862,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 46
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.98823535, g: 0.98823535, b: 0.98823535, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8789,7 +8789,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 46
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.98823535, g: 0.98823535, b: 0.98823535, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8924,7 +8924,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.547
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9411,7 +9411,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.547
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10005,7 +10005,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.547
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10770,7 +10770,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
   m_audioClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.547
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11371,9 +11371,9 @@ MonoBehaviour:
   - <sp:30>Her mother knocks on the door for the third time.
   - <sp:30><anim:shake>MOM!</anim>
   - <sp:30>"You're stil in bed... Don't you need to get ready?"
-  - <sp:30>You haven't cleaned you room<sp:3>...<sp:0> <sp:30> Theres rats everywhere<sp:3>...<sp:0>
+  - <sp:30>"You haven't cleaned you room<sp:3>...<sp:0> <sp:30> Theres rats everywhere<sp:3>...<sp:0>
     <sp:30>    and what about the <color=red><anim:wave>shadow beings</anim></color>
-    doing the entertainment?!
+    doing the entertainment?!"
   - <sp:30>Be there in one minute!
   - "<sp:30>But she\u2019s not worried. One minute can be more then you think with
     a little\u2026 <size=160%><anim:wave>Last Minute Magic!</anim></size>"
