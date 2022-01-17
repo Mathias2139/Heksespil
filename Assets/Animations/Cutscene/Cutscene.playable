@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 15.966666666666667
+    m_Start: 16.58625850340136
     m_ClipIn: 0
     m_Asset: {fileID: 461354239000167969}
     m_Duration: 1
@@ -162,7 +162,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 15.966666666666667
+    m_PreExtrapolationTime: 16.58625850340136
     m_DisplayName: annoyed-to-nervous
   m_Markers:
     m_Objects: []
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 0723bb422e1f98f4597564ac9e59448a, type: 3}
+  m_Clip: {fileID: 8300000, guid: 1d3287539d3307d45ba8d4573e8f49ae, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
@@ -451,25 +451,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -496,49 +478,13 @@ MonoBehaviour:
     m_BlendOutDuration: 1.0666666666666664
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -625,58 +571,22 @@ MonoBehaviour:
     m_Start: 18.433333333333334
     m_ClipIn: 0
     m_Asset: {fileID: -7668118923402821723}
-    m_Duration: 13.783333333333335
+    m_Duration: 15.716666666666665
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3902405104202230044}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: 1.4833333333333343
-    m_BlendOutDuration: 1.8000000000000007
+    m_BlendOutDuration: 1.93333333333333
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -691,7 +601,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM vcam4
   - m_Version: 1
-    m_Start: 30.416666666666668
+    m_Start: 32.21666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -1966598982624152050}
     m_Duration: 9.73333333333333
@@ -699,53 +609,17 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -3902405104202230044}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 1.8000000000000007
+    m_BlendInDuration: 1.93333333333333
     m_BlendOutDuration: 1.8833333333333329
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -760,7 +634,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM vcam5
   - m_Version: 1
-    m_Start: 38.266666666666666
+    m_Start: 40.06666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 894120756759969718}
     m_Duration: 11.783333333333331
@@ -1328,6 +1202,7 @@ MonoBehaviour:
   - {fileID: 881610475302391413}
   - {fileID: 4842697908297591492}
   - {fileID: 254110260944784769}
+  - {fileID: 634610801462739352}
   - {fileID: -7112541636533815411}
   - {fileID: 8102984465268553429}
   - {fileID: 8537875424276582843}
@@ -1370,7 +1245,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 13.15
+    m_Start: 12.90326530612245
     m_ClipIn: 0
     m_Asset: {fileID: 627251962658341802}
     m_Duration: 0.7663265306122449
@@ -1439,7 +1314,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: wendy-mom
   - m_Version: 1
-    m_Start: 14.1
+    m_Start: 14.719591836734699
     m_ClipIn: 0
     m_Asset: {fileID: -6202372908521265660}
     m_Duration: 1.2281179138321996
@@ -1508,7 +1383,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1-Youre still in bed
   - m_Version: 1
-    m_Start: 15.383333333333333
+    m_Start: 16.58625850340136
     m_ClipIn: 0
     m_Asset: {fileID: -5466555385583381323}
     m_Duration: 1.8470748299319728
@@ -1828,6 +1703,33 @@ MonoBehaviour:
   m_bufferingTime: 0.1
   m_ClipProperties:
     volume: 1
+--- !u!114 &634610801462739352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b22792c3b570444eb18cb78c2af3a74, type: 3}
+  m_Name: Audio Track (1)
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
+  m_TrackProperties:
+    volume: 1
+    stereoPan: 0
+    spatialBlend: 0
 --- !u!114 &867390670973801516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2074,7 +1976,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
   - m_Version: 1
-    m_Start: 14.083333333333329
+    m_Start: 14.702925170068028
     m_ClipIn: 0
     m_Asset: {fileID: -7819984725617129568}
     m_Duration: 0.40000000000000036
@@ -2350,7 +2252,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
   - m_Version: 1
-    m_Start: 13.35
+    m_Start: 12.90326530612245
     m_ClipIn: 0
     m_Asset: {fileID: -2789504621876318897}
     m_Duration: 0.40000000000000036
@@ -3429,7 +3331,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 12.866666666666667
+    m_Start: 12.036258503401369
     m_ClipIn: 0
     m_Asset: {fileID: 4704581251515049062}
     m_Duration: 4.549999999999997
@@ -3495,7 +3397,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 12.866666666666667
+    m_PreExtrapolationTime: 12.036258503401369
     m_DisplayName: MomEnter
   m_Markers:
     m_Objects: []
@@ -3551,7 +3453,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 12.916666666666666
+    m_Start: 12.502925170068032
     m_ClipIn: 0
     m_Asset: {fileID: 5419087086849599554}
     m_Duration: 1.1666666666666625
@@ -3617,7 +3519,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 12.916666666666666
+    m_PreExtrapolationTime: 12.502925170068032
     m_DisplayName: MomEnter2
   m_Markers:
     m_Objects: []

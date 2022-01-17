@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ScrapbookDialogueManager : MonoBehaviour
 {
     public TMP_Text[] textBox;
-    [TextArea(2, 8)]
+    [TextArea(2, 16)]
     public string[] dialogue;
 
     public AudioClip typingClip;
