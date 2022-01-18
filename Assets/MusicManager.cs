@@ -14,7 +14,7 @@ public class MusicManager : MonoBehaviour
     private void Start()
     {
         source = GetComponent<AudioSource>();
-        audiolevel = 0.5f;
+        audiolevel = 0f;
     }
     private void Update()
     {
