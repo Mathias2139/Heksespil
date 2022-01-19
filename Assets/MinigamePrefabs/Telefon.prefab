@@ -2776,7 +2776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigameName: Telefon
   gameIcon: {fileID: 3452719480182568766, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
-  beginText: Dial
+  beginText: Demons
   timeByPoints:
     serializedVersion: 2
     m_Curve:
@@ -2804,8 +2804,10 @@ MonoBehaviour:
   timeReward: 6
   winByTimeGain: 0
   countdownTime: 3
-  overrideCountdown: 0
-  overrideWords: []
+  overrideCountdown: 1
+  overrideWords:
+  - Dial
+  - the
   startGame:
     m_PersistentCalls:
       m_Calls:
