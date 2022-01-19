@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndingImageDecider : MonoBehaviour
 {
     public GameStats stats;
     [SerializeField]
     public IntImage[] intImage;
-    public SpriteRenderer renderer;
+    public Image renderer;
 
 
     [System.Serializable]
