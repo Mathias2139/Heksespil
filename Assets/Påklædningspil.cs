@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MA.Events;
 
 public class Påklædningspil : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class Påklædningspil : MonoBehaviour
     public AudioClip[] midChangeClips;
     public AudioClip[] bottomChangeClips;
     private AudioSource audioPlayer;
+    public AudioClipEvent voiceEvent;
+    public AudioClip[] somethingMoreLines;
+    public AudioClip[] somethingElseLines;
 
 
 
@@ -46,6 +50,7 @@ public class Påklædningspil : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             correctCombination[i] = Random.Range(0, headClothingOptions.Length);
+
             if(outfit.lastOutfit.Length == 3)
             {
                 if(correctCombination[i] == outfit.lastOutfit[i])
@@ -54,6 +59,7 @@ public class Påklædningspil : MonoBehaviour
                 }
             }
         }
+        EvaluateNewOutfit();
         for (int i = 0; i < 3; i++)
         {
             if(outfit.lastOutfit.Length != 3)
@@ -82,6 +88,72 @@ public class Påklædningspil : MonoBehaviour
 
 
     }
+
+    private void EvaluateNewOutfit()
+    {
+        int trackedIndex = 100;
+        int ofAKind = 1;
+        AudioClip clip = somethingElseLines[0];
+        for (int i = 0; i < correctCombination.Length; i++)
+        {
+            if(trackedIndex == correctCombination[i])
+            {
+                ofAKind++;
+            }
+            else if(ofAKind == 1)
+            {
+                trackedIndex = correctCombination[i];
+            }
+            
+        }
+        string output = "";
+        if(ofAKind >= 2)
+        {
+            switch (trackedIndex)
+            {
+                case 0:
+                    output = "cozy";
+                    clip = somethingMoreLines[0];
+                    break;
+                case 1:
+                    output = "cute";
+                    clip = somethingMoreLines[1];
+                    break;
+                case 2:
+                    output = "classy";
+                    clip = somethingMoreLines[2];
+                    break;
+                case 3:
+                    output = "practical";
+                    clip = somethingElseLines[UnityEngine.Random.Range(0, somethingElseLines.Length)];
+                    break;
+                case 4:
+                    output = "fancy";
+                    clip = somethingMoreLines[3];
+                    break;
+                case 5:
+                    output = "colorful";
+                    clip = somethingMoreLines[4];
+                    break;
+                case 6:
+                    output = "cool";
+                    clip = somethingMoreLines[5];
+                    break;
+            }
+        }
+        else
+        {
+            int random = UnityEngine.Random.Range(0, 2);
+            if(random == 0)
+            {
+                clip = somethingElseLines[UnityEngine.Random.Range(0, somethingElseLines.Length)];
+            }
+            
+        }
+        
+        voiceEvent.Raise(clip);
+    }
+
     public void StartGame()
     {
         allowInput = !allowInput;

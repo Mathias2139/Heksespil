@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameName: "P\xE5kl\xE6dning"
-  gameIcon: {fileID: 5062666878470025574, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
+  gameIcon: {fileID: -8407599821847681426, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
   beginText: Outfit
   timeByPoints:
     serializedVersion: 2
@@ -1564,6 +1564,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d7d25ac9254a8424abaa6fc95df9de4b, type: 3}
   - {fileID: 8300000, guid: b0cff3bdcf4b7654293749e015f95251, type: 3}
   - {fileID: 8300000, guid: dbf70989ae9f82d4a838326547ee6ce0, type: 3}
+  voiceEvent: {fileID: 11400000, guid: 7684ffec6a27aca4ab29930fe3db09b5, type: 2}
+  somethingMoreLines:
+  - {fileID: 8300000, guid: e46a58afc581845488ecfaef007f1b5e, type: 3}
+  - {fileID: 8300000, guid: d85fb9882145c40428f5ba164a2e9691, type: 3}
+  - {fileID: 8300000, guid: d176df6e5c7a85c42a54479c5c483a32, type: 3}
+  - {fileID: 8300000, guid: d133ec49c104dcb4286c3350e15559e7, type: 3}
+  - {fileID: 8300000, guid: 7cbda2788f6bbe64d9e4cdc5724d1f08, type: 3}
+  - {fileID: 8300000, guid: f2ffba25d68477541881564c6f01f1cd, type: 3}
+  somethingElseLines:
+  - {fileID: 8300000, guid: 1b12fa234bc0d3640844110fb9dff56a, type: 3}
+  - {fileID: 8300000, guid: f61f35696844fb24f8b54d224c8efffc, type: 3}
+  - {fileID: 8300000, guid: 6e81779700656b74b93e7ab5c6178abb, type: 3}
+  - {fileID: 8300000, guid: cf4b9c3414af12b4bb2eb5a8ac2d116e, type: 3}
+  - {fileID: 8300000, guid: 594c331afb9c51347950b03183213033, type: 3}
 --- !u!82 &6165406230580643268
 AudioSource:
   m_ObjectHideFlags: 0

@@ -17,6 +17,21 @@ TextureImporter:
   - first:
       213: 92133079095426892
     second: BarChart_4
+  - first:
+      213: 4791935553466917805
+    second: BarChart_5
+  - first:
+      213: -9074734796075019985
+    second: BarChart_6
+  - first:
+      213: 3452719480182568766
+    second: BarChart_7
+  - first:
+      213: -7268122191832644262
+    second: BarChart_8
+  - first:
+      213: -8407599821847681426
+    second: BarChart_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -150,7 +165,7 @@ TextureImporter:
         width: 172
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,7 +186,7 @@ TextureImporter:
         width: 174
         height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,7 +207,7 @@ TextureImporter:
         width: 140
         height: 152
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,7 +228,7 @@ TextureImporter:
         width: 194
         height: 161
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,7 +249,7 @@ TextureImporter:
         width: 186
         height: 146
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,6 +257,111 @@ TextureImporter:
       bones: []
       spriteID: c4fbb8b1c82574100800000000000000
       internalID: 92133079095426892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarChart_5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 170
+        width: 164
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3e5f24fff508240800000000000000
+      internalID: 4791935553466917805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarChart_6
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 166
+        width: 177
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21521178c0101280800000000000000
+      internalID: -9074734796075019985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarChart_7
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 157
+        width: 138
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e377a5de2168aef20800000000000000
+      internalID: 3452719480182568766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarChart_8
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 161
+        width: 162
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a558eabef51722b90800000000000000
+      internalID: -7268122191832644262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarChart_9
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 161
+        width: 144
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66a125e184325b80800000000000000
+      internalID: -8407599821847681426
       vertices: []
       indices: 
       edges: []
