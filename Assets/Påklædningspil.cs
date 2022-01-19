@@ -143,7 +143,7 @@ public class Påklædningspil : MonoBehaviour
         }
         else
         {
-            int random = UnityEngine.Random.Range(0, 2);
+            int random = UnityEngine.Random.Range(0, 3);
             if(random == 0)
             {
                 clip = somethingElseLines[UnityEngine.Random.Range(0, somethingElseLines.Length)];

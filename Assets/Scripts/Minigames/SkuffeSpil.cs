@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MA.Events;
 
 public class SkuffeSpil : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class SkuffeSpil : MonoBehaviour
     public AudioClip[] drawerOpeningSounds;
     public AudioClip[] drawerClosingSounds;
     private AudioSource audioplayer;
+
+    public AudioClip[] voiceOnStart;
+    public TimeSinceVoice timeSinceVoice;
+    public AudioClipEvent voiceEvent;
     
     private void Start()
     {
@@ -44,6 +49,12 @@ public class SkuffeSpil : MonoBehaviour
         foundItemObject.sprite = randomItem.look;
         
         foundItemObject.transform.position = drawers[randomPosition].transform.position - new Vector3(0, -drawerOpenAmounts[randomPosition] / 12, 0);
+
+        int random = UnityEngine.Random.Range(0, 2);
+        if(random == 0 && timeSinceVoice.time > 5)
+        {
+            voiceEvent.Raise(voiceOnStart[UnityEngine.Random.Range(0, voiceOnStart.Length)]);
+        }
         
 
         for (int i = 0; i < drawers.Length; i++)
