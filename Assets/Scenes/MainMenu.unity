@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -364,7 +364,6 @@ GameObject:
   - component: {fileID: 245016365}
   - component: {fileID: 245016364}
   - component: {fileID: 245016363}
-  - component: {fileID: 245016362}
   - component: {fileID: 245016366}
   m_Layer: 5
   m_Name: Setting Buttons
@@ -393,19 +392,6 @@ RectTransform:
   m_AnchoredPosition: {x: 33.661, y: -6.5329}
   m_SizeDelta: {x: 134.4939, y: 30.8539}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &245016362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245016360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ecd035c163db5c4c87821d66b6527b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneNavn: Cutscene
 --- !u!114 &245016363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369a53822b239954bab4784781c4b8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShow: {fileID: 1449602635}
+  objectToShow: {fileID: 1942839879}
   objectToHide: {fileID: 2066659168}
   myButtons: 
 --- !u!1 &245363121
@@ -2065,7 +2051,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Settings
+  m_Text: Audio Settings
 --- !u!222 &717556257
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5680,7 +5666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369a53822b239954bab4784781c4b8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShow: {fileID: 1449602635}
+  objectToShow: {fileID: 2066659168}
   objectToHide: {fileID: 1942839879}
   myButtons: 
 --- !u!1 &1942839879
@@ -5731,7 +5717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -226, y: 40}
+  m_AnchoredPosition: {x: 225.8, y: -4.6}
   m_SizeDelta: {x: 135.786, y: 135.786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1942839881
