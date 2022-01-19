@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class Playbutton : MonoBehaviour
 {
     public string sceneNavn;
+    public Animator doorAnimation;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,13 @@ public class Playbutton : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(sceneNavn);
+        doorAnimation.SetTrigger("Open");
+        Invoke("Wait",0.3f);
         Debug.Log("play");
+    }
+
+    private void Wait()
+    {
+        SceneManager.LoadScene(sceneNavn);
     }
 }

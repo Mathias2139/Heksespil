@@ -38,6 +38,14 @@ public class UIManager : MonoBehaviour
         if(Mathf.RoundToInt(time + 0.5f) != lastGlobalTime)
         {
             globalTimerText.text = Mathf.RoundToInt(time + 0.5f).ToString();
+            if((time + 0.5f)<= 6)
+            {
+                globalTimerText.color = Color.red;
+            }
+            else
+            {
+                globalTimerText.color = Color.white;
+            }
             lastGlobalTime = Mathf.RoundToInt(time + 0.5f);
         }
         globalTimerSliders[0].value = time / globalStartTime;

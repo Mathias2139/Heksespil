@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public Animation globalTimerAnimation;
     public GameObject globalTimerAdd;
     public LastOutfit outfit;
+    public AudioSource lydMellemSpil;
     private void Start()
     {
         //transition.SetBool("In", true);
@@ -144,7 +145,7 @@ public class GameManager : MonoBehaviour
         minigame.globalTime = globalTimer;
         minigame.localTime = localTime;
         minigame.globalTimeReward = globalTimeReward;
-        
+        lydMellemSpil.Play();
 
 
         //Initialize Controls, link game to manager

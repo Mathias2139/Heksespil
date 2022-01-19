@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameName: Kryds og Bolle
-  gameIcon: {fileID: -5640798556129938080, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
+  gameIcon: {fileID: -7268122191832644262, guid: e5f82656a02c9de4b9f5e400f5dc7f4c, type: 3}
   beginText: Toe
   timeByPoints:
     serializedVersion: 2
