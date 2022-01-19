@@ -5400,7 +5400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934746434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 313.8, y: -211.2, z: -378.4}
+  m_LocalPosition: {x: 313.8, y: -9.6, z: -378.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8123,6 +8123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: GameScene
+  musicEvent: {fileID: 11400000, guid: bca64cdf77029f342b8d9ab9c28aa03f, type: 2}
 --- !u!95 &1563425589
 Animator:
   serializedVersion: 3

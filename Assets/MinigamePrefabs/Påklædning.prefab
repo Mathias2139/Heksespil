@@ -1662,7 +1662,6 @@ MonoBehaviour:
   somethingElseLines:
   - {fileID: 8300000, guid: 08c90ad8ef76a5a4eaae16841158c75e, type: 3}
   - {fileID: 8300000, guid: 23ce79cc18d12af4ca536d721691861d, type: 3}
-  - {fileID: 8300000, guid: c5613da2aa6e12e44baf64c7ede3e785, type: 3}
   - {fileID: 8300000, guid: cda6fb5e33c74e44b8f96eb8771c66d5, type: 3}
 --- !u!82 &6165406230580643268
 AudioSource:

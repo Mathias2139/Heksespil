@@ -32,6 +32,11 @@ public class TacTacToe : MonoBehaviour
     private AudioSource audioPlayer;
     public AudioClip[] slidingClips;
 
+    public AudioClip[] voiceOnLose;
+    public AudioClip[] voiceOnTie;
+    public TimeSinceVoice timeSinceVoice;
+    public AudioClipEvent voiceEvent;
+
     public int[,] winCombos = new int[8, 3]
         {
             {0,1,2 },
@@ -341,6 +346,11 @@ public class TacTacToe : MonoBehaviour
         }
         else
         {
+            int random = UnityEngine.Random.Range(0, 2);
+            if (random == 0 && timeSinceVoice.time > 5)
+            {
+                voiceEvent.Raise(voiceOnTie[UnityEngine.Random.Range(0, voiceOnTie.Length)]);
+            }
             GameFinish(4);
             allowInput = false;
         }
@@ -377,6 +387,11 @@ public class TacTacToe : MonoBehaviour
             if (CheckForWinner(0))
             {
                 Debug.Log("O Wins");
+                int random = UnityEngine.Random.Range(0, 2);
+                if (timeSinceVoice.time > 5)
+                {
+                    voiceEvent.Raise(voiceOnLose[UnityEngine.Random.Range(0, voiceOnLose.Length)]);
+                }
                 GameFinish(2);
                 allowInput = false;
                 return;

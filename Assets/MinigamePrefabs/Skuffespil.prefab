@@ -2363,6 +2363,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 057fb838e2369e746b7005468089d78b, type: 3}
   - {fileID: 8300000, guid: 817d532a020aca641a4e1d3dcf07e568, type: 3}
   - {fileID: 8300000, guid: bb36c28236d58f94b9da1fcc9710844a, type: 3}
+  voiceOnStart:
+  - {fileID: 8300000, guid: 2f37e86c482df7f4392fcf48841c7507, type: 3}
+  - {fileID: 8300000, guid: 93d26f3c8a97bbe4b877113f40bd6d67, type: 3}
+  - {fileID: 8300000, guid: 37024f8d585ff4b4a99d4a0416efebbf, type: 3}
+  - {fileID: 8300000, guid: 138c4badc57e3664cab9674845873165, type: 3}
+  - {fileID: 8300000, guid: 985ff1157fc40bc4aa5117fd7299f8b3, type: 3}
+  timeSinceVoice: {fileID: 11400000, guid: 309f4fe1a86f6c247b81a66c5e744b89, type: 2}
+  voiceEvent: {fileID: 11400000, guid: 7684ffec6a27aca4ab29930fe3db09b5, type: 2}
 --- !u!82 &5396804818111116075
 AudioSource:
   m_ObjectHideFlags: 0
