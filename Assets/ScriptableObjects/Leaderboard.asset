@@ -13,17 +13,9 @@ MonoBehaviour:
   m_Name: Leaderboard
   m_EditorClassIdentifier: 
   leaderboard:
-  - name: "Evin\u200B"
-    score: 999
   - name: Xinru
     score: 73
-  - name: "Mathias.\u200B"
-    score: 23
-  - name: "New\u200B"
-    score: 23
-  - name: "UJJ\u200B"
-    score: 23
-  - name: "Mathias\u200B"
-    score: 15
-  - name: Jo
-    score: 13
+  - name: "Jo\u200B"
+    score: 38
+  - name: Mathias
+    score: 37

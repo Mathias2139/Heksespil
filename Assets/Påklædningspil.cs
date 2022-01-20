@@ -27,6 +27,7 @@ public class Påklædningspil : MonoBehaviour
     public AudioClipEvent voiceEvent;
     public AudioClip[] somethingMoreLines;
     public AudioClip[] somethingElseLines;
+    public TimeSinceVoice timeSinceVoice;
 
 
 
@@ -144,7 +145,7 @@ public class Påklædningspil : MonoBehaviour
         else
         {
             int random = UnityEngine.Random.Range(0, 3);
-            if(random == 0)
+            if(random == 0 && timeSinceVoice.time > 5)
             {
                 clip = somethingElseLines[UnityEngine.Random.Range(0, somethingElseLines.Length)];
             }

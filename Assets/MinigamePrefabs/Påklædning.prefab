@@ -1664,6 +1664,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 23ce79cc18d12af4ca536d721691861d, type: 3}
   - {fileID: 8300000, guid: cda6fb5e33c74e44b8f96eb8771c66d5, type: 3}
   - {fileID: 8300000, guid: cda6fb5e33c74e44b8f96eb8771c66d5, type: 3}
+  timeSinceVoice: {fileID: 11400000, guid: 309f4fe1a86f6c247b81a66c5e744b89, type: 2}
 --- !u!82 &6165406230580643268
 AudioSource:
   m_ObjectHideFlags: 0

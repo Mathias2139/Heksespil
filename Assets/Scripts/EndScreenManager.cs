@@ -69,6 +69,7 @@ public class EndScreenManager : MonoBehaviour
         }
         string leaderboardString = System.IO.File.ReadAllText(Application.persistentDataPath + "/Leaderboard.json");
         Debug.Log(leaderboardString);
+        Debug.Log(Application.persistentDataPath + "/Leaderboard.json");
         JsonUtility.FromJsonOverwrite(leaderboardString, leaderboard);
         for (int i = 0; i < Mathf.Min(leaderboard.leaderboard.Count, 7); i++)
         {
