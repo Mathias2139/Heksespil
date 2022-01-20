@@ -5688,7 +5688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000012246915966
 GameObject:
   m_ObjectHideFlags: 0
@@ -6119,7 +6119,7 @@ MonoBehaviour:
   interactable: 1
   enableShadowEffect: 1
   hasTransparentPages: 1
-  currentPaper: 1
+  currentPaper: 0
   papers:
   - Front: {fileID: 1000010150813326}
     Back: {fileID: 1000014231793054}
@@ -6505,9 +6505,9 @@ RectTransform:
   m_GameObject: {fileID: 1000008255623710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000013, y: 1.0000013, z: 1.0000002}
+  m_LocalScale: {x: 1.0000012, y: 1.0000012, z: 1.0000002}
   m_Children: []
-  m_Father: {fileID: 224000013013770458}
+  m_Father: {fileID: 224000011315182886}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6565,9 +6565,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 11002494}
-  - {fileID: 224000013930107866}
   m_Father: {fileID: 224000013897543340}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -6586,12 +6585,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1248896303}
+  - {fileID: 224000010248881008}
   m_Father: {fileID: 224000013897543340}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000008737796, y: 0.000030517578}
+  m_AnchoredPosition: {x: -0.0000038413946, y: 0.000030517578}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.00000008009374, y: -0.00000007264316}
 --- !u!224 &224000011916838940
@@ -6645,13 +6645,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1763742661}
-  - {fileID: 224000010248881008}
   m_Father: {fileID: 224000013897543340}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000008737796, y: 0.000030517578}
+  m_AnchoredPosition: {x: -0.0000038413946, y: 0.000030517578}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.00000008009374, y: -0.00000007264316}
 --- !u!224 &224000013373484540
@@ -6703,10 +6702,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6679, y: 1.6679, z: 1.6679}
   m_Children:
-  - {fileID: 224000011079962412}
   - {fileID: 224000013013770458}
-  - {fileID: 224000012880314978}
   - {fileID: 224000011315182886}
+  - {fileID: 224000012880314978}
+  - {fileID: 224000011079962412}
   - {fileID: 224000013987280778}
   - {fileID: 224000010631261718}
   - {fileID: 224000013735244596}
@@ -6714,6 +6713,7 @@ RectTransform:
   - {fileID: 224000011916838940}
   - {fileID: 224000013373484540}
   - {fileID: 224000010038103396}
+  - {fileID: 224000013930107866}
   m_Father: {fileID: 1428627081}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6729,16 +6729,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000012162892664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000013, y: 1.0000013, z: 1.0000002}
+  m_LocalScale: {x: 1.0000012, y: 1.0000012, z: 1.0000002}
   m_Children: []
-  m_Father: {fileID: 224000011079962412}
-  m_RootOrder: 1
+  m_Father: {fileID: 224000013897543340}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -304.96176, y: 0.000015258789}
   m_SizeDelta: {x: 185.5087, y: 330.54}
   m_Pivot: {x: 1, y: 0.21347925}
 --- !u!224 &224000013987280778
@@ -6792,9 +6792,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000014231793054}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!225 &225000015479285254
 CanvasGroup:
@@ -6804,7 +6804,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000010150813326}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
