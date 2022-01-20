@@ -16,11 +16,13 @@ public class SubmitHighscore : MonoBehaviour
     public GameObject newScoreText;
    public void Submit()
     {
+        Debug.Log("Pressed");
+        Debug.Log(Application.persistentDataPath + "/Leaderboard.json");
         if (!alreadySubmitted)
         {
             
             AddToLeaderboard();
-            alreadySubmitted = true;
+            
             
         }
         else
@@ -43,11 +45,25 @@ public class SubmitHighscore : MonoBehaviour
                 newScoreManager.AutoPlay();
                 string potion = JsonUtility.ToJson(leaderboard);
                 System.IO.File.WriteAllText(Application.persistentDataPath + "/Leaderboard.json", potion);
-                Debug.Log(Application.persistentDataPath + "/Leaderboard.json");
+                alreadySubmitted = true;
 
                 //manager.DisplayLeaderboard();
                 return;
             }
+            
+        }
+        if(alreadySubmitted != true)
+        {
+            
+                leaderboard.leaderboard.Insert(leaderboard.leaderboard.Count, new Leaderboard.entry(text.text, stats.completedMinigames));
+                newScoreText.transform.SetSiblingIndex(leaderboard.leaderboard.Count);
+                newScoreText.SetActive(true);
+                newScoreManager.dialogue[0] = "<sp:10><anim:wave>" + stats.completedMinigames.ToString() + " - " + text.text + "</anim>";
+                newScoreManager.AutoPlay();
+                string potion = JsonUtility.ToJson(leaderboard);
+                System.IO.File.WriteAllText(Application.persistentDataPath + "/Leaderboard.json", potion);
+                alreadySubmitted = true;
+            
         }
         
     }
