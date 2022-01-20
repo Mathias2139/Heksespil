@@ -32,6 +32,10 @@ public class WhackAMole_Minigame : MonoBehaviour
         minigame = GetComponent<Minigame>();
         spawnTotalTime = 100;
         moleArray = new GameObject[9];
+        if (timeSinceVoice.time > 5)
+        {
+            voiceEvent.Raise(voiceOnEnter[UnityEngine.Random.Range(0, voiceOnEnter.Length)]);
+        }
     }
 
     // Update is called once per frame
@@ -59,10 +63,6 @@ public class WhackAMole_Minigame : MonoBehaviour
         allowInput = !allowInput;
         AddMole();
         spawnTotalTime = Mathf.Clamp(spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f)) - Mathf.Min(stats.minigamesPlayed / 66, 0.6f),0,1000);
-        if (timeSinceVoice.time > 5)
-        {
-            voiceEvent.Raise(voiceOnEnter[UnityEngine.Random.Range(0, voiceOnEnter.Length)]);
-        }
         if (!allowInput)
         {
             for (int i = 0; i < 9; i++)

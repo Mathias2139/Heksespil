@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12270,9 +12270,9 @@ MonoBehaviour:
     <sp:20> and what about <p:normal>the <color=red><anim:wave>shadow demons</anim></color><p:normal><sp:15>
     doing the entertainment?!"
   - <sp:15>Be there in one minute!
-  - "<sp:22>But she\u2019s not worried. One minute can be more than you think with
-    a little\u2026<p:long><sp:20>\n<size=150%><anim:wave>Last<p:tiny> Minute<p:tiny>
-    Magic!</anim></size>"
+  - "<sp:22>But she\u2019s not worried.<p:short> One minute can be more than you
+    think with a little\u2026<p:long><sp:20>\n<size=150%><anim:wave>Last<p:tiny>
+    Minute<p:tiny> Magic!</anim></size>"
   typingClip: {fileID: 8300000, guid: fc0d7e714b07290419445fa728cd3bc6, type: 3}
   audioSourceGroup: {fileID: 1677125806}
   cam: {fileID: 529168238}

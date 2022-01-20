@@ -3110,6 +3110,12 @@ MonoBehaviour:
   globalTimerAnimation: {fileID: 895409692}
   globalTimerAdd: {fileID: 1698322849}
   outfit: {fileID: 11400000, guid: 54ed39b8024477f488a8f918cb50de1d, type: 2}
+  swooshes:
+  - {fileID: 8300000, guid: 2c50949a84c9ea845bc9f8737c2b8238, type: 3}
+  - {fileID: 8300000, guid: fd57fec9c1bde3f4e984ceb62b51c7da, type: 3}
+  - {fileID: 8300000, guid: e20c889dc7291824ebf0862bae4bfe04, type: 3}
+  - {fileID: 8300000, guid: 35da4b6498d7bd94a82c4513aeea5a14, type: 3}
+  - {fileID: 8300000, guid: 2e5704052b7858c4f86738de2a3abfdc, type: 3}
   lydMellemSpil: {fileID: 1750228493}
 --- !u!114 &1615371153
 MonoBehaviour:
@@ -8472,9 +8478,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8278988209500630038, guid: 3a4399d18e02fd74e8d6f8d1e6027c81, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 481de021352db0142b6a2a50cde3d387, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.681
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8618,6 +8624,18 @@ PrefabInstance:
     - target: {fileID: 3996061335700721764, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
+      propertyPath: voiceOnEnter.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
+      propertyPath: voiceOnEnter.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b4b1b3264efa7d4cb6f09a5aca2bc74, type: 3}
+    - target: {fileID: 3996061335700721767, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
+      propertyPath: voiceOnEnter.Array.data[7]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3996061335700721784, guid: 19fa6d9f2522b994d9bc24b1303ccc1e, type: 3}
       propertyPath: m_RootOrder

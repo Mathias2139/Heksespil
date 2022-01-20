@@ -2020,14 +2020,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d9b523470cdae8f42bb84d34713a0ed5, type: 3}
   - {fileID: 8300000, guid: a0cbe693f33540e4bb11e7a74a035ea2, type: 3}
   voiceOnLose:
-  - {fileID: 8300000, guid: 664b4630f2bcbda48821db5da82dc74f, type: 3}
   - {fileID: 8300000, guid: 206affe1596cced4abe59167bd67f8c9, type: 3}
   - {fileID: 8300000, guid: fd709f91932d91447a315e4a0c8c4261, type: 3}
-  - {fileID: 8300000, guid: ce35faa9b1645ae499f8bbab5b5e506f, type: 3}
   - {fileID: 8300000, guid: 0a028b450156b9e418cd90b29f1e5a7a, type: 3}
   - {fileID: 8300000, guid: 17e8c52041de74c45bfb0c0a885f8516, type: 3}
   - {fileID: 8300000, guid: 16db44b16b356ae4f82fb569c1096b54, type: 3}
   - {fileID: 8300000, guid: 72510c1e9fbdc34499086d0904989b4e, type: 3}
+  - {fileID: 8300000, guid: 37024f8d585ff4b4a99d4a0416efebbf, type: 3}
   voiceOnTie:
   - {fileID: 8300000, guid: 664b4630f2bcbda48821db5da82dc74f, type: 3}
   - {fileID: 0}
@@ -2035,7 +2034,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 8300000, guid: 0a028b450156b9e418cd90b29f1e5a7a, type: 3}
   - {fileID: 8300000, guid: 01b3045bd77107248ab56eeae20c7364, type: 3}
-  - {fileID: 8300000, guid: 2ad8118718a95e643957b2d6db54c10b, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 17e8c52041de74c45bfb0c0a885f8516, type: 3}
+  - {fileID: 8300000, guid: 985ff1157fc40bc4aa5117fd7299f8b3, type: 3}
+  - {fileID: 8300000, guid: 93d26f3c8a97bbe4b877113f40bd6d67, type: 3}
+  - {fileID: 0}
   timeSinceVoice: {fileID: 11400000, guid: 309f4fe1a86f6c247b81a66c5e744b89, type: 2}
   voiceEvent: {fileID: 11400000, guid: 7684ffec6a27aca4ab29930fe3db09b5, type: 2}
 --- !u!82 &7180782629193207333
@@ -2062,7 +2065,7 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:

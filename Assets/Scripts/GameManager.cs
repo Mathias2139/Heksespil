@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public Animation globalTimerAnimation;
     public GameObject globalTimerAdd;
     public LastOutfit outfit;
+    public AudioClip[] swooshes;
     public AudioSource lydMellemSpil;
     private void Start()
     {
@@ -139,13 +140,14 @@ public class GameManager : MonoBehaviour
 
             }
         }
+        lydMellemSpil.clip = swooshes[Random.Range(0, swooshes.Length)];
+        lydMellemSpil.Play();
         currentMinigame = Instantiate(minigames[randomNumber]);
         previousMinigame = randomNumber;
         Minigame minigame = currentMinigame.GetComponent<Minigame>();
         minigame.globalTime = globalTimer;
         minigame.localTime = localTime;
         minigame.globalTimeReward = globalTimeReward;
-        lydMellemSpil.Play();
 
 
         //Initialize Controls, link game to manager

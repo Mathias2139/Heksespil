@@ -2513,8 +2513,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 68354c18d8893c74893b22257d4d53b4, type: 3}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   voiceOnLose:
   - {fileID: 8300000, guid: ad6a2ab693ccc674a89724ac6b0ab99c, type: 3}
   - {fileID: 8300000, guid: e76de0a512a7ef74d8ddfa29b6f671e4, type: 3}
