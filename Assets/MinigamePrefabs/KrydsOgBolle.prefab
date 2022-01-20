@@ -2026,6 +2026,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ce35faa9b1645ae499f8bbab5b5e506f, type: 3}
   - {fileID: 8300000, guid: 0a028b450156b9e418cd90b29f1e5a7a, type: 3}
   - {fileID: 8300000, guid: 17e8c52041de74c45bfb0c0a885f8516, type: 3}
+  - {fileID: 8300000, guid: 16db44b16b356ae4f82fb569c1096b54, type: 3}
+  - {fileID: 8300000, guid: 72510c1e9fbdc34499086d0904989b4e, type: 3}
+  voiceOnTie:
+  - {fileID: 8300000, guid: 664b4630f2bcbda48821db5da82dc74f, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: fd709f91932d91447a315e4a0c8c4261, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 0a028b450156b9e418cd90b29f1e5a7a, type: 3}
   timeSinceVoice: {fileID: 11400000, guid: 309f4fe1a86f6c247b81a66c5e744b89, type: 2}
   voiceEvent: {fileID: 11400000, guid: 7684ffec6a27aca4ab29930fe3db09b5, type: 2}
 --- !u!82 &7180782629193207333

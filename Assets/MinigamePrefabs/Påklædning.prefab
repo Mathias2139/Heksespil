@@ -225,7 +225,7 @@ RectTransform:
   m_GameObject: {fileID: 868258536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5644343, y: 1.5644343, z: 1.5644343}
+  m_LocalScale: {x: 1.5018569, y: 1.5018569, z: 1.5018569}
   m_Children: []
   m_Father: {fileID: 2860926912331496337}
   m_RootOrder: 3
@@ -275,7 +275,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 2bd45f9c2e5cce44bbea4babddf7567d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09d2287dbedd88240b91b5bc6e03ed10, type: 3}
   m_Color: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1662,6 +1662,7 @@ MonoBehaviour:
   somethingElseLines:
   - {fileID: 8300000, guid: 08c90ad8ef76a5a4eaae16841158c75e, type: 3}
   - {fileID: 8300000, guid: 23ce79cc18d12af4ca536d721691861d, type: 3}
+  - {fileID: 8300000, guid: cda6fb5e33c74e44b8f96eb8771c66d5, type: 3}
   - {fileID: 8300000, guid: cda6fb5e33c74e44b8f96eb8771c66d5, type: 3}
 --- !u!82 &6165406230580643268
 AudioSource:

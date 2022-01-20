@@ -33,23 +33,23 @@ public class Mole : MonoBehaviour
 
         if (molePosition + 1 >= 1 && molePosition + 1 < 4)
         {
-            sprite.sortingOrder = 5;
+            sprite.sortingOrder = 8;
             if (isFrog == true)
             {
-                armSprite.sortingOrder = 5;
+                armSprite.sortingOrder = 7;
             }
         }
         else if (molePosition + 1 >= 4 && molePosition + 1 < 7)
         {
-            sprite.sortingOrder = 3;
+            sprite.sortingOrder = 5;
             if (isFrog == true)
             {
-                armSprite.sortingOrder = 3;
+                armSprite.sortingOrder = 4;
             }
         }
         else
         {
-            sprite.sortingOrder = 1;
+            sprite.sortingOrder = 2;
             if (isFrog == true)
             {
                 armSprite.sortingOrder = 1;

@@ -19,7 +19,13 @@ public class WhackAMole_Minigame : MonoBehaviour
     public Animator broomAnimation;
     private int molesSpawned;
     public AudioSource[] BroomSounds;
-    
+    public AudioSource[] LossSounds;
+    public AudioClip[] voiceOnWin;
+    public AudioClip[] voiceOnLose;
+    public TimeSinceVoice timeSinceVoice;
+    public AudioClipEvent voiceEvent;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +66,23 @@ public class WhackAMole_Minigame : MonoBehaviour
                 if (moleArray[i] != null)
                 {
                     moleArray[i].GetComponent<Mole>().timeUp = true;
+                }
+            }
+            //// Spille lyde ved spillets afslutning
+            List<int> emptyspots = FindEmptySpots();
+            if (emptyspots.Count < 5)
+            {
+                LossSounds[Random.Range(0, LossSounds.Length)].Play();
+                if (timeSinceVoice.time > 5)
+                {
+                    voiceEvent.Raise(voiceOnLose[UnityEngine.Random.Range(0, voiceOnLose.Length)]);
+                }
+            }
+            else
+            {
+                if (timeSinceVoice.time > 5)
+                {
+                    voiceEvent.Raise(voiceOnWin[UnityEngine.Random.Range(0, voiceOnWin.Length)]);
                 }
             }
         }

@@ -1878,7 +1878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 200
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
@@ -3157,15 +3157,15 @@ RectTransform:
   m_GameObject: {fileID: 1248896302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5156694, y: 0.5156694, z: 0.5156694}
   m_Children: []
   m_Father: {fileID: 224000011315182886}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.162796, y: -25.834396}
-  m_SizeDelta: {x: 280.5618, y: 291.118}
+  m_AnchoredPosition: {x: 6.011, y: -50}
+  m_SizeDelta: {x: 323.284, y: 298.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248896304
 MonoBehaviour:
@@ -3188,12 +3188,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: c5bfac7425a3b764ba0ccd531bbf2212, type: 3}
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 52
+    m_MinSize: 1
+    m_MaxSize: 150
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -3217,11 +3217,11 @@ MonoBehaviour:
   text: {fileID: 1248896304}
   intText:
   - i: 0
-    aboveI: Bad
+    aboveI: '"I did tell you to get a move on... Better luck next year!"'
   - i: 7
-    aboveI: Okay
+    aboveI: '"Well, look at you! Not bad. Happy birthday, sweetie."'
   - i: 15
-    aboveI: Good
+    aboveI: '"I have no idea how you did that. Amazing!!"'
 --- !u!222 &1248896306
 CanvasRenderer:
   m_ObjectHideFlags: 0
