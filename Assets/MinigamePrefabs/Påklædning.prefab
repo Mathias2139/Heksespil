@@ -1660,10 +1660,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fac98119dd2bfc049bfe1ea9c6aef65c, type: 3}
   - {fileID: 8300000, guid: d4b6a636222ace84c9a89a138b523e7f, type: 3}
   somethingElseLines:
-  - {fileID: 8300000, guid: 08c90ad8ef76a5a4eaae16841158c75e, type: 3}
+  - {fileID: 8300000, guid: ab26910425a2789469b34763b7edf17d, type: 3}
   - {fileID: 8300000, guid: 23ce79cc18d12af4ca536d721691861d, type: 3}
   - {fileID: 8300000, guid: cda6fb5e33c74e44b8f96eb8771c66d5, type: 3}
   - {fileID: 8300000, guid: cda6fb5e33c74e44b8f96eb8771c66d5, type: 3}
+  - {fileID: 8300000, guid: deaad776c1b8b15478b10ebd0f590317, type: 3}
+  - {fileID: 8300000, guid: 7b749f82211a8fa4fb5baa8addff0fcd, type: 3}
   timeSinceVoice: {fileID: 11400000, guid: 309f4fe1a86f6c247b81a66c5e744b89, type: 2}
 --- !u!82 &6165406230580643268
 AudioSource:

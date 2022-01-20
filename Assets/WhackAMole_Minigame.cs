@@ -20,7 +20,7 @@ public class WhackAMole_Minigame : MonoBehaviour
     private int molesSpawned;
     public AudioSource[] BroomSounds;
     public AudioSource[] LossSounds;
-    public AudioClip[] voiceOnWin;
+    public AudioClip[] voiceOnEnter;
     public AudioClip[] voiceOnLose;
     public TimeSinceVoice timeSinceVoice;
     public AudioClipEvent voiceEvent;
@@ -59,6 +59,10 @@ public class WhackAMole_Minigame : MonoBehaviour
         allowInput = !allowInput;
         AddMole();
         spawnTotalTime = Mathf.Clamp(spawnTotalTimeDistribution.Evaluate(Random.Range(0f, 1f)) - Mathf.Min(stats.minigamesPlayed / 66, 0.6f),0,1000);
+        if (timeSinceVoice.time > 5)
+        {
+            voiceEvent.Raise(voiceOnEnter[UnityEngine.Random.Range(0, voiceOnEnter.Length)]);
+        }
         if (!allowInput)
         {
             for (int i = 0; i < 9; i++)
@@ -76,13 +80,6 @@ public class WhackAMole_Minigame : MonoBehaviour
                 if (timeSinceVoice.time > 5)
                 {
                     voiceEvent.Raise(voiceOnLose[UnityEngine.Random.Range(0, voiceOnLose.Length)]);
-                }
-            }
-            else
-            {
-                if (timeSinceVoice.time > 5)
-                {
-                    voiceEvent.Raise(voiceOnWin[UnityEngine.Random.Range(0, voiceOnWin.Length)]);
                 }
             }
         }

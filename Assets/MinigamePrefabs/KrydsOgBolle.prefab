@@ -2034,6 +2034,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fd709f91932d91447a315e4a0c8c4261, type: 3}
   - {fileID: 0}
   - {fileID: 8300000, guid: 0a028b450156b9e418cd90b29f1e5a7a, type: 3}
+  - {fileID: 8300000, guid: 01b3045bd77107248ab56eeae20c7364, type: 3}
+  - {fileID: 8300000, guid: 2ad8118718a95e643957b2d6db54c10b, type: 3}
   timeSinceVoice: {fileID: 11400000, guid: 309f4fe1a86f6c247b81a66c5e744b89, type: 2}
   voiceEvent: {fileID: 11400000, guid: 7684ffec6a27aca4ab29930fe3db09b5, type: 2}
 --- !u!82 &7180782629193207333
