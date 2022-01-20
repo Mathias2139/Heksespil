@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3090,7 +3090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba7753eebfa3924e8d88a32e08dd45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 60
+  startTime: 11.3
   stats: {fileID: 11400000, guid: 9be70091218cf314e8451da3430b663c, type: 2}
   inputEvent: {fileID: 11400000, guid: 34045e83daaf30540b4c43bd163fa6c2, type: 2}
   minigames:
@@ -9348,7 +9348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: EndingScene
-  musicEvent: {fileID: 0}
+  musicEvent: {fileID: 11400000, guid: bca64cdf77029f342b8d9ab9c28aa03f, type: 2}
 --- !u!1 &2129379196
 GameObject:
   m_ObjectHideFlags: 0
