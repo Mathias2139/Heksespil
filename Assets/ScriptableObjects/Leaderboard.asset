@@ -12,10 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58c1862b216f22449dc755fde98bb87, type: 3}
   m_Name: Leaderboard
   m_EditorClassIdentifier: 
-  leaderboard:
-  - name: Xinru
-    score: 73
-  - name: "Jo\u200B"
-    score: 38
-  - name: Mathias
-    score: 37
+  leaderboard: []

@@ -11,11 +11,13 @@ public class Leaderboard : ScriptableObject
     {
         public string name;
         public int score;
+        public List<GameStats.GameTracker> stats;
 
-        public entry(string name, int score)
+        public entry(string name, int score, List<GameStats.GameTracker> stats)
         {
             this.name = name;
             this.score = score;
+            this.stats = stats;
         }
     }
 }

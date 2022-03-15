@@ -38,7 +38,7 @@ public class SubmitHighscore : MonoBehaviour
         {
             if(stats.completedMinigames > leaderboard.leaderboard[i].score)
             {
-                leaderboard.leaderboard.Insert(i, new Leaderboard.entry(text.text, stats.completedMinigames));
+                leaderboard.leaderboard.Insert(i, new Leaderboard.entry(text.text, stats.completedMinigames, stats.tracker));
                 newScoreText.transform.SetSiblingIndex(i);
                 newScoreText.SetActive(true);
                 newScoreManager.dialogue[0] = "<sp:10><anim:wave>"+stats.completedMinigames.ToString() + " - " + text.text + "</anim>";
@@ -55,7 +55,7 @@ public class SubmitHighscore : MonoBehaviour
         if(alreadySubmitted != true)
         {
             
-                leaderboard.leaderboard.Insert(leaderboard.leaderboard.Count, new Leaderboard.entry(text.text, stats.completedMinigames));
+                leaderboard.leaderboard.Insert(leaderboard.leaderboard.Count, new Leaderboard.entry(text.text, stats.completedMinigames, stats.tracker));
                 newScoreText.transform.SetSiblingIndex(leaderboard.leaderboard.Count);
                 newScoreText.SetActive(true);
                 newScoreManager.dialogue[0] = "<sp:10><anim:wave>" + stats.completedMinigames.ToString() + " - " + text.text + "</anim>";
